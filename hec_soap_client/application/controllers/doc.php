@@ -54,6 +54,11 @@ class Doc extends CI_Controller {
 		
 		$this->load->view('valid_doc_view',$data);
 	}
+	
+	public function find_doc()
+	{
+		$this->load->view('find_doc_view');
+	}
 }
 
 /* End of file home.php */
