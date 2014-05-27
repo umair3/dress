@@ -28,9 +28,9 @@
 				<h3><a href="<?php echo site_url('/doc/valid_doc/'); ?>" title="Validate Document">Validate Document</a></h3>	
 				<p>Returns document details</p>		
 			</section>
-			<section class="column colspan-3 twenty illustrated">
-				<h3><a href="<?php echo site_url('/doc/find_doc/'); ?>" title="List Documents">Find Document</a></h3>	
-				<p>Find document by query</p>		
+			<section class="column colspan-3 search illustrated">
+				<h3><a href="<?php echo site_url('/doc/find_doc/'); ?>" title="Search">Search Document</a></h3>	
+				<p>Search by query</p>		
 			</section>
 		</div>
 	</div>
