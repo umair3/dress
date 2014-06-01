@@ -3,7 +3,7 @@
 	<div class="column-wrap standalone what-is-ci">	
 		<section class="column colspan-12">
 			<h2>Student Degree Record Exchange Standard</h2>
-			<p>The student data is currently exchanged manually between educational institutes in Pakistan. This is an effort that will enable these institutes to inter-exchange student degree record digitally.</p>
+			<p>The student data is currently exchanged manually between educational institutes in Pakistan. This is an effort that will enable these institutes to inter-exchange student degree record digitally according to the definded standard.</p>
 			<h3>Useful Links</h3>
 			<ul class="checklist column colspan-8">
 				<li><a href="http://localhost/projects/thesis/uni_soap_server/gen_wsdl.php/" title="Web Service Description Language document">WSDL document <small>[example]</small></a></li>
