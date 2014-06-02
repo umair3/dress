@@ -32,6 +32,23 @@ class DataProvider
 	public function validateDegree($doc_type) {
 		// return array ("test1","test2");
 		
+		// Get Degree Map array
+		/*$map = $this->mapper_model->getMap('DEGREE');
+		
+		$map['documentType'];
+		
+		// Tags linked to same table should be in one query.
+		foreach ($map as $tag) {
+			//get table name
+			
+		}*/
+		
+		/*
+		[
+		table: t1,
+		column: c1
+		]
+		*/
 		
 		$doc.= '<xml>';
 		$doc.= '<documentType>DEGREE</documentType>';

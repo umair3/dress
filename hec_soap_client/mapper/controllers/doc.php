@@ -31,7 +31,7 @@ class Doc extends CI_Controller {
 	{
 		$data['posted'] = 0;
 		if($_POST) {
-			$options = array("location" => "http://localhost/thesis_present/uni_soap_server/soapserver.php", "uri" => "http://localhost");
+			$options = array("location" => "http://localhost/projects/thesis/uni_soap_server/soapserver.php", "uri" => "http://localhost");
 			try {
 				$client = new SoapClient(null, $options);
 				
@@ -53,6 +53,11 @@ class Doc extends CI_Controller {
 		}		
 		
 		$this->load->view('valid_doc_view',$data);
+	}
+	
+	public function find_doc()
+	{
+		$this->load->view('find_doc_view');
 	}
 }
 
