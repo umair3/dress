@@ -143,9 +143,9 @@
 	<div class="full-width feature">
 		<div class="column-wrap talking-points dim leadin">
 			<div class="wizard-steps">
-			  <div class="active-step"><a href="#home">Home</a></div>
-			  <div><a href="#step-one"><span>1</span>Database Credentials</a></div>
-			  <div><a href="#step-two"><span>2</span>Map Columns To XML Tags</a></div>
+			  <div class="completed-step"><a href="#home">Home</a></div>
+			  <div class="completed-step"><a href="#step-one"><span>1</span>Database Credentials</a></div>
+			  <div class="active-step"><a href="#step-two"><span>2</span>Map Columns To XML Tags</a></div>
 			  <div><a href="#"><span>3</span> Review Maps</a></div>
 			  <div><a href="#"><span>4</span> Finish</a></div>
 			</div>
@@ -154,19 +154,46 @@
 
 	<div class="column-wrap standalone what-is-ci">	
 		<section class="column colspan-12">
-			<h2>Semi-Automated DB To SDRES XML Mapper</h2>
-			<p>If you are view this, then you have downloaded the DB To SDRES XML Mapper. Follow the instructions in the wizard and you will be able to create a soap service for the HEC portal with the help of this browser based GUI interface.</p>
-			<h3>Requirements</h3>
-			<ul class="checklist column colspan-8">
-				<li>PHP 5.5</li>
-				<li>MySQL 5.6</li>
-			</ul>	
-			<ul class="checklist column colspan-8">
-				<li>Apache 2.2</li>
-				<li>SOAP extension enabled</li>
-			</ul>
-			<form action="http://localhost/projects/thesis/hec_soap_client/mapper.php/wizard/db_creds/" method="get">
-			<p style="float:right"><input type="submit" value="Begin" /></p>
+			<h2>Map Database To XML</h2>
+			<p>Add the tables and columns to the corresponding tags. Each Type of XML Schema has its own Mapping, for example, DEGREE has its own Map while REGISTRATION has its own.</p>
+			<form method="post" action="">
+			<table>
+				<tr>
+					<td>Host: *</td>
+					<td>
+						<input type="text" id="host" name="host" value=""/>
+					</td>
+				</tr>
+				<tr>
+					<td>Port: *</td>
+					<td>
+						<input type="text" id="port" name="port" value="3306"/>
+					</td>
+				</tr>
+				<tr>
+					<td>User: *</td>
+					<td>
+						<input type="text" id="user" name="user" value=""/>
+					</td>
+				</tr>
+				<tr>
+					<td>Password: *</td>
+					<td>
+						<input type="password" id="password" name="password" value=""/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="Connect"/>
+					</td>
+				</tr>
+			</table>
+			</form>
+			
+			
+			<form action="http://localhost/projects/thesis/hec_soap_client/mapper.php/wizard/map/" method="get">
+			<p style="float:right"><input type="submit" value="Next" /></p>
 			</form>
 		</section>					
 	</div>
