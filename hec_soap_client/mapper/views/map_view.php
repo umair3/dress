@@ -156,36 +156,194 @@
 		<section class="column colspan-12">
 			<h2>Map Database To XML</h2>
 			<p>Add the tables and columns to the corresponding tags. Each Type of XML Schema has its own Mapping, for example, DEGREE has its own Map while REGISTRATION has its own.</p>
+			<h3>Map DEGREE XML Schema to DB Columns</h3>
 			<form method="post" action="">
 			<table>
 				<tr>
-					<td>Host: *</td>
+					<th>Mapping XML Tag</th>
+					<th>DB Table</th>
+					<th>DB Column</th>
+				</tr>
+				<tr>
+					<td>&lt;documentType&gt;</td>
+					<td>DEGREE</td>
+					<td>DEGREE</td>
+				</tr>
+				<tr>
+					<td>&lt;level&gt;</td>
 					<td>
-						<input type="text" id="host" name="host" value=""/>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
-					<td>Port: *</td>
+					<td>&lt;examSystem&gt;</td>
 					<td>
-						<input type="text" id="port" name="port" value="3306"/>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
-					<td>User: *</td>
+					<td>&lt;title&gt;</td>
 					<td>
-						<input type="text" id="user" name="user" value=""/>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
-					<td>Password: *</td>
+					<td>&lt;serialNo&gt;</td>
 					<td>
-						<input type="password" id="password" name="password" value=""/>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
 					</td>
 				</tr>
+				<tr>
+					<td>&lt;registrationNo&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;rollNo&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;date&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;firstName&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;lastName&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;institute&gt;</td>
+					<td>
+						<select>
+							<option>table1</option>
+							<option>table2</option>
+							<option>table3</option>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<option>column2</option>
+							<option>column3</option>
+						</select>
+					</td>
+				</tr>
+				
 				<tr>
 					<td></td>
 					<td>
-						<input type="submit" value="Connect"/>
+						<input type="submit" value="Save"/>
 					</td>
 				</tr>
 			</table>
