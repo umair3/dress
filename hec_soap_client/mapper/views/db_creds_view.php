@@ -160,25 +160,31 @@
 				<tr>
 					<td>Host: *</td>
 					<td>
-						<input type="text" id="host" name="host" value=""/>
+						<input type="text" id="host" name="host" value="<?php if (isset($db_creds->host)) {echo $db_creds->host;} ?>"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Port: *</td>
 					<td>
-						<input type="text" id="port" name="port" value="3306"/>
+						<input type="text" id="port" name="port" value="<?php if (isset($db_creds->port)) {echo $db_creds->port;} ?>"/>
 					</td>
 				</tr>
 				<tr>
 					<td>User: *</td>
 					<td>
-						<input type="text" id="user" name="user" value=""/>
+						<input type="text" id="user" name="user" value="<?php if (isset($db_creds->user)) {echo $db_creds->user;} ?>"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Password: *</td>
 					<td>
-						<input type="password" id="password" name="password" value=""/>
+						<input type="password" id="password" name="password" value="<?php if (isset($db_creds->password)) {echo $db_creds->password;} ?>"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Database: *</td>
+					<td>
+						<input type="text" id="database" name="database" value="<?php if (isset($db_creds->database)) {echo $db_creds->database;} ?>"/>
 					</td>
 				</tr>
 				<tr>

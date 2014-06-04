@@ -357,6 +357,17 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+/*
+|--------------------------------------------------------------------------
+| SDRES Web Service Properties Path
+|--------------------------------------------------------------------------
+|
+| Leave this BLANK unless you would like to set something other than the default
+| application/logs/ folder. Use a full server path with trailing slash.
+|
+*/
+$config['ws_properties'] = 'ws_properties';
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

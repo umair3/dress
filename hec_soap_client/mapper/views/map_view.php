@@ -173,16 +173,17 @@
 					<td>&lt;level&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option value="">choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -190,16 +191,17 @@
 					<td>&lt;examSystem&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -207,16 +209,22 @@
 					<td>&lt;title&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
 							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 				</tr>
@@ -224,16 +232,17 @@
 					<td>&lt;serialNo&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -241,16 +250,17 @@
 					<td>&lt;registrationNo&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -258,16 +268,17 @@
 					<td>&lt;rollNo&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -275,16 +286,17 @@
 					<td>&lt;date&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -292,16 +304,17 @@
 					<td>&lt;firstName&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -309,16 +322,17 @@
 					<td>&lt;lastName&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -326,16 +340,17 @@
 					<td>&lt;institute&gt;</td>
 					<td>
 						<select>
-							<option>table1</option>
-							<option>table2</option>
-							<option>table3</option>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
 						</select>
 					</td>
 					<td>
 						<select>
-							<option>column1</option>
-							<option>column2</option>
-							<option>column3</option>
+							<option>choose</option>
 						</select>
 					</td>
 				</tr>
@@ -359,6 +374,10 @@
 		</section>
 		
 	</section><!-- /#wrap -->
+
+<script type="text/javascript">
+
+</script>
 	
 	</body>
 </html>
