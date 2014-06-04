@@ -374,9 +374,28 @@
 		</section>
 		
 	</section><!-- /#wrap -->
-
+<?php 
+	$column_select_options['students'];
+?>
 <script type="text/javascript">
-
+ /*function table_columns(tag, table){
+	
+	var options = '"';
+	<?php
+	foreach($column_select_options['students'] as $t) {
+		echo 'options=<option>'.$t.'</option>';
+	}?>
+	options = '"';
+	
+ }*/
+ 
+ function table_columns (tag, table) {
+	if (table=='students') {
+		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
+	}else {
+		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
+	}
+ }
 </script>
 	
 	</body>

@@ -58,16 +58,20 @@ class Wizard extends CI_Controller {
 		
 		$data['tables_select_options'] = '';
 		
+		$data['column_select_options'] = array(
+		
+		);
+		
 		foreach ($tables as $table) {
 			
 			$data['tables_select_options'].= '<option>'.$table.'</option>';
 			$this->_load_ws_database();
 			$fields = $this->db->list_fields($table);
 			
-			$data[$table.'column_select_options'] = '';
+			$data['column_select_options'][$table] = '';
 			
 			foreach ($fields as $field) {
-			   $data[$table.'column_select_options'].= '<option>'.$field.'</option>';
+			   $data['column_select_options'][$table].= '<option>'.$field.'</option>';
 			} 
 		   
 		}
