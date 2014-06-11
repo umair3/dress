@@ -378,15 +378,6 @@
 	$column_select_options['students'];
 ?>
 <script type="text/javascript">
-	var tables;
-	tables = [
-		'students' = {
-	
-		},
-		'degrees' = {
-	
-		},
-	];
  /*function table_columns(tag, table){
 	
 	var options = '"';
@@ -401,7 +392,7 @@
  function table_columns (tag, table) {
 	if (table=='students') {
 		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
-	} else {
+	}else {
 		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
 	}
  }
