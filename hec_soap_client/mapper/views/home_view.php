@@ -155,7 +155,7 @@
 	<div class="column-wrap standalone what-is-ci">	
 		<section class="column colspan-12">
 			<h2>Semi-Automated DB To SDRES XML Mapper</h2>
-			<p>If you are view this, then you have downloaded the DB To SDRES XML Mapper. Follow the instructions in the wizard and you will be able to create a soap service for the HEC portal with the help of this browser based GUI interface.</p>
+			<p>Follow the instructions to create a soap service for the HEC portal with the help of this browser based GUI interface.</p>
 			<h3>Requirements</h3>
 			<ul class="checklist column colspan-8">
 				<li>PHP 5.5</li>
