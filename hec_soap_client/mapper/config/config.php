@@ -26,7 +26,7 @@ $config['base_url']	= 'http://localhost/projects/thesis/hec_soap_client/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = 'mapper.php';
 
 /*
 |--------------------------------------------------------------------------

@@ -14,7 +14,7 @@ class Wizard extends CI_Controller {
 				'host'		=>	$this->input->post('host'),
 				'port'		=>	$this->input->post('port'),
 				'user'		=>	$this->input->post('user'),
-				'password'	=>	$this->input->post('password'), // to be encrypted in future to secure
+				'password'	=>	$this->input->post('password'), // to be encrypted in future for security
 				'database'	=>	$this->input->post('database')
 			);
 			

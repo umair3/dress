@@ -143,9 +143,9 @@
 	<div class="full-width feature">
 		<div class="column-wrap talking-points dim leadin">
 			<div class="wizard-steps">
-			  <div class="completed-step"><a href="#home">Home</a></div>
-			  <div class="completed-step"><a href="#step-one"><span>1</span>Database Credentials</a></div>
-			  <div class="active-step"><a href="#step-two"><span>2</span>Map Columns To XML Tags</a></div>
+			  <div class="completed-step"><a href="<?php echo base_url().index_page().'/'; ?>">Home</a></div>
+			  <div class="completed-step"><a href="<?php echo base_url().index_page().'/wizard/db_creds/'; ?>"><span>1</span>Database Credentials</a></div>
+			  <div class="active-step"><a href="<?php echo base_url().index_page().'/wizard/map/'; ?>"><span>2</span>Map Columns To XML Tags</a></div>
 			  <div><a href="#"><span>3</span> Review Maps</a></div>
 			  <div><a href="#"><span>4</span> Finish</a></div>
 			</div>
