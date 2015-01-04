@@ -156,21 +156,9 @@
 		<section class="column colspan-12">
 			<h2>Map Database To XML</h2>
 			<p>Add the tables and columns to the corresponding tags. Each Type of XML Schema has its own Mapping, for example, DEGREE has its own Map while REGISTRATION has its own.</p>
-			
-			<?php 
-			if(isset($degree_map)){ 
-			?>
-			<h3>Map DEGREE XML Schema to DB Columns <img width="16" src="<?php echo base_url('resources/images/completed.png'); ?>" /></h3>
-			<div>
-				<pre>
-						<?php echo json_encode(json_decode($degree_map),JSON_PRETTY_PRINT); ?>
-					
-				</pre>
-			</div>
-            <?php 
-			} else {
-			?>
-            <h3>Map DEGREE XML Schema to DB Columns</h3> 
+			<h3>Map DEGREE XML Schema to DB Columns</h3>
+            
+            <?php if(!isset($degree_map)){ ?> 
 			<form method="post" action="">
 			<table>
 				<tr>

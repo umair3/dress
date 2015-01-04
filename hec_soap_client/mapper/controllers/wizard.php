@@ -34,6 +34,21 @@ class Wizard extends CI_Controller {
 		return json_decode(read_file('ws_properties/database.properties'));
 	}
 	
+	private function _load_map ($map) {
+		return json_decode(read_file('ws_properties/'.$map.'.properties'));
+	}
+	
+	private function _check_map ($map) {
+		if (file_exists('ws_properties/'.$map.'.properties')){
+			return TRUE;
+		} 
+		return FALSE;
+	}
+	
+	private function _read_map ($map) {
+		return read_file('ws_properties/'.$map.'.properties');
+	}
+	
 	private function _load_ws_database() {
 		
 		$db_creds = $this->_load_database_properties();
@@ -81,6 +96,55 @@ class Wizard extends CI_Controller {
 		}
 		
 		$data['degree_tags'] = array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
+		
+		if (isset($_POST['degree'])) {
+		
+			$degree_map_tags = array (
+				'docType'		=>	'DEGREE',
+				'level'			=>	$this->input->post('degree_table_level').'.'.$this->input->post('degree_table_level_field'),
+				'examSystem'	=>	$this->input->post('degree_table_examSystem').'.'.$this->input->post('degree_table_examSystem_field'),
+				'title'			=>	$this->input->post('degree_table_title').'.'.$this->input->post('degree_table_title_field'), 
+				'serialNo'		=>	$this->input->post('degree_table_serialNo').'.'.$this->input->post('degree_table_serialNo_field'),
+				'regNo'			=>	$this->input->post('degree_table_regNo').'.'.$this->input->post('degree_table_regNo_field'),
+				'rollNo'		=>	$this->input->post('degree_table_rollNo').'.'.$this->input->post('degree_table_rollNo_field'),
+				'date'			=>	$this->input->post('degree_table_date').'.'.$this->input->post('degree_table_date_field'),
+				'firstName'		=>	$this->input->post('degree_table_firstName').'.'.$this->input->post('degree_table_firstName_field'),
+				'lastName'		=>	$this->input->post('degree_table_lastName').'.'.$this->input->post('degree_table_lastName_field'),
+				'institute'		=>	$this->input->post('degree_table_institute').'.'.$this->input->post('degree_table_institute_field')
+			);
+			
+			$degree_map['tags'] = $degree_map_tags;
+			
+			$degree_join_count = $this->input->post('degree_join_count');
+			
+			if ($degree_join_count >= 1) {
+				
+				$degree_map_joins = array();
+				
+				for($i=1;$i <= $degree_join_count;$i++) {
+					
+					$degree_map_joins[] = array (
+						'column'	=>	$this->input->post('degree_join_table_'.$i).'.'.$this->input->post('degree_join_table_'.$i.'_field'),
+						'joinType'	=>	$this->input->post('degree_join_type_'.$i),
+						'joinOn'	=>	$this->input->post('degree_joinon_table_'.$i).'.'.$this->input->post('degree_joinon_table_'.$i.'_field')
+					);	
+						
+				}
+			
+				$degree_map['joins'] = $degree_map_joins;
+			
+			}
+			
+			$degree_map_json = json_encode($degree_map);
+			
+			write_file('ws_properties/degree.properties', $degree_map_json);
+			
+			$data['message'] = 'DEGREE map saved successfully.';
+		}
+		
+		if ($this->_check_map('degree')) {
+			$data['degree_map'] = $this->_read_map('degree');
+		}
 		
 		$this->load->view('map_view', $data);
 	}
