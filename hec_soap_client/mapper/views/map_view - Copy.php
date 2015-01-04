@@ -165,17 +165,14 @@
 					<th>DB Column</th>
 				</tr>
 				<tr>
-					<td>&lt;docType&gt;</td>
+					<td>&lt;documentType&gt;</td>
 					<td>DEGREE</td>
 					<td>DEGREE</td>
 				</tr>
-				<?php
-				foreach ($degree_tags as $degree_tag) {
-				?>
 				<tr>
-					<td>&lt;<?php echo $degree_tag; ?>&gt;</td>
+					<td>&lt;level&gt;</td>
 					<td>
-						<select id="degree_table_<?php echo $degree_tag; ?>" name="degree_table_<?php echo $degree_tag; ?>" onchange=showFields(this.name,this.value)>
+						<select>
 							<option value="">choose</option>
 							<?php 
 							if (isset($tables_select_options)) {
@@ -185,14 +182,178 @@
 						</select>
 					</td>
 					<td>
-						<select id="degree_table_<?php echo $degree_tag; ?>_field" name="degree_table_<?php echo $degree_tag; ?>_field">
+						<select>
 							<option>choose</option>
 						</select>
 					</td>
 				</tr>
-				<?php
-				}
-				?>
+				<tr>
+					<td>&lt;examSystem&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;title&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>column1</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;serialNo&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;registrationNo&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;rollNo&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;date&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;firstName&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;lastName&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;institute&gt;</td>
+					<td>
+						<select>
+							<option>choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select>
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
 				
 				<tr>
 					<td></td>
@@ -215,44 +376,34 @@
 	</section><!-- /#wrap -->
 <?php 
 	$column_select_options['students'];
-	//print_r($tables_array);
 ?>
 <script type="text/javascript">
-   var tables_array = [];
-   <?php
-   // Creating arrays of fields for all tables.
-   foreach($tables_array as $key=>$table) {
-		$table_fields = '';
-		$table_name = '';
-		$table_name = $key;
-		foreach($table as $field){
-			if($table_fields == ''){
-				$table_fields.="'".$field."'";
-			}else{
-				$table_fields.=",'".$field."'";
-			}
-		}
-		echo "tables_array['".$table_name."'] = [".$table_fields."]; ";
-   }
-   ?>
+	var tables;
+	tables = [
+		'students' = {
 	
- function showFields(select_list_name,table) {
+		},
+		'degrees' = {
 	
-	console.log('showFields called by '+select_list_name+' having value ' +table);
+		},
+	];
+ /*function table_columns(tag, table){
 	
-	table_field_select_list = document.getElementById(select_list_name+'_field');
+	var options = '"';
+	<?php
+	foreach($column_select_options['students'] as $t) {
+		echo 'options=<option>'.$t.'</option>';
+	}?>
+	options = '"';
 	
-	// Empty Select List first
-	for (var option in table_field_select_list){
-		table_field_select_list.remove(option);
+ }*/
+ 
+ function table_columns (tag, table) {
+	if (table=='students') {
+		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
+	} else {
+		document.getElementById(tag+'_column_select_list').innerHTML = '<select><option>RegNo</option><option>FirstName</option><option>LastName</option></select>';
 	}
-	// Add options in emptied select list
-	for (i = 0; i < tables_array[table].length; i++ ) {
-		table_field_select_list.options[table_field_select_list.options.length]=new Option(tables_array[table][i], tables_array[table][i], false, false);
-	}
-	
-	//table_field_select_list.options[table_field_select_list.options.length]=new Option("Movies", "moviesvalue", false, false);
-	
  }
 </script>
 	

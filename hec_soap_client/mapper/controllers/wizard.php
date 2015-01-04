@@ -62,6 +62,8 @@ class Wizard extends CI_Controller {
 		
 		);
 		
+		$data['tables_array'] = array();
+		
 		foreach ($tables as $table) {
 			
 			$data['tables_select_options'].= '<option>'.$table.'</option>';
@@ -69,14 +71,16 @@ class Wizard extends CI_Controller {
 			$fields = $this->db->list_fields($table);
 			
 			$data['column_select_options'][$table] = '';
+			$data['tables_array'][$table] = array();
 			
 			foreach ($fields as $field) {
 			   $data['column_select_options'][$table].= '<option>'.$field.'</option>';
-			} 
-		   
+			   $data['tables_array'][$table][] = $field;
+			}
+			
 		}
 		
-		
+		$data['degree_tags'] = array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
 		
 		$this->load->view('map_view', $data);
 	}
