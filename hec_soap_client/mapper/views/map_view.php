@@ -195,7 +195,7 @@
 				?>
 				
 			</table>
-			
+			<input id="degree_join_count" name="degree_join_count" value="0" type="hidden" />
 			<table  id="degree_join_table">
 				<tr>
 					<th>DB Table</th>
@@ -208,6 +208,8 @@
 				
 			</table>
 			<a href="javascript:void(0)" onclick="showJoinRow('degree')">Add Join</a>
+			<p><input type="submit" value="Save" /></p>
+			<br/>
 			</form>
 			
 			
@@ -287,6 +289,11 @@
 	
 	join_table = document.getElementById(mapping+'_join_table');
 	
+	degree_join_count = document.getElementById('degree_join_count');
+	degree_join_count.value = (parseInt(degree_join_count.value)+1);
+	
+	var i = degree_join_count.value;
+	
 	// Adding row to Join Table
 	var row = join_table.insertRow(join_table.rows.length);
     var cell0 = row.insertCell(0);
@@ -295,16 +302,16 @@
 	var cell3 = row.insertCell(3);
 	var cell4 = row.insertCell(4);
     
-	cell0.innerHTML = '<select id="degree_join_table_1" name="degree_join_table_1" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
+	cell0.innerHTML = '<select id="degree_join_table_'+i+'" name="degree_join_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
     
-	cell1.innerHTML = '<select id="degree_join_table_1_field" name="degree_join_table_1_field"><option>choose</option></select>';
+	cell1.innerHTML = '<select id="degree_join_table_'+i+'_field" name="degree_join_table_'+i+'_field"><option>choose</option></select>';
 	
-	cell2.innerHTML = '<select id="degree_join_type" name="degree_join_type"><option value="JOIN">JOIN</option><option value="LEFT JOIN">LEFT JOIN</option><option value="RIGHT JOIN">RIGHT JOIN</option></select>';
+	cell2.innerHTML = '<select id="degree_join_type_'+i+'" name="degree_join_type_'+i+'"><option value="JOIN">JOIN</option><option value="LEFT JOIN">LEFT JOIN</option><option value="RIGHT JOIN">RIGHT JOIN</option></select>';
 	
-	cell3.innerHTML = '<select id="degree_joinon_table_1" name="degree_joinon_table_1" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
+	cell3.innerHTML = '<select id="degree_joinon_table_'+i+'" name="degree_joinon_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
 	
-	cell4.innerHTML = '<select id="degree_joinon_table_1_field" name="degree_joinon_table_1_field"><option>choose</option></select>';
-	
+	cell4.innerHTML = '<select id="degree_joinon_table_'+i+'_field" name="degree_joinon_table_'+i+'_field"><option>choose</option></select>';
+		
  }
 </script>
 	
