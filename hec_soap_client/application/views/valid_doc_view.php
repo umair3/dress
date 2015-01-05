@@ -37,8 +37,7 @@
 					<td>
 						<select id="search_criteria" name="search_criteria">
 							<option>Choose</option>
-							<option>NUST</option>
-							<option>UOG</option>
+							<?php echo $institute_options; ?>
 						</select>
 					</td>
 				</tr>

@@ -2,33 +2,38 @@
 
 class Doc extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function check_reg()
 	{
-		$this->load->view('check_reg_view');
+		$data['institute_options'] = $this->_get_institues_select_options();
+		
+		$this->load->view('check_reg_view', $data);
+	}
+	
+	private function _get_institues_select_options() {
+		 
+		$address_list = $this->db->get('address_list');
+		$institutes = $address_list->result();
+		
+		$options = '';
+		
+		foreach ($institutes as $institute) {
+			$options.= '<option value="'.$institute->id.'">'.$institute->uni_name.'</option>';
+		}
+		
+		return $options;
+		
 	}
 	
 	public function list_doc()
 	{
-		$this->load->view('list_doc_view');
+		$data['institute_options'] = $this->_get_institues_select_options();
+		$this->load->view('list_doc_view', $data);
 	}
 	
 	public function valid_doc()
 	{
+		$data['institute_options'] = $this->_get_institues_select_options();
+		
 		$data['posted'] = 0;
 		if($_POST) {
 			$options = array("location" => "http://localhost/projects/thesis/uni_soap_server/soapserver.php", "uri" => "http://localhost");
