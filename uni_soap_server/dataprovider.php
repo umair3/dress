@@ -4,16 +4,8 @@
 
 class DataProvider
 {
-	public function makeAgreement () {
-		return array ("test1","test2");
-	}
 	
 	public function findStudent (string $search_string, string $search_criteria, string $institute) {
-		//return array ("test1","test2");
-		/*$doc.= '<tns:DocType>Registration</DocType>';
-		$doc.= '<tns:SerialNo>Registration</SerialNo>';
-		$doc.= '<tns:Date>Registration</Date>';*/
-		
 		
 		$doc.= '<xml>';
 		$doc.= '<documentType>REG</documentType>';
@@ -29,8 +21,15 @@ class DataProvider
 		return $doc;
 	}
 	
+	private function _read_map ($map) {
+		return read_file('ws_properties/'.$map.'.properties');
+	}
+	
 	public function validateDegree($doc_type) {
-		// return array ("test1","test2");
+		
+		//$this->_read_map('degree');
+		
+		
 		
 		// Get Degree Map array
 		/*$map = $this->mapper_model->getMap('DEGREE');

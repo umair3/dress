@@ -38,7 +38,60 @@
 				</tr>
 			</table>
 			</form>
-		</section>					
+		</section>	
+		<?php if ($posted==1) { ?>
+		<section class="column colspan-12">
+			
+			
+			<table>
+				<tr>
+					<td>Document Type: </td>
+					<td>
+						<?php echo $documentType;?>
+					</td>
+				</tr>
+				<tr>
+					<td>Serial#</td>
+					<td>
+						<?php echo $serialNo;?>
+					</td>
+				</tr>
+				<tr>
+					<td>Reg#</td>
+					<td>
+						<?php echo $registrationNo;?>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Date Issued: </td>
+					<td>
+						<?php echo $date;?>
+					</td>
+				</tr>
+				<tr>
+					<td>First Name: </td>
+					<td>
+						<?php echo $firstName;?>
+					</td>
+				</tr>
+				<tr>
+					<td>Last Name: </td>
+					<td>
+						<?php echo $lastName;?>
+					</td>
+				</tr>
+				<tr>
+					<td>Awarding Institute: </td>
+					<td>
+						<?php echo $institute;?>
+					</td>
+				</tr>
+				
+			</table>
+			
+		</section>	
+		<?php } ?>
 	</div>
 
 		</section>

@@ -53,30 +53,11 @@
 		<?php if ($posted==1) { ?>
 		<section class="column colspan-12">
 			
-			
 			<table>
 				<tr>
 					<td>Document Type: </td>
 					<td>
 						<?php echo $documentType;?>
-					</td>
-				</tr>
-				<tr>
-					<td>Level: </td>
-					<td>
-						<?php echo $level;?>
-					</td>
-				</tr>
-				<tr>
-					<td>Exam System: </td>
-					<td>
-						<?php echo $examSystem;?>
-					</td>
-				</tr>
-				<tr>
-					<td>Title: </td>
-					<td>
-						<?php echo $title;?>
 					</td>
 				</tr>
 				<tr>
@@ -89,12 +70,6 @@
 					<td>Reg#</td>
 					<td>
 						<?php echo $registrationNo;?>
-					</td>
-				</tr>
-				<tr>
-					<td>Roll#</td>
-					<td>
-						<?php echo $rollNo;?>
 					</td>
 				</tr>
 				<tr>
