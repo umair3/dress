@@ -171,7 +171,7 @@
 			} 
 			?>
             
-			<form action="<?php echo base_url().index_page().'/wizard/review_maps/'; ?>" method="get">
+			<form action="<?php echo base_url().index_page().'/wizard/finish/'; ?>" method="get">
 			<p style="float:right"><input type="submit" value="Next" /></p>
 			</form>
 		</section>					

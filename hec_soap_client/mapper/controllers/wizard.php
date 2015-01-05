@@ -65,7 +65,7 @@ class Wizard extends CI_Controller {
 	
 	public function map()
 	{
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		
 		$this->_load_ws_database();
 		
@@ -151,7 +151,7 @@ class Wizard extends CI_Controller {
 	
 	public function review_maps()
 	{
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		
 		$this->_load_ws_database();
 		
@@ -191,6 +191,14 @@ class Wizard extends CI_Controller {
 		$this->load->view('review_maps_view', $data);
 	}
 	
+	
+	public function finish()
+	{
+		//$this->output->enable_profiler(TRUE);
+		
+		
+		$this->load->view('finish_view');
+	}
 	
 }
 
