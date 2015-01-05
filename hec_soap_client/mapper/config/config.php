@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/projects/thesis/hec_soap_client/';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------
