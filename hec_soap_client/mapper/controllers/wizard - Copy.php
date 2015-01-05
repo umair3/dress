@@ -149,48 +149,6 @@ class Wizard extends CI_Controller {
 		$this->load->view('map_view', $data);
 	}
 	
-	public function review_maps()
-	{
-		$this->output->enable_profiler(TRUE);
-		
-		$this->_load_ws_database();
-		
-		$tables = $this->db->list_tables();
-		
-		$data['tables_select_options'] = '';
-		
-		$data['column_select_options'] = array(
-		
-		);
-		
-		$data['tables_array'] = array();
-		
-		foreach ($tables as $table) {
-			
-			$data['tables_select_options'].= '<option>'.$table.'</option>';
-			$this->_load_ws_database();
-			$fields = $this->db->list_fields($table);
-			
-			$data['column_select_options'][$table] = '';
-			$data['tables_array'][$table] = array();
-			
-			foreach ($fields as $field) {
-			   $data['column_select_options'][$table].= '<option>'.$field.'</option>';
-			   $data['tables_array'][$table][] = $field;
-			}
-			
-		}
-		
-		$data['degree_tags'] = array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
-		
-		
-		if ($this->_check_map('degree')) {
-			$data['degree_map'] = $this->_read_map('degree');
-		}
-		
-		$this->load->view('review_maps_view', $data);
-	}
-	
 	
 }
 

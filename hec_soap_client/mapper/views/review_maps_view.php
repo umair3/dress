@@ -84,7 +84,7 @@
 }
 .wizard-steps .completed-step a:before {
     border-top: 12px solid #A3C1C9;
-    border-bottom: 1;82px solid #A3C1C9;
+    border-bottom: 12px solid #A3C1C9;
 }
 .wizard-steps .completed-step a:after {
     border-left: 12px solid #A3C1C9;
@@ -145,8 +145,8 @@
 			<div class="wizard-steps">
 			  <div class="completed-step"><a href="<?php echo base_url().index_page().'/'; ?>">Home</a></div>
 			  <div class="completed-step"><a href="<?php echo base_url().index_page().'/wizard/db_creds/'; ?>"><span>1</span>Database Credentials</a></div>
-			  <div class="active-step"><a href="<?php echo base_url().index_page().'/wizard/map/'; ?>"><span>2</span>Map Columns To XML Tags</a></div>
-			  <div><a href="#"><span>3</span> Review Maps</a></div>
+			  <div class="completed-step"><a href="<?php echo base_url().index_page().'/wizard/map/'; ?>"><span>2</span>Map Columns To XML Tags</a></div>
+			  <div class="active-step"><a href="<?php echo base_url().index_page().'/wizard/review_maps/'; ?>"><span>3</span> Review Maps</a></div>
 			  <div><a href="#"><span>4</span> Finish</a></div>
 			</div>
 		</div>
@@ -154,76 +154,24 @@
 
 	<div class="column-wrap standalone what-is-ci">	
 		<section class="column colspan-12">
-			<h2>Map Database To XML</h2>
-			<p>Add the tables and columns to the corresponding tags. Each Type of XML Schema has its own Mapping, for example, DEGREE has its own Map while REGISTRATION has its own.</p>
-			<h3>Map DEGREE XML Schema to DB Columns</h3>
-            <table>
-				<tr>
-					<th>Mapping XML Tag</th>
-					<th>DB Table</th>
-					<th>DB Column</th>
-				</tr>
-            </table>
-            <?php if(!isset($degree_map)){ ?> 
-			<form method="post" action="">
-			<table>
-				<tr>
-					<th>Mapping XML Tag</th>
-					<th>DB Table</th>
-					<th>DB Column</th>
-				</tr>
-				<tr>
-					<td>&lt;docType&gt;</td>
-					<td>DEGREE</td>
-					<td>DEGREE</td>
-				</tr>
-				<?php
-				foreach ($degree_tags as $degree_tag) {
-				?>
-				<tr>
-					<td>&lt;<?php echo $degree_tag; ?>&gt;</td>
-					<td>
-						<select id="degree_table_<?php echo $degree_tag; ?>" name="degree_table_<?php echo $degree_tag; ?>" onchange=showFields(this.name,this.value)>
-							<option value="">choose</option>
-							<?php 
-							if (isset($tables_select_options)) {
-								echo $tables_select_options;
-							}
-							?>
-						</select>
-					</td>
-					<td>
-						<select id="degree_table_<?php echo $degree_tag; ?>_field" name="degree_table_<?php echo $degree_tag; ?>_field">
-							<option>choose</option>
-						</select>
-					</td>
-				</tr>
-				<?php
-				}
-				?>
-				
-			</table>
-			<input id="degree_join_count" name="degree_join_count" value="0" type="hidden" />
-			<table  id="degree_join_table">
-				<tr>
-					<th>DB Table</th>
-					<th>DB Column</th>
-					<th>JOIN Type</th>
-					<th>JOIN ON DB Table</th>
-					<th>JOIN ON DB Column</th>
-				</tr>
-				
-				
-			</table>
-			<a href="javascript:void(0)" onclick="showJoinRow('degree')">Add Join</a>
-			<p><input type="submit" name="degree" value="Save" /></p>
-			<br/>
-			</form>
-			<?php } ?>
-            
-            
+			<h2>Review Maps</h2>
+			<p>Below are the mappings you have created in your previous step;</p>
 			
-			<form action="http://localhost/projects/thesis/hec_soap_client/mapper.php/wizard/map/" method="get">
+			<?php 
+			if(isset($degree_map)){ 
+			?>
+			<h3>Map DEGREE XML Schema to DB Columns <img width="16" src="<?php echo base_url('resources/images/completed.png'); ?>" /></h3>
+			<div>
+				<pre>
+						<?php echo json_encode(json_decode($degree_map),JSON_PRETTY_PRINT); ?>
+					
+				</pre>
+			</div>
+            <?php 
+			} 
+			?>
+            
+			<form action="<?php echo base_url().index_page().'/wizard/review_maps/'; ?>" method="get">
 			<p style="float:right"><input type="submit" value="Next" /></p>
 			</form>
 		</section>					
