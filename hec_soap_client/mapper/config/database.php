@@ -56,6 +56,7 @@ if (isset($db_creds)) {
 	$db['default']['password'] 	= $db_creds->password;
 	$db['default']['database']  = $db_creds->database;
 }
+
 /*$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';

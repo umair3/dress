@@ -48,10 +48,19 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db_creds = json_decode(read_file('ws_properties/database.properties'));
+
+if (isset($db_creds)) {
+	$db['default']['hostname']	= $db_creds->host.':'.$db_creds->port;
+	$db['default']['username'] 	= $db_creds->user;
+	$db['default']['password'] 	= $db_creds->password;
+	$db['default']['database']  = $db_creds->database;
+}
+
+/*$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
-$db['default']['database'] = 'university1';
+$db['default']['database'] = 'university1';*/
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

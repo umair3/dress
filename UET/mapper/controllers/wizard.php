@@ -95,7 +95,8 @@ class Wizard extends CI_Controller {
 			
 		}
 		
-		$data['degree_tags'] = array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
+		$data['degree_tags'] 		= array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
+		$data['registration_tags'] 	= array ('serialNo','regNo','date','firstName','lastName','institute');
 		
 		if (isset($_POST['degree'])) {
 		
@@ -142,8 +143,53 @@ class Wizard extends CI_Controller {
 			$data['message'] = 'DEGREE map saved successfully.';
 		}
 		
+		if (isset($_POST['registration'])) {
+		
+			$registration_map_tags = array (
+				'docType'		=>	'REGISTRATION', 
+				'serialNo'		=>	$this->input->post('registration_table_serialNo').'.'.$this->input->post('registration_table_serialNo_field'),
+				'regNo'			=>	$this->input->post('registration_table_regNo').'.'.$this->input->post('registration_table_regNo_field'),
+				'date'			=>	$this->input->post('registration_table_date').'.'.$this->input->post('registration_table_date_field'),
+				'firstName'		=>	$this->input->post('registration_table_firstName').'.'.$this->input->post('registration_table_firstName_field'),
+				'lastName'		=>	$this->input->post('registration_table_lastName').'.'.$this->input->post('registration_table_lastName_field'),
+				'institute'		=>	$this->input->post('registration_table_institute').'.'.$this->input->post('registration_table_institute_field')
+			);
+			
+			$registration_map['tags'] = $registration_map_tags;
+			
+			$registration_join_count = $this->input->post('registration_join_count');
+			
+			if ($registration_join_count >= 1) {
+				
+				$registration_map_joins = array();
+				
+				for($i=1;$i <= $registration_join_count;$i++) {
+					
+					$registration_map_joins[] = array (
+						'column'	=>	$this->input->post('registration_join_table_'.$i).'.'.$this->input->post('registration_join_table_'.$i.'_field'),
+						'joinType'	=>	$this->input->post('registration_join_type_'.$i),
+						'joinOn'	=>	$this->input->post('registration_joinon_table_'.$i).'.'.$this->input->post('registration_joinon_table_'.$i.'_field')
+					);	
+						
+				}
+			
+				$registration_map['joins'] = $registration_map_joins;
+			
+			}
+			
+			$registration_map_json = json_encode($registration_map);
+			
+			write_file('ws_properties/registration.properties', $registration_map_json);
+			
+			$data['message'] = 'REGISTRATION map saved successfully.';
+		}
+		
 		if ($this->_check_map('degree')) {
 			$data['degree_map'] = $this->_read_map('degree');
+		}
+		
+		if ($this->_check_map('registration')) {
+			$data['registration_map'] = $this->_read_map('registration');
 		}
 		
 		$this->load->view('map_view', $data);
@@ -186,6 +232,10 @@ class Wizard extends CI_Controller {
 		
 		if ($this->_check_map('degree')) {
 			$data['degree_map'] = $this->_read_map('degree');
+		}
+		
+		if ($this->_check_map('registration')) {
+			$data['registration_map'] = $this->_read_map('registration');
 		}
 		
 		$this->load->view('review_maps_view', $data);

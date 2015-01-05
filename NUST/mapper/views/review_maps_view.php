@@ -170,6 +170,20 @@
             <?php 
 			} 
 			?>
+			
+			<?php 
+			if(isset($registration_map)){ 
+			?>
+			<h3>Map REGISTRATION XML Schema to DB Columns <img width="16" src="<?php echo base_url('resources/images/completed.png'); ?>" /></h3>
+			<div>
+				<pre>
+						<?php echo json_encode(json_decode($registration_map),JSON_PRETTY_PRINT); ?>
+					
+				</pre>
+			</div>
+            <?php 
+			} 
+			?>
             
 			<form action="<?php echo base_url().index_page().'/wizard/finish/'; ?>" method="get">
 			<p style="float:right"><input type="submit" value="Next" /></p>

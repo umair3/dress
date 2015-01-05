@@ -229,6 +229,79 @@
             
             
 			
+			<!---- REGISTRATION STARTS ---->
+			<?php 
+			if(isset($registration_map)){ 
+			?>
+			<h3>Map REGISTRATION XML Schema to DB Columns <img width="16" src="<?php echo base_url('resources/images/completed.png'); ?>" /></h3>
+			<div>
+				<pre>
+						<?php echo json_encode(json_decode($registration_map),JSON_PRETTY_PRINT); ?>
+					
+				</pre>
+			</div>
+            <?php 
+			} else {
+			?>
+            <h3>Map REGISTRATION XML Schema to DB Columns</h3> 
+			<form method="post" action="">
+			<table>
+				<tr>
+					<th>Mapping XML Tag</th>
+					<th>DB Table</th>
+					<th>DB Column</th>
+				</tr>
+				<tr>
+					<td>&lt;docType&gt;</td>
+					<td>REGISTRATION</td>
+					<td>REGISTRATION</td>
+				</tr>
+				<?php
+				foreach ($registration_tags as $registration_tag) {
+				?>
+				<tr>
+					<td>&lt;<?php echo $registration_tag; ?>&gt;</td>
+					<td>
+						<select id="registration_table_<?php echo $registration_tag; ?>" name="registration_table_<?php echo $registration_tag; ?>" onchange=showFields(this.name,this.value)>
+							<option value="">choose</option>
+							<?php 
+							if (isset($tables_select_options)) {
+								echo $tables_select_options;
+							}
+							?>
+						</select>
+					</td>
+					<td>
+						<select id="registration_table_<?php echo $registration_tag; ?>_field" name="registration_table_<?php echo $registration_tag; ?>_field">
+							<option>choose</option>
+						</select>
+					</td>
+				</tr>
+				<?php
+				}
+				?>
+				
+			</table>
+			<input id="registration_join_count" name="registration_join_count" value="0" type="hidden" />
+			<table  id="registration_join_table">
+				<tr>
+					<th>DB Table</th>
+					<th>DB Column</th>
+					<th>JOIN Type</th>
+					<th>JOIN ON DB Table</th>
+					<th>JOIN ON DB Column</th>
+				</tr>
+				
+				
+			</table>
+			<a href="javascript:void(0)" onclick="showJoinRow('registration')">Add Join</a>
+			<p><input type="submit" name="registration" value="Save" /></p>
+			<br/>
+			</form>
+			<?php } ?>
+			
+			<!----- REGISTRATION ENDS ------>
+			
 			<form action="<?php echo base_url().index_page().'/wizard/review_maps/'; ?>" method="get">
 			<p style="float:right"><input type="submit" value="Next" /></p>
 			</form>
@@ -305,7 +378,12 @@
 	
 	join_table = document.getElementById(mapping+'_join_table');
 	
-	degree_join_count = document.getElementById('degree_join_count');
+	if (mapping=='registration') {
+		degree_join_count = document.getElementById('registration_join_count');
+	} else {
+		degree_join_count = document.getElementById('degree_join_count');
+	}
+	
 	degree_join_count.value = (parseInt(degree_join_count.value)+1);
 	
 	var i = degree_join_count.value;
@@ -318,15 +396,15 @@
 	var cell3 = row.insertCell(3);
 	var cell4 = row.insertCell(4);
     
-	cell0.innerHTML = '<select id="degree_join_table_'+i+'" name="degree_join_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
+	cell0.innerHTML = '<select id="'+mapping+'_join_table_'+i+'" name="'+mapping+'_join_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
     
-	cell1.innerHTML = '<select id="degree_join_table_'+i+'_field" name="degree_join_table_'+i+'_field"><option>choose</option></select>';
+	cell1.innerHTML = '<select id="'+mapping+'_join_table_'+i+'_field" name="'+mapping+'_join_table_'+i+'_field"><option>choose</option></select>';
 	
-	cell2.innerHTML = '<select id="degree_join_type_'+i+'" name="degree_join_type_'+i+'"><option value="JOIN">JOIN</option><option value="LEFT JOIN">LEFT JOIN</option><option value="RIGHT JOIN">RIGHT JOIN</option></select>';
+	cell2.innerHTML = '<select id="'+mapping+'_join_type_'+i+'" name="'+mapping+'_join_type_'+i+'"><option value="JOIN">JOIN</option><option value="LEFT JOIN">LEFT JOIN</option><option value="RIGHT JOIN">RIGHT JOIN</option></select>';
 	
-	cell3.innerHTML = '<select id="degree_joinon_table_'+i+'" name="degree_joinon_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
+	cell3.innerHTML = '<select id="'+mapping+'_joinon_table_'+i+'" name="'+mapping+'_joinon_table_'+i+'" onchange=showJoinFields(this.name,this.value)><option value="">choose</option><?php if (isset($tables_select_options)) {echo $tables_select_options;} ?>	</select>';
 	
-	cell4.innerHTML = '<select id="degree_joinon_table_'+i+'_field" name="degree_joinon_table_'+i+'_field"><option>choose</option></select>';
+	cell4.innerHTML = '<select id="'+mapping+'_joinon_table_'+i+'_field" name="'+mapping+'_joinon_table_'+i+'_field"><option>choose</option></select>';
 		
  }
 </script>
