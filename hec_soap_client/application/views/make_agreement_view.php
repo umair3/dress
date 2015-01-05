@@ -20,7 +20,13 @@
 				<tr>
 					<td>Description: </td>
 					<td>
-						<textarea></textarea>
+						<textarea id="uni_description" name="uni_description"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>API Access Key: </td>
+					<td>
+						<input type="password" id="uni_api_access_key" name="uni_api_access_key" />
 					</td>
 				</tr>
 				<tr>
