@@ -197,7 +197,7 @@
 			</form>
 			
 			
-			<form action="http://localhost/projects/thesis/hec_soap_client/mapper.php/wizard/map/" method="get">
+			<form action="<?php echo base_url().index_page().'/wizard/map/'; ?>" method="get">
 			<p style="float:right"><input type="submit" value="Next" /></p>
 			</form>
 		</section>					
