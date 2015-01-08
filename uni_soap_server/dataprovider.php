@@ -5,32 +5,30 @@
 class DataProvider
 {
 	
-	public function findStudent (string $search_string, string $search_criteria, string $institute) {
-		
-		$doc.= '<xml>';
-		$doc.= '<documentType>REG</documentType>';
-		$doc.= '<serialNo>17654</serialNo>';
-		$doc.= '<registrationNo>2011-NUST-MS PhD-IT-049</registrationNo>';
-		$doc.= '<date>2004-12-12</date>';
-		$doc.= '<firstName>Umair</firstName>';
-		$doc.= '<lastName>Anwar</lastName>';
-		$doc.= '<institute>NUST</institute>';
-		$doc.= '<image></image>';
-		$doc.= '</xml>';
-		
-		return $doc;
-	}
 	
 	private function _read_map ($map) {
-		return read_file('ws_properties/'.$map.'.properties');
+		return read_file('../hec_soap_client/ws_properties/'.$map.'.properties');
+	}
+	
+	private function _load_ws_database() {
+		
+		$db_creds = $this->_load_database_properties();
+		
+		$this->load->database();
+		$this->db->hostname	= $db_creds->host.':'.$db_creds->port;
+		$this->db->username = $db_creds->user;
+		$this->db->password = $db_creds->password;
+		$this->db->database = $db_creds->database;
+	}
+	
+	private function _load_database_properties () {
+		return json_decode(read_file('../hec_soap_client/ws_properties/database.properties'));
 	}
 	
 	public function validateDegree($doc_type) {
 		
 		//$this->_read_map('degree');
-		
-		
-		
+			
 		// Get Degree Map array
 		/*$map = $this->mapper_model->getMap('DEGREE');
 		
@@ -68,6 +66,8 @@ class DataProvider
 	}
 	
 	public function checkRegistration($search_string, $search_criteria, $institute){
+		
+		//$this->_read_map('degree');
 		
 		//$registration_card_details_array = array();
 		$doc.= '<xml>';
