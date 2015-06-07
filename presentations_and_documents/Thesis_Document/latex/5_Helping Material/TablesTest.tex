@@ -1,0 +1,167 @@
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{amssymb}
+\usepackage{rotating}
+\setcounter{tocdepth}{3}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+\begin{sidewaystable}[h]
+\caption{MIT Prediction Models Summary and their Parameter Estimates} 
+\centering                           
+\begin{tabular}{l c c c l}              
+\hline\hline 
+% inserting double-line
+{} & Significance & $R^2$ & Model  & Prediction / Extrapolation Equation \\[1ex]
+\hline                                      % inserts single-line
+{Male Under-Graduates} & 0.006 & 0.816 &	Quadratic &	$Y = 2449.714 + (-65.359*X) + (6.736*X^2)$ \\[1ex]
+Female Under-Graduates & 0.000 &	0.980 &	Cubic &	$Y = 1823.287 + (-52.542*X) + (8.918*X^2) + (-0.309*X^3)$ \\[1ex] 
+Male Graduates & 0.001 &	0.947 &	Cubic &	$Y = 4412.516 + (23.003*X) + (-22.878*X^2) + (2.309*X^3)$ \\[1ex] 
+Female Graduates & 0.000 &	0.977 &	Cubic &	$Y = 1355.203 + (166.973*X) + (-21.003*X^2) + (0.946*X^3)$ \\[1ex] 
+Bachelor Degrees Awarded & 0.022 &	0.423 &	Linear & $Y = 1252.939 + (-9.042*X)$ \\[1ex] 
+Master Degrees Awarded & 0.156 &	0.461 &	Cubic &	$Y = 1320.293 + (141.258*X) + (-24.543*X^2) + (1.208*X^3)$ \\[1ex] 
+PhD Degrees Awarded & 0.001 &	0.715 &	Linear & $Y = 427.242 + (16.014*X)$ \\ 
+\hline                          % inserts single-line
+\end{tabular}
+\label{table:table3}
+\end{sidewaystable} 
+
+%\begin{table}
+%\caption{Correlations of MIT \& Stanford} \begin{center}{
+%\label{table:table1}
+%{
+%\begin{tabular}{|c|c|c|}
+%  \hline
+%\textbf{B/w}& \textbf{MIT}& \textbf{Stanford} \\ \hline
+% 	No. of Male \& Female Under-Graduates & 0.2398  & 0.9199 \\ \hline
+%	No. of Male \& Female Graduates & 0.1573 &  0.9719 \\ \hline
+%\end{tabular}
+%}
+%}
+%\end{center}
+%\end{table}
+
+
+\begin{table}
+\caption{Correlations between MIT \& Stanford} \begin{center}{
+\label{table:table2}
+{
+\begin{tabular}{|c|c|}
+  \hline
+\textbf{B/w MIT \& Stanford}& \textbf{Correlation Coefficient} \\ \hline
+ 	Male Under-Graduates Enrollment & 0.2217  \\ \hline
+	Female Under-Graduates Enrollment & -0.4368  \\ \hline
+    Male Graduates Enrollment &	0.0749 \\ \hline
+    Female Graduates Enrollment & 0.7767 \\ \hline
+    Bachelor-Degrees Awarded & 0.3823 \\ \hline
+    Master-Degrees Awarded & -0.2369 \\ \hline
+    PhD-Degrees Awarded & 0.7244 \\ \hline
+\end{tabular}
+}
+}
+\end{center}
+\end{table}
+%
+%\begin{table}
+%\caption{MIT Prediction Models Summary and their Parameter Estimates} \begin{center}{
+%\label{table:table3}
+%{
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\multicolumn{4}{|c|}\textbf{MIT Prediction Models}\\ \hline
+%\textbf{Significance}& \textbf{$R^2$} & \textbf{Model} & \textbf{Prediction / Extrapolation Equation} \\ \hline
+%\multicolumn{4}{|c|}\textbf{Male Under-Graduates}\\ \hline
+%0.006 & 0.816 &	Quadratic &	$Y = 2449.714 + (-65.359*X) + (6.736*X^2)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Female Under-Graduates}\\ \hline	
+%0.000 &	0.980 &	Cubic &	$Y = 1823.287 + (-52.542*X) + (8.918*X^2) + (-0.309*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Male Graduates}\\ \hline	
+%0.001 &	0.947 &	Cubic &	$Y = 4412.516 + (23.003*X) + (-22.878*X^2) + (2.309*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Female Graduates}\\ \hline
+%0.000 &	0.977 &	Cubic &	$Y = 1355.203 + (166.973*X) + (-21.003*X^2) + (0.946*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Bachelor Degrees Awarded}\\ \hline	
+%0.022 &	0.423 &	Linear & $Y = 1252.939 + (-9.042*X)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Master Degrees Awarded}\\ \hline	
+%0.156 &	0.461 &	Cubic &	$Y = 1320.293 + (141.258*X) + (-24.543*X^2) + (1.208*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{PhD Degrees Awarded}\\ \hline	
+%0.001 &	0.715 &	Linear & $Y = 427.242 + (16.014*X)$ \\ \hline
+%\end{tabular}
+%}
+%}
+%\end{center}
+%\end{table}
+%
+%\begin{table}
+%\caption{Relative Absolute Error \& \% Error} \begin{center}{
+%\label{table:table4}
+%{
+%\begin{tabular}{|c|c|c|}
+%  \hline
+%\textbf{MIT Parameters}& \textbf{Relative Absolute Error}& \textbf{\% Error} \\ \hline
+%Male Under-Graduates Enrollment & 0.45 & 0.73 \% \\ \hline
+%Female Under-Graduates Enrollment & 0.12 & 0.47 \% \\ \hline
+%Male Graduate Enrollment & 0.23 & 0.35 \% \\ \hline
+%Female Graduate Enrollment & 0.17 & 0.99 \% \\ \hline
+%Bachelor-Degrees Awarded & 0.74 & 2.45 \% \\ \hline
+%Master-Degrees Awarded & 0.76 & 2.44 \% \\ \hline
+%PhD-Degrees Awarded & 0.43 & 5.29 \% \\ \hline	
+%\end{tabular}
+%}
+%}
+%\end{center}
+%\end{table}
+%
+%\begin{table}
+%\caption{Stanford Prediction Models Summary and their Parameter Estimates} \begin{center}{
+%\label{table:table5}
+%{
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\multicolumn{4}{|c|}\textbf{Stanford Prediction Models}\\ \hline
+%\textbf{Significance}	& \textbf{$R^2$}& \textbf{Model} & \textbf{Prediction / Extrapolation Equation} \\ \hline
+%\multicolumn{4}{|c|}\textbf{Male Under-Graduates}\\ \hline
+%0.000 & 0.927 &	Cubic &	$Y = 3862.573 + (-51.910*X) + (-7.273*X^2) + (0.761*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Female Under-Graduates}\\ \hline
+%0.000 &	0.887 &	Cubic &	$Y = 4289.357 + (-174.518*X) + (-3.334*X^2) + (0.915*X^3)$ \\ \hline	
+%\multicolumn{4}{|c|}\textbf{Male Graduates}\\ \hline
+%0.000 &	0.800 &	Quadratic &	$Y = 6124.832 + (24.367*X) + (7.328*X^2)$ \\ \hline	
+%\multicolumn{4}{|c|}\textbf{Female Graduates}\\ \hline
+%0.001 &	0.665 &	Linear & $Y = 3163.038 + (139.533*X)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{Bachelor Degrees Awarded}\\ \hline
+%0.301 &	0.097 &	Linear & $Y = 1734.577 + (-3.676*X)$ \\ \hline	
+%\multicolumn{4}{|c|}\textbf{Master Degrees Awarded}\\ \hline
+%0.676 &	0.149 &	Cubic &	$Y = 2078.601 + (-27.085*X) + (3.957*X^2) + (-0.135*X^3)$ \\ \hline
+%\multicolumn{4}{|c|}\textbf{PhD Degrees Awarded}\\ \hline
+%0.000 &	0.803 &	Quadratic &	$Y = 558.818 + (-2.694*X) + (1.382*X^2)$ \\ \hline
+%\end{tabular}
+%}
+%}
+%\end{center}
+%\end{table}
+%
+%
+%\begin{table}
+%\caption{Relative Absolute Error \& \% Error} \begin{center}{
+%\label{table:table6}
+%{
+%\begin{tabular}{|c|c|c|}
+%  \hline
+%\textbf{Stanford Parameters}& \textbf{Relative Absolute Error}& \textbf{\% Error} \\ \hline
+%Male Under-Graduates Enrollment & 0.28 & 0.99 \% \\ \hline
+%Female Under-Graduates Enrollment & 0.35 & 2.91 \% \\ \hline
+%Male Graduate Enrollment & 0.41 & 2.85 \% \\ \hline
+%Female Graduate Enrollment & 0.50 & 7.21 \% \\ \hline
+%Bachelor-Degrees Awarded & 0.92 & 1.98 \% \\ \hline
+%Master-Degrees Awarded & 0.92 & 2.27 \% \\ \hline
+%PhD-Degrees Awarded & 0.41 & 4.19 \% \\ \hline	
+%\end{tabular}
+%}
+%}
+%\end{center}
+%\end{table}
+
+
+
+\end{document} 
