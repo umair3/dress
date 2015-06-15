@@ -3,6 +3,18 @@ White space in argument---line 24 of file ThesisTexFile.aux
  : \citation{bologna
  :                   process}
 I'm skipping whatever remains of this command
+White space in argument---line 25 of file ThesisTexFile.aux
+ : \citation{improvement
+ :                       bologna process}
+I'm skipping whatever remains of this command
+White space in argument---line 26 of file ThesisTexFile.aux
+ : \citation{European
+ :                    Higher Education Area }
+I'm skipping whatever remains of this command
+White space in argument---line 27 of file ThesisTexFile.aux
+ : \citation{European
+ :                    Higher Education Area }
+I'm skipping whatever remains of this command
 I found no \bibdata command---while reading file ThesisTexFile.aux
 I found no \bibstyle command---while reading file ThesisTexFile.aux
-(There were 3 error messages)
+(There were 6 error messages)
