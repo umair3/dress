@@ -239,7 +239,54 @@ These regressions were found using response variable $y$ and predictor variable 
 \noindent where $w_0$, $w_1$, $w_2$,and $w_3$ are regression coefficients.
 
 \chapter{REQUIREMENTS ANALYSIS}\label{c-requirements-analysis}
-For two universities to exchange data, they have to create an agreement first. The agreement will have the list of documents for which data exchange is available and exchange secrets will be generated.
+\section{Definitions}
+We define the basic terms that are used in exchange of documents. It is necessary to understand these before we go through the requirements.
+
+Exchange Agreement: It is an understanding between partaking institutes, between the requester and the provider, for exchanging the educational certificates. This agreement comprises of;
+ a) web-service access point
+ b) authentication credentials
+
+Requester: The partaking institute asking for the exchange.
+
+Provider: The partaking institute providing the details.
+
+Coordinator: A person responsible for signing and exchange of agreements between institutes.
+
+\section{Business Process}
+This section describes the business that is involved in the execution of exchange of different educational institutes. The process is explained using the sequence diagrams.
+
+    \subsection{Make Exchange Agreement}
+    For two universities to exchange data, they have to create an exchange agreement first. The agreement will have the web-service access point and exchange secrets. These details are used for requesting exchange and for authenticating the requester.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{sq_agreement.png}
+  \caption{Making Exchange Agreement}
+  \label{fig:sq_agreement}
+\end{figure}
+
+    After the implementation of web-service by the provider. The requester fills a form and asks for the credentials. The emails the access point and exchange secrets to the Coordinator.
+    
+    \subsection{Find Student Data}
+    To find a student record, the requester asks a provider from the agreed providers list for a student record. The provider sends back list of documents associated with the student.
+    
+\begin{figure}[!hbp]
+  \centering
+  \includegraphics[width=14cm]{sq_find_student_data.png}
+  \caption{Finding Student Data}
+  \label{fig:sq_find_student_data}
+\end{figure}
+
+    \subsection{Exchange a Document Details}
+    To exchange a document details, the requester asks a provider with search criteria and document type. The provider sends back the document details using DRESS.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{sq_exchange_doc.png}
+  \caption{Exchanging a Document Details}
+  \label{fig:sq_exchange_doc}
+\end{figure}
+
 
 \chapter{Architecture and Design}\label{c-architecture-design}
 From use cases and the business requirements, we suggest student exchange system will have distributed architecture. Each university has its own data and signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.

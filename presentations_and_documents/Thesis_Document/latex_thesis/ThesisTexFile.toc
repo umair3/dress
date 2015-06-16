@@ -18,11 +18,16 @@
 \contentsline {section}{\numberline {2.4}Information Manifold}{7}
 \contentsline {section}{\numberline {2.5}MAPQFTOOL}{7}
 \contentsline {chapter}{\numberline {3}REQUIREMENTS ANALYSIS}{9}
-\contentsline {chapter}{\numberline {4}Architecture and Design}{10}
-\contentsline {chapter}{\numberline {5}IMPLEMENTATION}{11}
-\contentsline {chapter}{\numberline {6}RESULTS AND DISCUSSION}{12}
-\contentsline {section}{\numberline {6.1}Section Heading Here}{12}
-\contentsline {subsection}{\numberline {6.1.1}Sub-Section Heading Here}{12}
-\contentsline {chapter}{\numberline {7}CONCLUSION AND FUTURE WORK}{14}
-\contentsline {section}{\numberline {7.1}Conclusion}{14}
-\contentsline {section}{\numberline {7.2}Future Work}{14}
+\contentsline {section}{\numberline {3.1}Definitions}{9}
+\contentsline {section}{\numberline {3.2}Business Process}{9}
+\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{9}
+\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{10}
+\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{10}
+\contentsline {chapter}{\numberline {4}Architecture and Design}{12}
+\contentsline {chapter}{\numberline {5}IMPLEMENTATION}{13}
+\contentsline {chapter}{\numberline {6}RESULTS AND DISCUSSION}{14}
+\contentsline {section}{\numberline {6.1}Section Heading Here}{14}
+\contentsline {subsection}{\numberline {6.1.1}Sub-Section Heading Here}{14}
+\contentsline {chapter}{\numberline {7}CONCLUSION AND FUTURE WORK}{16}
+\contentsline {section}{\numberline {7.1}Conclusion}{16}
+\contentsline {section}{\numberline {7.2}Future Work}{16}
