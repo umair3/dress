@@ -23,6 +23,8 @@
 \contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{9}
 \contentsline {subsection}{\numberline {3.2.2}Find Student Data}{10}
 \contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{10}
+\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{11}
+\contentsline {section}{\numberline {3.4}Software Specifications}{11}
 \contentsline {chapter}{\numberline {4}Architecture and Design}{12}
 \contentsline {chapter}{\numberline {5}IMPLEMENTATION}{13}
 \contentsline {chapter}{\numberline {6}RESULTS AND DISCUSSION}{14}

@@ -252,7 +252,7 @@ Provider: The partaking institute providing the details.
 
 Coordinator: A person responsible for signing and exchange of agreements between institutes.
 
-\section{Business Process}
+\section{Business Process}\label{s-business_process}
 This section describes the business that is involved in the execution of exchange of different educational institutes. The process is explained using the sequence diagrams.
 
     \subsection{Make Exchange Agreement}
@@ -287,6 +287,20 @@ This section describes the business that is involved in the execution of exchang
   \label{fig:sq_exchange_doc}
 \end{figure}
 
+\section{Mapping and Web Service Challange}
+
+It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically. 
+
+\section{Software Specifications}
+Based on the business process and the challenges we discussed, functional and non-functional requirements are;
+
+    \subsection{Functional Requirements}
+    
+    
+    \subsection{Non-functional Requirements}
+    
+    
+    
 
 \chapter{Architecture and Design}\label{c-architecture-design}
 From use cases and the business requirements, we suggest student exchange system will have distributed architecture. Each university has its own data and signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.
@@ -299,7 +313,7 @@ There are some choices to be made at this point. We will be using web services f
 
 The nodes will exchange data using SOAP based web service in our system.  We chose SOAP as it forces to follow a formal standard and supports developer defined data types.
 
-The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system or using UDDI. UDDI is a standard used to discover and save web services URLs. Now we have to make a choice. UDDI can be global or each requesting node can have its own private UDDI registry. We will use private registry to avoid single point of failure and to minimize load.
+The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system "URL registry" for saving web services URLs. Now we have to make a choice. URL registry can be global or each requesting node can have its own private URL registry. We will use private registry to avoid single point of failure and to minimize load.
 
 
 \chapter{IMPLEMENTATION}\label{c-implement}
