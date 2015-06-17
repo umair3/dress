@@ -1,13 +1,33 @@
-\contentsline {chapter}{\numberline {1}Introduction or the Name of your First Chapter}{1}
-\contentsline {section}{\numberline {1.1}Name of the First Section of Your First Section}{1}
-\contentsline {section}{\numberline {1.2}The second section of your first chapter}{1}
-\contentsline {subsection}{\numberline {1.2.1}First subsection}{1}
-\contentsline {chapter}{\numberline {2}Literature Review}{2}
-\contentsline {section}{\numberline {2.1}Mobile Phone Sensors}{2}
-\contentsline {chapter}{\numberline {3}Implementation and Results}{4}
-\contentsline {section}{\numberline {3.1}Classifier Training \& Validation Strategy}{4}
-\contentsline {subsection}{\numberline {3.1.1}Classifier Training}{4}
-\contentsline {section}{\numberline {3.2}Performance Evaluation}{4}
-\contentsline {chapter}{\numberline {4}Conclusions}{7}
-\contentsline {section}{\numberline {4.1}This is the End}{7}
-\contentsline {chapter}{\numberline {A}Feature Extraction Walking}{8}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Problem Statement}{1}
+\contentsline {section}{\numberline {1.2}Thesis Contribution}{1}
+\contentsline {section}{\numberline {1.3}Thesis Organization}{1}
+\contentsline {chapter}{\numberline {2}Literature Review}{3}
+\contentsline {section}{\numberline {2.1}Bologna Process}{3}
+\contentsline {section}{\numberline {2.2}Qualifications Exchange Standards}{4}
+\contentsline {subsection}{\numberline {2.2.1}European Qualifications Framework}{4}
+\contentsline {subsection}{\numberline {2.2.2}Europass}{5}
+\contentsline {subsubsection}{Europass Curriculum Vitae}{5}
+\contentsline {subsubsection}{Europass Language Passport}{5}
+\contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{6}
+\contentsline {subsection}{\numberline {2.2.4}Dublin Core}{6}
+\contentsline {section}{\numberline {2.3}European Learner Mobility}{6}
+\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{6}
+\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{7}
+\contentsline {section}{\numberline {2.4}Information Manifold}{7}
+\contentsline {section}{\numberline {2.5}MAPQFTOOL}{7}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{9}
+\contentsline {section}{\numberline {3.1}Definitions}{9}
+\contentsline {section}{\numberline {3.2}Business Process}{9}
+\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{9}
+\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{10}
+\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{10}
+\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{11}
+\contentsline {section}{\numberline {3.4}Software Specifications}{11}
+\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{11}
+\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{11}
+\contentsline {chapter}{\numberline {4}Architecture \& Design}{12}
+\contentsline {chapter}{\numberline {5}Implementation}{15}
+\contentsline {chapter}{\numberline {6}Conclusions}{16}
+\contentsline {section}{\numberline {6.1}This is the End}{16}
+\contentsline {chapter}{\numberline {A}Feature Extraction Walking}{19}

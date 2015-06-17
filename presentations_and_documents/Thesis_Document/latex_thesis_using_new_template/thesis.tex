@@ -39,12 +39,12 @@
 %\usepackage{cite}
 
 
-\title{Title of Your Dissertation}
+\title{Automating Exchange of Educational Certificates Using DRESS}
 %\subtitle{An optional sub-title, usually not used at NUST}
 
-\author{Your Name Goes Here}
-\regno{2013-NUST-MS-EE-xx}
-\degree{\MSEE} 
+\author{Umair Anwar}
+\regno{2011-NUST-MS PhD-IT-049}
+\degree{\MSIT} 
 % Argument pptions for \degree{_____}:
 % \BSIT for Bachelor of Science in Information Technology (BS IT)
 % \BSCS for Bachelor of Science in Computer Science (BS CS)
@@ -55,10 +55,10 @@
 % \MSCCS for Masters in Computer and Communication Security (MS CCS)
 % \MSEE for Masters of Science in Electrical Engineering (MS EE)
 
-\adviser{Dr. FirstName LastName}
-\adviserAffiliation{Department of Electrical Engineering}
+\adviser{Dr. Sharifullah Khan}
+\adviserAffiliation{Department of Computing}
 
-\date{April 2015}
+\date{June 2015}
 
 %\setcounter{tocdepth}{2}
  %\setstretch{1.1}
@@ -67,109 +67,192 @@
 \begin{document}
 \maketitle
 
-\evaluationcommitteeapproval{Dr. Name of First Committee Member}{Dr. Name of Second Committee Member}{Dr Name of Third Committee Member}
+\evaluationcommitteeapproval{Dr. Hamid Mukhtar}{Dr. Sarah Shafiq Khan}{Mr. Mujtaba Haider}
 
 \chapter*{Abstract}
-Your abstract goes here. Blah blah blah.
 
+ Student degree record is exchanged manually between educational institutes in Pakistan. In this paper, we put a push to recommend a data format and architecture for empowering these bodies to inter-exchange degree record digitally. To simplify its implementation, we recommend a mapping tool to semi-automatically create mappings between our standard and the institute data-sets.
 
-\chapter*{Dedication}
-I dedicate this thesis to my pets, Sparky and Coco. 
-
-
+%---------------------------------------------------------------------
 \certificateoforiginality
-
+%---------------------------------------------------------------------
 \chapter*{Acknowledgment}
-I would like to thank my advisor, my parents, my friends and my pets. Blah blah blah ...
+Up and above everything all glory to {\bfseries ALMIGHTY ALLAH}. The Beneficent, The most Merciful and Most Compassionate. It's a great blessing from Almighty Allah that gives me the health and strength to do this research work.\\
+
+I would like to special thank the {\bfseries Supervisor}. \\
+
+\begin{flushright} \textbf{Umair Anwar} \end{flushright}
+%---------------------------------------------------------------------
 
 \tableofcontents
+%
+%\printnomenclature{2.5cm}
+%\nomenclature{DCF}{Distributed Coordination Function}
+%
+%
+\chapter*{List of Abbreviations}
+
+\begin{table}[h]
+   % increase table row spacing, adjust to taste
+    \renewcommand{\arraystretch}{1.3}
+    \label{table:table1}
+     \begin{tabular}{ll}
+        \hline\hline
+        % inserting double-line
+            {\bfseries Abbreviations} & {\bfseries Descriptions} \\
+            \hline                                      % inserts single-line
+            DRES & Document Record Exchange Standard  \\
+            DRESS & Document Record Exchange Standard Secured  \\
+            SCHAC & Schema for Academia  \\
+            LDAP & Lightweight Directory Access Protocol \\
+            FVUSPEC & Finnish Virtual University Specifications  \\
+            MLO & Meta-data for Learning Opportunities  \\
+            WSDL & Web Service Description Language  \\
+            EHEA & European Higher Education Area  \\
+            ECTS & European Credit Transfer and Accumulation System  \\
+            EA & Exchange Agreement  \\
+            NQF & National Qualifications Framework  \\
+            EQF & European Qualifications Framework  \\
+            \hline                          % inserts single-line
+    \end{tabular}
+\end{table}
+
 \listoffigures
 \listoftables
 % \lstlistoflistings
 
 \resetpagenumbering
+%---------------------------------------------------------------------
+
+\chapter{Introduction}\label{ch-intro}
+%-----------------------------------------------
+
+The rest of the chapter is organized as follows. In Section 1.1, the problem statement is stated. In Section 1.2, thesis contributions are stated. In Section 1.3, we conclude the chapter with an outline for the rest of the thesis.
+
+\section{Problem Statement}
+
+Description of problem here...............
+
+A formal problem statement is given as:
+
+".................................."
+
+\section{Thesis Contribution}
+
+Our research work contributes in .................. areas.
+
+All contributions of ................. are summarizing as follows:
+
+\begin{itemize}
+\item
+Finding 1.
+\item
+Finding 2.
+\end{itemize}
+
+\section{Thesis Organization}
+
+The rest of the thesis is organized as follows: \\
+
+Chapter 2 discusses the state of the art related to the current research, and reviews the relevant literature aimed at finding .......................... \\
+
+In Chapter 3, the .................... are discussed and then proposed methodology is presented. \\
+
+In Chapter 4, the results are given along with detailed discussions. \\
+
+In Chapter 5, the conclusion and future work is presented.
+
+\chapter{Literature Review}\label{ch-work}
+
+There already exists a few standards and practices identified with exchanging degree or courses record. It is important to go through these, before proceeding onward to the new standard and the architecture we are proposing. We will review what these standards cover and what we can reuse.
+
+\section{Bologna Process}
+
+It intends to make European educational framework of standards engaging different countries in Europe to compare, contrast and make compatible their educational systems. \cite{bologna process}
+
+To improve the mutual recognition of degrees and programs, education ministers from 29 countries signed bologna declaration in 1999. Other partaking countries joined the program later. \cite{improvement bologna process} Bologna process is quite often named as European Higher Education Area (EHEA). EHEA focuses on transferability and convergence adaption by 46 countries. This process benefits Europeans and it has its significance for other educational institutes and communities. a) The leading role of European institutes, b) the lessons that are learned in the implementation of the framework of standards, and c) the practices adopted guide the educational communities around the world. 2010 was marked as the deadline across Europe for implementing the agreed specifications. \cite{European Higher Education Area }
+
+To meet the 2010 deadline, Spain started to implement the convergence of undergraduate engineering degrees that conformed EHEA in 2008. This standardization provided some opportunities for mobility and unified measurements. \cite{European Higher Education Area }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Introduction or the Name of your First Chapter}
-\label{sec:label_of_first_chapter}
+\section{Qualifications Exchange Standards}
 
-\section{Name of the First Section of Your First Section}
-\label{sec:Label_of_First_Section}
+    \subsection{European Qualifications Framework}
+    EQF is an agreed reference framework that helps participating countries to compare national qualifications and make them more clear, readable and understandable across Europe. The point is to advance mobility of workers and learners. This was settled upon by European universities in 2008 to relate their national qualifications to EQF. The new qualifications from 2012 carry a reference to suitable EQF level.
+
+    EQF comprises of eight reference levels, each showing what a learner knows and has the capacity to understand it. National qualifications of the partaking countries identify and relate with these eight levels raging from basic (level 1) to advanced (level 8) as shown in figure ~\ref{fig:EQF}. This simplifies qualification comparison in partaking countries supporting mobility of learners and empowering them to not repeat what they have already learned.
+
+\begin{figure}[!hbp]
+  \centering
+  \includegraphics[width=14cm]{eqf.png}
+  \caption{EQFs against NQFs \cite{MAPQFTOOL}}
+  \label{fig:EQF}
+\end{figure}
+
+    EQF concentrates on learning results as opposed to concentrating on learning inputs. It covers all types of education including professional, vocational and school education. It tries to validate formal and in addition informal education.
+
+    \subsection{Europass}
+    Collection of five documents which intend to ease mobility when seeking employment across Europe. These include the Curriculum Vitae, the Language Passport, the Mobility, the Diploma Supplement, and the Certificate Supplement. One can fill himself the Curriculum Vitae, and the Language Passport but the rest of the documents are issued by the related authorities. It follows a standard template format system, a layout. Same format helps to achieve neutrality and transparency while presenting one's skills.
+
+    The motto as mentioned on the Europass website's homepage is as follows;
+    "Five documents to make your skills and qualifications clearly and easily understood in Europe"
+
+    Europass has defined XML schemas for CV and Language Passport. The documents can be exported in XML format when created on Europass. These exported XML documents can be imported to Europass and converted to HTML, PDF, Microsoft Word or ODT templates.
+
+    Europass specifies JSON schema according to Internet Engineering Task Force's JSON specifications draft. The europass JSON vocabulary is close and similar to europass XML schema. The JSON objects for europass documents (CV and Language Passport) can be validated using Europass JSON validator.
+
+    All these documents have some common XML schema attributes which describe document type, printed preferences.
+
+    Europass does not explain details related to degrees or educational certificates in XML certificate.
+
+        \subsubsection{Europass Curriculum Vitae}
+        Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in xml format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV.
+
+        \subsubsection{Europass Language Passport}
+        Europass Language Passport (ELP) is a template. One can create it online and export it in europass xml format. It contains XML vocabulary related to language skills and the scale of six values to score proficiency.
+
+    \subsection{Schema for Academia}
+    Schema for Academia (SCHAC) describes vocabulary related degrees and courses. The schema is written for LDAP (Lightweight Directory Access Protocol). It aims at promoting a common framework to inter-exchange data between educational institutes. It defines attributes that describe individuals and their LDAP profile
+
+    \subsection{Dublin Core}
+    The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery.
+
+\section{European Learner Mobility}
+Some related work has been done recently and systems have been proposed based on the above mentioned standards. These are "The Mobility Project" and "The REST Mobility" projects.
+
+    \subsection{The Mobility Project}
+    It aimed to provide a platform and infrastructure for exchange of electronic data exchange between educational institutes. Infrastructure includes data format, architecture and the prototype software. The system will be called The Mobility later in this paper.
+
+    The Mobility is peer to peer like architecture. Nodes exchange data using SOAP base web service. Other web services like XML-RPC and REST were not used due to their limitations. XML-RPC not have developer defined data-types and character set. REST does not imposes a standard specification, instead it follows set of rules and is used for speedy development of web service interface.
+
+    The nodes represented the universities, and their number tends to change. So there was a need for system to maintain this record and UDDI was used. He did not recommend the central or delegated private registry instead gave advantages and disadvantages of both. Central single registry has all information at one place but also it a single point of failure.
+
+    The software has two transport modules and each have web interface.
+
+    Nagrozki proposed a new standard, defined its vocabulary re-using ideas taken from SCHAC to leverage ISO and RFC rules. Some like grade, credits were taken in inspiration from Eropass Mobility.
+
+    Although The Mobility project was started by MUCI and CINECA, two European Higher Education Consortia. Many universities consortia, individual universities and companies joined in later on.
+
+    \subsection{The REST Mobility}
+    This is alternative implementation of The Mobility. Nagrozki's system used SOAP web service for data exchange. Karol created a RESTful implementation of the Mobility. The Mobility lacked data model. In The REST Mobility a data model is proposed since REST is resourceful. The model proposed not represents or intends to be a standard.
+
+\section{Information Manifold}
+Providing a uniform interface for querying data from many sources is the aim of Information Manifold. It enables a simple user to not worry about locating sources and manually combining results. This leads to concept of Deep Web. Data integration systems give users a common global schema called mediated schema for posting queries. To answer these queries semantic relationships called mappings are needed between mediated schema and the sources schema.
+
+\section{MAPQFTOOL}
+This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database.
+
+Related to the \cite{umair} research related to the regression models for predictions is concerned, Ali et al.~\cite{ali} discussed the application of linear regression for future prediction using {\it SPSS} (Statistical Package for the Social Sciences). They found the P-values, beta scores, $R^2$, mean and standard deviation parameters that helped to learn good models for future prediction.
+
+These regressions were found using response variable $y$ and predictor variable $x$ as shown in equations~\ref{eq2.13}-\ref{eq2.16}.
 %
-Over the past ten years blah blah blah blah.
-
-\section{The second section of your first chapter}
-\label{sec:The_second_label}
-%
-There you go, getting boring already.
-
-\subsection{First subsection}
-\label{subsec:First_subsection}
-%
-While designing blah blah blah. We designed a classification algorithm for activity inference.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\chapter{Literature Review}
-\label{ch:Literature_Review}
-%
-\section{Mobile Phone Sensors}
-In the past few years Mobile Phones have become an essential communication device. Previously, Goodwin, Velicer and Intille \cite{Goodwin2008} used cell phones to record feelings and opinions of participants in behavioral studies, while \cite{Ahas2007} tracks recreation and tourism behavior by GPS enabled cell phones. Using cell phones as part of the study is unlikely to introduce health bias in a data set according to Lajunen et al. \cite{Lajunen2007} furthermore, computer use did correlate with higher BMI results in young people, while cell phone use was only weakly linked.
-
-Table \ref{tab:Activity_Traces} shows the number of activity traces collected for various activities, broken up by the phone placement.
-
-\begin{table}[!tbh]
-\renewcommand{\arraystretch}{1.5}
-\caption{Data set of activity traces.}
-\label{tab:Activity_Traces}
-\centering
-\begin{tabular}[width=\columnwidth]{|p{0.9in}||p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|}
-\hline
-Activity $\backslash$ Placement & Pant Pocket & Hand & Hand Bag & Shirt Pocket & Sub-total \\
-\hline
-Walking             & 25 & 20 & 15 & 20 & \textbf{80} \\
-Running             & 20 & 20 & 25 & 15 & \textbf{80} \\
-Climbing Stairs     & 15 & 25 & 15 & 10 & \textbf{75} \\
-Descending Stairs   & 15 & 20 & 15 & 10 & \textbf{60} \\
-Driving             & 10 & 10 & 20 & 25 & \textbf{65} \\
-Cycling             & 25 & 15 & 15 & 10 & \textbf{65} \\
-Inactive            & 20 & 20 & 25 & 20 & \textbf{85} \\
-\hline
-\textbf{TOTAL}      &    &    &    &    & \textbf{510}\\
-\hline
-\end{tabular}
-\end{table}
-
-
 \begin{equation}
-%\begin{aligned}
-\sigma_{ij} = \frac{1}{N-1} \sum_{n=1}^{N}{\left(a_{i}[n]-\overline{a}_i\right)\left(a_j[n]-\overline{a}_j]\right)} \\
-\label{eq:Covariance}
-%\end{aligned}
+  y  =  w_0 + w_1 * x \; \mbox{(Linear)}
+  \label{eq2.13}
 \end{equation}
-
-The covariance matrix $\mathbf{C}$ is defined in terms of covariance terms as,
-
-\begin{equation}
-%\begin{aligned}
-\mathbf{C} = \left[\begin{array}{ccc}
-              \sigma_x^2 & \sigma_{xy} & \sigma_{xz} \\
-              \sigma_{yx} & \sigma_y^2 & \sigma_{yz} \\
-              \sigma_{zx} & \sigma_{zy} & \sigma_z^2
-              \end{array} \right] \\
-\label{eq:Covariance_Matrix}
-%\end{aligned}
-\end{equation}
-
-If $\mathbf{V}$ is the matrix of eigenvectors, then the matrix $\mathbf{A}$ of accelerometer signals is transformed into matrix $\mathbf{D}$ according to Equation \ref{eq:Coord_Transformation}.
-
-
+%
 \begin{equation}
 %\begin{align}
 \mathbf{D} = \mathbf{A} \mathbf{V}
@@ -184,19 +267,119 @@ where
 %\end{align}
 \end{equation}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Requirements Analysis}\label{ch-requirements-analysis}
+\section{Definitions}
+We define the basic terms that are used in exchange of documents. It is necessary to understand these before we go through the requirements.
 
-\chapter{Implementation and Results}
-\label{ch:Implementation_and_Results}
+Exchange Agreement: It is an understanding between partaking institutes, between the requester and the provider, for exchanging the educational certificates. This agreement comprises of;
+ a) web-service access point
+ b) authentication credentials
 
-\section{Classifier Training \& Validation Strategy}
-\label{subsec:Classifier_Training_and_Validation_Strategy}
+Requester: The partaking institute asking for the exchange.
 
-\subsection{Classifier Training}
-\label{subsec:Classifier_Training}
+Provider: The partaking institute providing the details.
+
+Coordinator: A person responsible for signing and exchange of agreements between institutes.
+
+\section{Business Process}\label{s-business_process}
+This section describes the business that is involved in the execution of exchange of different educational institutes. The process is explained using the sequence diagrams.
+
+    \subsection{Make Exchange Agreement}
+    For two universities to exchange data, they have to create an exchange agreement first. The agreement will have the web-service access point and exchange secrets. These details are used for requesting exchange and for authenticating the requester.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{sq_agreement.png}
+  \caption{Making Exchange Agreement}
+  \label{fig:sq_agreement}
+\end{figure}
+
+
+After the implementation of web-service by the provider. The requester fills a form and asks for the credentials. The emails the access point and exchange secrets to the Coordinator.
+
+    \subsection{Find Student Data}
+    To find a student record, the requester asks a provider from the agreed providers list for a student record. The provider sends back list of documents associated with the student.
+
+\begin{figure}[!hbp]
+  \centering
+  \includegraphics[width=14cm]{sq_find_student_data.png}
+  \caption{Finding Student Data}
+  \label{fig:sq_find_student_data}
+\end{figure}
+
+    \subsection{Exchange a Document Details}
+    To exchange a document details, the requester asks a provider with search criteria and document type. The provider sends back the document details using DRESS.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{sq_exchange_doc.png}
+  \caption{Exchanging a Document Details}
+  \label{fig:sq_exchange_doc}
+\end{figure}
+
+\section{Mapping and Web Service Challange}
+
+It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically.
+
+\section{Software Specifications}
+Based on the business process and the challenges we discussed, functional and non-functional requirements are;
+
+    \subsection{Functional Requirements}
+
+
+    \subsection{Non-functional Requirements}
+
+
+\chapter{Architecture \& Design}\label{ch-architecture-design}
+From the requirements analysis, we suggest student exchange system should have distributed architecture. As partaking institutes are autonomous and themselves maintain the its own data. It signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=6cm]{architecture_distributed_independent_exchange.png}
+  \caption{Multiple Nodes Exchanging Information Independently in Distributed Architecture \cite{The Mobility Project}}
+  \label{fig:architecture_distributed_independent_exchange}
+\end{figure}
+
+This peer to peer like distribute architecture has benefits over adding a middle agent or central server in the system.
+1.	Avoidance from single point of failure.
+2.	Lesser load.
+3.	Each university having control over its own data and thus building trust in the system.
+
+We suggest student exchange system will have distributed architecture. Each university has its own data and signs agreements with HEC for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=5cm]{architecture_distributed_exchange_through_hec.png}
+  \caption{Multiple Nodes Exchanging Information Through a Central Control Authority in Distributed Architecture}
+  \label{fig:architecture_distributed_exchange_through_hec}
+\end{figure}
+
+There are some choices to be made at this point. We will be using web services for exchanging data as they provide a high abstraction from network issues and use well known standards like XML over HTTP. There are some XML based data exchange protocols on web. These are XML-RPC, SOAP, and REST.
+
+The nodes will exchange data using SOAP based web service in our system.  We chose SOAP as it forces to follow a formal standard and supports developer defined data types.
+
+The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system "URL registry" for saving web services URLs. Now we have to make a choice. URL registry can be global or each requesting node can have its own private URL registry. We will use private registry to avoid single point of failure and to minimize load.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=12cm]{architecture.png}
+  \caption{Architecture Diagram}
+  \label{fig:architecture}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Implementation}\label{ch-implement}
+In this chapter, the methodology that is used for modeling is explained.
+
+
+\chapter{Conclusions}
+\label{ch:Conclusions}
+
+\section{This is the End}
+\label{sec:This_is_the_end}
 %
-Machine learning algorithms are used to classify activities based on a feature set.
-
+In this research we reported the design and implementation of.
 
 \begin{figure}[htp]
 \centering
@@ -204,12 +387,6 @@ Machine learning algorithms are used to classify activities based on a feature s
 \caption{Feature rank by information gain.}
 \label{fig:Feature_Rank}
 \end{figure}
-
-
-\section{Performance Evaluation}
-\label{sec:Performance_Evaluation}
-%
-For performance evaluation we used 10-fold validation.
 
 \begin{table}[!tbh]
 %\renewcommand{\arraystretch}{1.5}
@@ -256,16 +433,6 @@ a & b & c & d & e & f & g & $\leftarrow$ Classified As \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Conclusions}
-\label{ch:Conclusions}
-
-\section{This is the End}
-\label{sec:This_is_the_end}
-%
-In this research we reported the design and implementation of.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \appendix
 \chapter{Feature Extraction Walking}
 %
@@ -279,4 +446,4 @@ Features plotted in Matlab.
 \backmatter
 
 
-\end{document}
+\end{document} 
