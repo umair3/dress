@@ -1,13 +1,16 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces EQFs against NQFs \cite {MAPQFTOOL}}}{4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces EQFs against NQFs \cite {MAPQFTOOL}}}{5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Making Exchange Agreement}}{10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Finding Student Data}}{10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Exchanging a Document Details}}{11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Making Exchange Agreement}}{12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Finding Student Data}}{13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Exchanging a Document Details}}{14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Multiple Nodes Exchanging Information Independently in Distributed Architecture \cite {The Mobility Project}}}{15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multiple Nodes Exchanging Information Through a Central Control Authority in Distributed Architecture}}{16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Architecture Diagram}}{17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Month-wise pH Trend of Streams}}{14}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Month-wise pH Trend of Streams}}{20}
 \addvspace {10\p@ }

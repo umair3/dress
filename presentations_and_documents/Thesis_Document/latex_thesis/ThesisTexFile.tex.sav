@@ -9,12 +9,10 @@
 \usepackage{amssymb,amsmath}
 \usepackage{eucal}
 \usepackage{nomencl}
-\usepackage{cite}
 \usepackage{natbib}
 \usepackage{amsmath}
 \usepackage[algoruled,vlined,linesnumbered,commentsnumbered,algochapter]{algorithm2e}
 \usepackage{sfmath}
-\renewcommand{\baselinestretch}{1.5}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -268,10 +266,10 @@ This section describes the business that is involved in the execution of exchang
 \end{figure}
 
     After the implementation of web-service by the provider. The requester fills a form and asks for the credentials. The emails the access point and exchange secrets to the Coordinator.
-
+    
     \subsection{Find Student Data}
     To find a student record, the requester asks a provider from the agreed providers list for a student record. The provider sends back list of documents associated with the student.
-
+    
 \begin{figure}[!hbp]
   \centering
   \includegraphics[width=14cm]{sq_find_student_data.png}
@@ -291,18 +289,18 @@ This section describes the business that is involved in the execution of exchang
 
 \section{Mapping and Web Service Challange}
 
-It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically.
+It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically. 
 
 \section{Software Specifications}
 Based on the business process and the challenges we discussed, functional and non-functional requirements are;
 
     \subsection{Functional Requirements}
-
-
+    
+    
     \subsection{Non-functional Requirements}
-
-
-
+    
+    
+    
 
 \chapter{ARCHITECTURE \& DESIGN}\label{c-architecture-design}
 From the requirements analysis, we suggest student exchange system should have distributed architecture. As partaking institutes are autonomous and themselves maintain the its own data. It signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.
