@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Introduction or the Name of your First Chapter}{1}
+\contentsline {section}{\numberline {1.1}Name of the First Section of Your First Section}{1}
+\contentsline {section}{\numberline {1.2}The second section of your first chapter}{1}
+\contentsline {subsection}{\numberline {1.2.1}First subsection}{1}
+\contentsline {chapter}{\numberline {2}Literature Review}{2}
+\contentsline {section}{\numberline {2.1}Mobile Phone Sensors}{2}
+\contentsline {chapter}{\numberline {3}Implementation and Results}{4}
+\contentsline {section}{\numberline {3.1}Classifier Training \& Validation Strategy}{4}
+\contentsline {subsection}{\numberline {3.1.1}Classifier Training}{4}
+\contentsline {section}{\numberline {3.2}Performance Evaluation}{4}
+\contentsline {chapter}{\numberline {4}Conclusions}{7}
+\contentsline {section}{\numberline {4.1}This is the End}{7}
+\contentsline {chapter}{\numberline {A}Feature Extraction Walking}{8}

@@ -1,0 +1,282 @@
+\documentclass[12pt,a4paper,oneside]{book} 
+%scrbook book report
+
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+%\usepackage{color}
+%\usepackage{subfigure}
+\usepackage{seecs}
+%\usepackage{color}
+%\usepackage{colortbl}
+%\usepackage{soul}
+%\usepackage{listings}
+%\lstloadlanguages{Java,XML}
+%\lstset{frame=lines}
+%\usepackage{astron}
+%\usepackage{xspace}
+%\usepackage[leqno]{amsmath}
+%\usepackage{hyperref}
+%\usepackage{sfmath}
+%\usepackage{setspace}
+\usepackage{cite}
+\definecolor{lightgray}{gray}{0.9}
+
+
+%\usepackage{amsmath,amssymb,amsthm,paralist}
+%% Include other packages you wish to use except setspace.
+%% That package is loaded automatically.
+%% IMPORTANT: Load only those packages you know you will use.
+%% Some packages can cause conflicts resulting in improper formatting.
+%\usepackage{graphicx}
+%\usepackage{subfig}
+%\usepackage{latexsym}
+%\usepackage{url}
+%%\usepackage{soul}  % package for strikeout \st{}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\usepackage{cite}
+
+
+\title{Title of Your Dissertation}
+%\subtitle{An optional sub-title, usually not used at NUST}
+
+\author{Your Name Goes Here}
+\regno{2013-NUST-MS-EE-xx}
+\degree{\MSEE} 
+% Argument pptions for \degree{_____}:
+% \BSIT for Bachelor of Science in Information Technology (BS IT)
+% \BSCS for Bachelor of Science in Computer Science (BS CS)
+% \BICSE for Bachelor of Engineering in Information and Communication Systems (BE ICS)
+% \BEE for Bachelor of Engineering in Electronics (BE Electronics)
+% \MSIT for Masters of Science in Information Technology (MS IT)
+% \MSCSE for Masters in Communication Systems Engineering (MS CSE)
+% \MSCCS for Masters in Computer and Communication Security (MS CCS)
+% \MSEE for Masters of Science in Electrical Engineering (MS EE)
+
+\adviser{Dr. FirstName LastName}
+\adviserAffiliation{Department of Electrical Engineering}
+
+\date{April 2015}
+
+%\setcounter{tocdepth}{2}
+ %\setstretch{1.1}
+ %\linespread{1.1}
+
+\begin{document}
+\maketitle
+
+\evaluationcommitteeapproval{Dr. Name of First Committee Member}{Dr. Name of Second Committee Member}{Dr Name of Third Committee Member}
+
+\chapter*{Abstract}
+Your abstract goes here. Blah blah blah.
+
+
+\chapter*{Dedication}
+I dedicate this thesis to my pets, Sparky and Coco. 
+
+
+\certificateoforiginality
+
+\chapter*{Acknowledgment}
+I would like to thank my advisor, my parents, my friends and my pets. Blah blah blah ...
+
+\tableofcontents
+\listoffigures
+\listoftables
+% \lstlistoflistings
+
+\resetpagenumbering
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Introduction or the Name of your First Chapter}
+\label{sec:label_of_first_chapter}
+
+\section{Name of the First Section of Your First Section}
+\label{sec:Label_of_First_Section}
+%
+Over the past ten years blah blah blah blah.
+
+\section{The second section of your first chapter}
+\label{sec:The_second_label}
+%
+There you go, getting boring already.
+
+\subsection{First subsection}
+\label{subsec:First_subsection}
+%
+While designing blah blah blah. We designed a classification algorithm for activity inference.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Literature Review}
+\label{ch:Literature_Review}
+%
+\section{Mobile Phone Sensors}
+In the past few years Mobile Phones have become an essential communication device. Previously, Goodwin, Velicer and Intille \cite{Goodwin2008} used cell phones to record feelings and opinions of participants in behavioral studies, while \cite{Ahas2007} tracks recreation and tourism behavior by GPS enabled cell phones. Using cell phones as part of the study is unlikely to introduce health bias in a data set according to Lajunen et al. \cite{Lajunen2007} furthermore, computer use did correlate with higher BMI results in young people, while cell phone use was only weakly linked.
+
+Table \ref{tab:Activity_Traces} shows the number of activity traces collected for various activities, broken up by the phone placement.
+
+\begin{table}[!tbh]
+\renewcommand{\arraystretch}{1.5}
+\caption{Data set of activity traces.}
+\label{tab:Activity_Traces}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{0.9in}||p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|}
+\hline
+Activity $\backslash$ Placement & Pant Pocket & Hand & Hand Bag & Shirt Pocket & Sub-total \\
+\hline
+Walking             & 25 & 20 & 15 & 20 & \textbf{80} \\
+Running             & 20 & 20 & 25 & 15 & \textbf{80} \\
+Climbing Stairs     & 15 & 25 & 15 & 10 & \textbf{75} \\
+Descending Stairs   & 15 & 20 & 15 & 10 & \textbf{60} \\
+Driving             & 10 & 10 & 20 & 25 & \textbf{65} \\
+Cycling             & 25 & 15 & 15 & 10 & \textbf{65} \\
+Inactive            & 20 & 20 & 25 & 20 & \textbf{85} \\
+\hline
+\textbf{TOTAL}      &    &    &    &    & \textbf{510}\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{equation}
+%\begin{aligned}
+\sigma_{ij} = \frac{1}{N-1} \sum_{n=1}^{N}{\left(a_{i}[n]-\overline{a}_i\right)\left(a_j[n]-\overline{a}_j]\right)} \\
+\label{eq:Covariance}
+%\end{aligned}
+\end{equation}
+
+The covariance matrix $\mathbf{C}$ is defined in terms of covariance terms as,
+
+\begin{equation}
+%\begin{aligned}
+\mathbf{C} = \left[\begin{array}{ccc}
+              \sigma_x^2 & \sigma_{xy} & \sigma_{xz} \\
+              \sigma_{yx} & \sigma_y^2 & \sigma_{yz} \\
+              \sigma_{zx} & \sigma_{zy} & \sigma_z^2
+              \end{array} \right] \\
+\label{eq:Covariance_Matrix}
+%\end{aligned}
+\end{equation}
+
+If $\mathbf{V}$ is the matrix of eigenvectors, then the matrix $\mathbf{A}$ of accelerometer signals is transformed into matrix $\mathbf{D}$ according to Equation \ref{eq:Coord_Transformation}.
+
+
+\begin{equation}
+%\begin{align}
+\mathbf{D} = \mathbf{A} \mathbf{V}
+\label{eq:Coord_Transformation}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mathbf{D} = \left[\begin{array}{ccc}d_1[n] & d_2[n] & d_3[n] \end{array}\right]
+\mathbf{A} = \left[  \begin{array}{ccc}a_x[n] & a_y[n] & a_z[n]\end{array} \right]
+%\end{align}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Implementation and Results}
+\label{ch:Implementation_and_Results}
+
+\section{Classifier Training \& Validation Strategy}
+\label{subsec:Classifier_Training_and_Validation_Strategy}
+
+\subsection{Classifier Training}
+\label{subsec:Classifier_Training}
+%
+Machine learning algorithms are used to classify activities based on a feature set.
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.9\columnwidth]{nust}%{drivingpeaksrsq}
+\caption{Feature rank by information gain.}
+\label{fig:Feature_Rank}
+\end{figure}
+
+
+\section{Performance Evaluation}
+\label{sec:Performance_Evaluation}
+%
+For performance evaluation we used 10-fold validation.
+
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Detailed Accuracy By Class (Na\"ive Bayes).}
+\label{tab:Perf_Metrics_Naive_Bayes}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|c|c|c|}
+\hline
+Class               & TP Rate   & FP Rate   & Precision & Recall    & ROC Area \\
+\hline
+Walking 	        	& 0.789	    & 0.031	    & 0.675	    & 0.789	    & 0.818 \\
+Running	            & 1.000	    & 0.000	    & 1.000	    & 1.000	    & 0.999 \\
+Climbing Stairs	    & 0.450	    & 0.054	    & 0.731	    & 0.450	    & 0.807 \\
+Descending Stairs		& 0.833	    & 0.023	    & 0.814	    & 0.833	    & 0.919 \\
+Driving	            & 0.933	    & 0.018	    & 0.897	    & 0.933	    & 0.934 \\
+Cycling	            & 1.000	    & 0.000	    & 0.880	    & 1.000	    & 0.992 \\
+Inactive            & 0.933	    & 0.000	    & 0.996	    & 0.933	    & 0.961 \\
+\hline
+\textbf{Weighted Average}	& \textbf{0.847}	    & \textbf{0.040}	    & \textbf{0.846}	    & \textbf{0.847}	    & \textbf{0.891} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Confusion matrix (Naive Bayes).}
+\label{tab:Confusion_Matrix_Naive Bayes}
+\centering
+\begin{tabular}[width=\columnwidth]{|ccccccc|p{1.5in}|}
+\hline
+a & b & c & d & e & f & g & $\leftarrow$ Classified As \\
+  &   &   &   &   &   &   & Actual Activity $\downarrow$ \\
+\hline
+\textbf{59} & 0 & 6 & 5 & 1 & 0 & 0 & a $\leftarrow$ Walking \\
+0 & \textbf{50} & 0 & 1 & 0 & 0 & 0 & b $\leftarrow$ Running \\
+5 & 0 & \textbf{34} & 4 & 0 & 0 & 0 & c $\leftarrow$ Climbing Stairs \\
+4 & 0 & 3 & \textbf{29} & 5 & 0 & 0 & d $\leftarrow$ Descending Stairs \\
+0 & 0 & 0 & 0 & \textbf{32} & 0 & 4 & e $\leftarrow$ Driving \\
+2 & 0 & 0 & 1 & 0 & \textbf{20} & 0 & f $\leftarrow$ Cycling \\
+0 & 0 & 0 & 0 & 5 & 0 & \textbf{30} & g $\leftarrow$ Inactive \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusions}
+\label{ch:Conclusions}
+
+\section{This is the End}
+\label{sec:This_is_the_end}
+%
+In this research we reported the design and implementation of.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\chapter{Feature Extraction Walking}
+%
+Features plotted in Matlab.
+
+
+\bibliographystyle{plain}
+\bibliography{thesis}
+
+
+\backmatter
+
+
+\end{document}
