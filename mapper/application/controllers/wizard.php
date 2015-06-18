@@ -229,7 +229,6 @@ class Wizard extends CI_Controller {
 		
 		$data['degree_tags'] = array ('level','examSystem','title','serialNo','regNo','rollNo','date','firstName','lastName','institute');
 		
-		
 		if ($this->_check_map('degree')) {
 			$data['degree_map'] = $this->_read_map('degree');
 		}
@@ -245,7 +244,6 @@ class Wizard extends CI_Controller {
 	public function finish()
 	{
 		//$this->output->enable_profiler(TRUE);
-		
 		
 		$this->load->view('finish_view');
 	}
