@@ -154,7 +154,7 @@
 
 	<div class="column-wrap standalone what-is-ci">	
 		<section class="column colspan-12">
-			<h2>Semi-Automated DB To SDRES XML Mapper</h2>
+			<h2>Semi-Automated DB To DRESS XML Mapper</h2>
 			<p>Follow the instructions to create a soap service for the HEC portal with the help of this browser based GUI interface.</p>
 			<h3>Requirements</h3>
 			<ul class="checklist column colspan-8">

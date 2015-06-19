@@ -312,7 +312,7 @@
 		
 	</section><!-- /#wrap -->
 <?php 
-	$column_select_options['students'];
+	//$column_select_options['students'];
 	//print_r($tables_array);
 ?>
 <script type="text/javascript">
