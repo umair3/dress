@@ -1,31 +1,32 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
-White space in argument---line 11 of file thesis.aux
+White space in argument---line 4 of file thesis.aux
+ : \citation{The
+ :               Mobility Project}
+I'm skipping whatever remains of this command
+White space in argument---line 12 of file thesis.aux
  : \citation{bologna
  :                   process}
 I'm skipping whatever remains of this command
-White space in argument---line 12 of file thesis.aux
+White space in argument---line 13 of file thesis.aux
  : \citation{improvement
  :                       bologna process}
-I'm skipping whatever remains of this command
-White space in argument---line 13 of file thesis.aux
- : \citation{European
- :                    Higher Education Area}
 I'm skipping whatever remains of this command
 White space in argument---line 14 of file thesis.aux
  : \citation{European
  :                    Higher Education Area}
 I'm skipping whatever remains of this command
-White space in argument---line 59 of file thesis.aux
+White space in argument---line 20 of file thesis.aux
+ : \citation{European
+ :                    Higher Education Area}
+I'm skipping whatever remains of this command
+White space in argument---line 56 of file thesis.aux
  : \citation{The
  :               Mobility Project}
 I'm skipping whatever remains of this command
-White space in argument---line 60 of file thesis.aux
+White space in argument---line 57 of file thesis.aux
  : \citation{The
  :               Mobility Project}
 I'm skipping whatever remains of this command
-The style file: plain.bst
-Database file #1: thesis.bib
-Warning--I didn't find a database entry for "MAPQFTOOL"
-Warning--I didn't find a database entry for "umair"
-Warning--I didn't find a database entry for "ali"
-(There were 6 error messages)
+I found no \bibdata command---while reading file thesis.aux
+I found no \bibstyle command---while reading file thesis.aux
+(There were 9 error messages)

@@ -36,7 +36,8 @@
 %%\usepackage{soul}  % package for strikeout \st{}
 %\usepackage{algorithm}
 %\usepackage{algorithmic}
-%\usepackage{cite}
+\usepackage{cite}
+\renewcommand{\baselinestretch}{1.5}
 
 
 \title{Automating Exchange of Educational Certificates Using DRESS}
@@ -244,42 +245,38 @@ Providing a uniform interface for querying data from many sources is the aim of 
 \section{MAPQFTOOL}
 This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database.
 
-Related to the \cite{umair} research related to the regression models for predictions is concerned, Ali et al.~\cite{ali} discussed the application of linear regression for future prediction using {\it SPSS} (Statistical Package for the Social Sciences). They found the P-values, beta scores, $R^2$, mean and standard deviation parameters that helped to learn good models for future prediction.
-
-These regressions were found using response variable $y$ and predictor variable $x$ as shown in equations~\ref{eq2.13}-\ref{eq2.16}.
-%
-\begin{equation}
-  y  =  w_0 + w_1 * x \; \mbox{(Linear)}
-  \label{eq2.13}
-\end{equation}
-%
-\begin{equation}
-%\begin{align}
-\mathbf{D} = \mathbf{A} \mathbf{V}
-\label{eq:Coord_Transformation}
-\end{equation}
-%
-where
-%
-\begin{equation}
-\mathbf{D} = \left[\begin{array}{ccc}d_1[n] & d_2[n] & d_3[n] \end{array}\right]
-\mathbf{A} = \left[  \begin{array}{ccc}a_x[n] & a_y[n] & a_z[n]\end{array} \right]
-%\end{align}
-\end{equation}
-
 \chapter{Requirements Analysis}\label{ch-requirements-analysis}
 \section{Definitions}
 We define the basic terms that are used in exchange of documents. It is necessary to understand these before we go through the requirements.
 
-Exchange Agreement: It is an understanding between partaking institutes, between the requester and the provider, for exchanging the educational certificates. This agreement comprises of;
- a) web-service access point
- b) authentication credentials
+\begin{enumerate}
+\item Exchange Agreement: 
+	\begin{description} 
+	
+	\item It is an understanding between partaking institutes, between the requester and the provider, for exchanging the educational certificates. This agreement comprises of;
+	\begin{itemize}
+	\item web-service access point
+	\item authentication credentials
+	\end{itemize}
+	
+	\end{description} 
 
-Requester: The partaking institute asking for the exchange.
+\item Requester: 
+	\begin{description} 
+	\item The partaking institute asking for the exchange.
+	\end{description} 
 
-Provider: The partaking institute providing the details.
+\item Provider: 
+	\begin{description} 
+	\item The partaking institute providing the details.
+	\end{description} 
 
-Coordinator: A person responsible for signing and exchange of agreements between institutes.
+\item Coordinator: 
+	\begin{description} 
+	\item A person responsible for signing and exchange of agreements between institutes.
+	\end{description} 
+	
+\end{enumerate}
 
 \section{Business Process}\label{s-business_process}
 This section describes the business that is involved in the execution of exchange of different educational institutes. The process is explained using the sequence diagrams.
@@ -341,9 +338,12 @@ From the requirements analysis, we suggest student exchange system should have d
 \end{figure}
 
 This peer to peer like distribute architecture has benefits over adding a middle agent or central server in the system.
-1.	Avoidance from single point of failure.
-2.	Lesser load.
-3.	Each university having control over its own data and thus building trust in the system.
+
+\begin{enumerate}
+\item Avoidance from single point of failure.
+\item Lesser load.
+\item Each university having control over its own data and thus building trust in the system.	
+\end{enumerate}
 
 We suggest student exchange system will have distributed architecture. Each university has its own data and signs agreements with HEC for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities
 
@@ -381,69 +381,36 @@ In this chapter, the methodology that is used for modeling is explained.
 %
 In this research we reported the design and implementation of.
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.9\columnwidth]{nust}%{drivingpeaksrsq}
-\caption{Feature rank by information gain.}
-\label{fig:Feature_Rank}
-\end{figure}
 
-\begin{table}[!tbh]
-%\renewcommand{\arraystretch}{1.5}
-\caption{Detailed Accuracy By Class (Na\"ive Bayes).}
-\label{tab:Perf_Metrics_Naive_Bayes}
-\centering
-\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|c|c|c|}
-\hline
-Class               & TP Rate   & FP Rate   & Precision & Recall    & ROC Area \\
-\hline
-Walking 	        	& 0.789	    & 0.031	    & 0.675	    & 0.789	    & 0.818 \\
-Running	            & 1.000	    & 0.000	    & 1.000	    & 1.000	    & 0.999 \\
-Climbing Stairs	    & 0.450	    & 0.054	    & 0.731	    & 0.450	    & 0.807 \\
-Descending Stairs		& 0.833	    & 0.023	    & 0.814	    & 0.833	    & 0.919 \\
-Driving	            & 0.933	    & 0.018	    & 0.897	    & 0.933	    & 0.934 \\
-Cycling	            & 1.000	    & 0.000	    & 0.880	    & 1.000	    & 0.992 \\
-Inactive            & 0.933	    & 0.000	    & 0.996	    & 0.933	    & 0.961 \\
-\hline
-\textbf{Weighted Average}	& \textbf{0.847}	    & \textbf{0.040}	    & \textbf{0.846}	    & \textbf{0.847}	    & \textbf{0.891} \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!tbh]
-%\renewcommand{\arraystretch}{1.5}
-\caption{Confusion matrix (Naive Bayes).}
-\label{tab:Confusion_Matrix_Naive Bayes}
-\centering
-\begin{tabular}[width=\columnwidth]{|ccccccc|p{1.5in}|}
-\hline
-a & b & c & d & e & f & g & $\leftarrow$ Classified As \\
-  &   &   &   &   &   &   & Actual Activity $\downarrow$ \\
-\hline
-\textbf{59} & 0 & 6 & 5 & 1 & 0 & 0 & a $\leftarrow$ Walking \\
-0 & \textbf{50} & 0 & 1 & 0 & 0 & 0 & b $\leftarrow$ Running \\
-5 & 0 & \textbf{34} & 4 & 0 & 0 & 0 & c $\leftarrow$ Climbing Stairs \\
-4 & 0 & 3 & \textbf{29} & 5 & 0 & 0 & d $\leftarrow$ Descending Stairs \\
-0 & 0 & 0 & 0 & \textbf{32} & 0 & 4 & e $\leftarrow$ Driving \\
-2 & 0 & 0 & 1 & 0 & \textbf{20} & 0 & f $\leftarrow$ Cycling \\
-0 & 0 & 0 & 0 & 5 & 0 & \textbf{30} & g $\leftarrow$ Inactive \\
-\hline
-\end{tabular}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\appendix
-\chapter{Feature Extraction Walking}
-%
-Features plotted in Matlab.
+%\backmatter
 
 
-\bibliographystyle{plain}
-\bibliography{thesis}
+\begin{thebibliography}{10}
 
+\bibitem{umair}
+M. Ali, H. Qureshi, and M. S. Akhtar (2013), \emph{Analysis of growth in Students Intake and Degree Awarding Contribution: A Comparison of Stanford and MIT}, MLDM 2013: International Conference on Machine Learning and Data Mining, in press.
 
-\backmatter
+\bibitem{bologna process}
+http://www.ehea.info/Uploads/Irina/Bologna%20beyond%202010.pdf
 
+\bibitem{MAPQFTOOL}
+P. Pouyioutas, H. Gjermundrod, and M. Michael, "MAPQFTOOL: A software tool to support national qualifications frameworks," Information Society (i-Society), 2011 International Conference on, pp. 198-203, Jun. 2011.
+
+\bibitem{The Mobility Project}
+Rafal Nagrodzki, "The Mobility Project," Institue of Informatics, University of Warsaw, Warsaw, Master's Thesis 2009.
+
+\bibitem{European Higher Education Area }
+A. Duran, Y.B. Moon, and E. Giraldo, "Work in progress - the European Higher Education Area ("Bologna process") in Engineering Education in Spain," Frontiers in Education Conference, 2009. FIE '09. 39th IEEE, pp. 1,2, Oct. 2009.
+
+\bibitem{Integration of Services in the Mobility Project}
+Karol Kanski, "Integration of Services in the Mobility Project," Institute of Informatics, University of Warsaw, Warsaw, Master's Thesis 2011.
+
+\bibitem{Data integration: the teenage years}
+Alon Halevy, Anand Rajaraman, and Joann Ordille, "Data integration: the teenage years," In Proceedings of the 32nd international conference on Very large data bases (VLDB '06), pp. 9-16, 2006.
+
+\bibitem{improvement bologna process}
+Szentirmai, L.; Radacs, L., "Improvement of academic and research standards of higher engineering education in light of Bologna process," Emerging eLearning Technologies \& Applications (ICETA), 2012 IEEE 10th International Conference on , vol., no., pp.381,386, 8-9 Nov. 2012
+
+\end{thebibliography}
 
 \end{document} 
