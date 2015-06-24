@@ -13,23 +13,23 @@
 \contentsline {subsubsection}{Europass Curriculum Vitae}{8}
 \contentsline {subsubsection}{Europass Language Passport}{8}
 \contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{9}
-\contentsline {subsection}{\numberline {2.2.4}Dublin Core}{9}
-\contentsline {section}{\numberline {2.3}European Learner Mobility}{9}
-\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{9}
-\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{10}
-\contentsline {section}{\numberline {2.4}Information Manifold}{11}
-\contentsline {section}{\numberline {2.5}MAPQFTOOL}{11}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{12}
-\contentsline {section}{\numberline {3.1}Definitions}{12}
-\contentsline {section}{\numberline {3.2}Business Process}{13}
-\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{13}
-\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{14}
-\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{14}
-\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{14}
-\contentsline {section}{\numberline {3.4}Software Specifications}{15}
-\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{15}
-\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{15}
-\contentsline {chapter}{\numberline {4}Architecture \& Design}{16}
-\contentsline {chapter}{\numberline {5}Implementation}{19}
-\contentsline {chapter}{\numberline {6}Conclusions}{20}
-\contentsline {section}{\numberline {6.1}This is the End}{20}
+\contentsline {subsection}{\numberline {2.2.4}Dublin Core}{10}
+\contentsline {section}{\numberline {2.3}European Learner Mobility}{11}
+\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{11}
+\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{12}
+\contentsline {section}{\numberline {2.4}Information Manifold}{12}
+\contentsline {section}{\numberline {2.5}MAPQFTOOL}{12}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{13}
+\contentsline {section}{\numberline {3.1}Definitions}{13}
+\contentsline {section}{\numberline {3.2}Business Process}{14}
+\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{14}
+\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{15}
+\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{15}
+\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{15}
+\contentsline {section}{\numberline {3.4}Software Specifications}{16}
+\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{16}
+\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{16}
+\contentsline {chapter}{\numberline {4}Architecture \& Design}{17}
+\contentsline {chapter}{\numberline {5}Implementation}{20}
+\contentsline {chapter}{\numberline {6}Conclusions}{21}
+\contentsline {section}{\numberline {6.1}This is the End}{21}

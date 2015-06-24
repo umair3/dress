@@ -261,7 +261,55 @@ To meet the 2010 deadline, Spain started to implement the convergence of undergr
         Europass Language Passport (ELP) is a template. One can create it online and export it in europass xml format. It contains XML vocabulary related to language skills and the scale of six values to score proficiency.
 
     \subsection{Schema for Academia}
-    Schema for Academia (SCHAC) describes vocabulary related degrees and courses. The schema is written for LDAP (Lightweight Directory Access Protocol). It aims at promoting a common framework to inter-exchange data between educational institutes. It defines attributes that describe individuals and their LDAP profile
+    The need for the inter-exchange of information between institutes across Europe has highlighted the importance of common attributes for this exchange to take place. Schema for Academia (SCHAC) is the result of the attribute coordination between different institutes. It plans to define and advance common attributes in the field of higher education to encourage data-exchange between institutions. It does not plan to supplement different the national schemas, rather it suggests a coordinated framework on top of the different national schemas.
+    
+    Schema for Academia (SCHAC) describes vocabulary related degrees and courses. The schema is not technology dependent and written for LDAP (Lightweight Directory Access Protocol). It aims at promoting a common framework to inter-exchange data between educational institutes. It defines attributes that describe individuals and their LDAP profile.
+    
+	It is a collection of schemas which can be classified into following categories;
+\begin{itemize}
+\item
+Personal Characteristics
+\item
+Location Information
+\item
+Student Information
+\item
+Employee Information
+\item
+Linkage Identifiers
+\item
+Administration Information
+\item
+Confidentiality (Visibility)
+\item
+Authorization, Entitlements
+\item
+Group-related Attributes
+\end{itemize}
+
+	SCHAC has a clearly defined meta-information for defining an attribute. To discuss the ideas  used by SCHAC, let us look in detail the schacGender attribute as an example shown in Table \ref{tab:schacGender}. It uses ISO-standards where-ever possible. In schacGender attribute, it is using values from ISO-5218. However, it lacks hierarchy which prevents from reuse-ability and it can be considered its disadvantage.
+	
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Example of SCHAC attribute: schacGender.}
+\label{tab:schacGender}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|c|c|c|}
+\hline
+Name               	& schacGender \\
+\hline
+Description 	    & Male or Female, specify the legal gender	\\
+Format	    		& 0 - Not Known, 1 - Male, 2 - Female, 9 - Not Specified \\
+Values				& Single \\
+References	        & ISO-5218	\\
+Example	            & schacGender = 1	\\
+\hline
+\end{tabular}
+\end{table}
+
+Surname issue.
+
+It is also worth mentioning that SCHAC has a category student information for curriculum, major and degree but no attribute is defined. This is because SCHAC is not completed till now and it is in progress.
 
     \subsection{Dublin Core}
     The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery.
@@ -456,6 +504,10 @@ Alon Halevy, Anand Rajaraman, and Joann Ordille, "Data integration: the teenage 
 
 \bibitem{improvement bologna process}
 Szentirmai, L.; Radacs, L., "Improvement of academic and research standards of higher engineering education in light of Bologna process," Emerging eLearning Technologies \& Applications (ICETA), 2012 IEEE 10th International Conference on , vol., no., pp.381,386, 8-9 Nov. 2012
+
+\bibitem{SCHAC 1.5.0}
+https://wiki.refeds.org/download/attachments/1606048/SCHAC
+\%2B1.5.0.pdf?version=3\&modificationDate=1429195142624\&api=v2
 
 \end{thebibliography}
 
