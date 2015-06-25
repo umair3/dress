@@ -2,34 +2,34 @@
 \contentsline {section}{\numberline {1.1}Problem Statement}{3}
 \contentsline {section}{\numberline {1.2}Contributions}{3}
 \contentsline {subsection}{\numberline {1.2.1}Motivation}{3}
-\contentsline {subsection}{\numberline {1.2.2}Goals}{3}
+\contentsline {subsection}{\numberline {1.2.2}Goals}{4}
 \contentsline {subsection}{\numberline {1.2.3}Challenges}{4}
 \contentsline {section}{\numberline {1.3}Thesis Organization}{4}
-\contentsline {chapter}{\numberline {2}Literature Review}{5}
-\contentsline {section}{\numberline {2.1}Bologna Process}{5}
-\contentsline {section}{\numberline {2.2}Qualifications Exchange Standards}{6}
-\contentsline {subsection}{\numberline {2.2.1}European Qualifications Framework}{6}
-\contentsline {subsection}{\numberline {2.2.2}Europass}{7}
-\contentsline {subsubsection}{Europass Curriculum Vitae}{8}
-\contentsline {subsubsection}{Europass Language Passport}{8}
-\contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{9}
-\contentsline {subsection}{\numberline {2.2.4}Dublin Core}{10}
-\contentsline {section}{\numberline {2.3}European Learner Mobility}{11}
-\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{11}
-\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{12}
-\contentsline {section}{\numberline {2.4}Information Manifold}{12}
-\contentsline {section}{\numberline {2.5}MAPQFTOOL}{12}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{13}
-\contentsline {section}{\numberline {3.1}Definitions}{13}
-\contentsline {section}{\numberline {3.2}Business Process}{14}
-\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{14}
-\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{15}
-\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{15}
-\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{15}
-\contentsline {section}{\numberline {3.4}Software Specifications}{16}
-\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{16}
-\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{16}
-\contentsline {chapter}{\numberline {4}Architecture \& Design}{17}
-\contentsline {chapter}{\numberline {5}Implementation}{20}
-\contentsline {chapter}{\numberline {6}Conclusions}{21}
-\contentsline {section}{\numberline {6.1}This is the End}{21}
+\contentsline {chapter}{\numberline {2}Literature Review}{6}
+\contentsline {section}{\numberline {2.1}Bologna Process}{6}
+\contentsline {section}{\numberline {2.2}Qualifications Exchange Standards}{7}
+\contentsline {subsection}{\numberline {2.2.1}European Qualifications Framework}{7}
+\contentsline {subsection}{\numberline {2.2.2}Europass}{8}
+\contentsline {subsubsection}{Europass Curriculum Vitae}{9}
+\contentsline {subsubsection}{Europass Language Passport}{10}
+\contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{10}
+\contentsline {subsection}{\numberline {2.2.4}Dublin Core}{12}
+\contentsline {section}{\numberline {2.3}European Learner Mobility}{12}
+\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{12}
+\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{13}
+\contentsline {section}{\numberline {2.4}Information Manifold}{13}
+\contentsline {section}{\numberline {2.5}MAPQFTOOL}{14}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{15}
+\contentsline {section}{\numberline {3.1}Definitions}{15}
+\contentsline {section}{\numberline {3.2}Business Process}{16}
+\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{16}
+\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{17}
+\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{17}
+\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{17}
+\contentsline {section}{\numberline {3.4}Software Specifications}{18}
+\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{18}
+\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{18}
+\contentsline {chapter}{\numberline {4}Architecture \& Design}{19}
+\contentsline {chapter}{\numberline {5}Implementation}{22}
+\contentsline {chapter}{\numberline {6}Conclusions}{23}
+\contentsline {section}{\numberline {6.1}This is the End}{23}
