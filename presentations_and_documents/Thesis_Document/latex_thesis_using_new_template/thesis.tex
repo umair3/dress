@@ -469,16 +469,35 @@ The number of universities can increase when agreements are signed with new univ
 Automating exchange of educational certificates using DRESS can be divided into four stages of implementation. The very first stage begins with defining the schema, that is our proposed standard and writing an xsd. The second stage involves implementation of a mapping tool that generates mapping and filters over heterogeneous schemas. The third stage is the development of a web-service that uses the generated mappings and filters to serve requests using DRESS. In this stage we implement a soap service describing the possible operations in a WSDL that satisfy the business processes described in chapter. The fifth stage is the last stage which includes a GUI interface for a Client which is a central authority to send and retrieve information from different institutes/nodes.
  
 \subsection{Defining the Schema}
+DRESS defines vocabulary for educational certificates. Using this vocabulary, XML documents are created for the exchange of documents to take place. There are different types of documents like DEGREE, REGISTRATION and TRANSCRIPT. Each document has a corresponding XML document. At this stage we create the XSDs for these XML documents.
 
 \subsection{Map Generation}
+Using the defined schema, we create mappings at stage 2. A semi-automated wizard is run on the provider node to create mappings and filters. These mappings and filters are stored in JSON format as properties.  The Mapping Tool and generated mappings reside on the provider node.
 
 \subsection{DRESS based Web-Service}
+At stage 3, a SOAP based web-service uses the defined mappings and filters. This piece of code fetches data from the provider database using the mappings. The fetched data is then served in DRESS format to the  request/client. The SOAP base web-service runs on the provider node. 
 
 \subsection{Client}
+At stage 4, a request mechanism is developed on the central Authority. A client tool is developed that enables us to request the DRESS based web-services using a graphical user interface. It then displays the exchanged document in readable format.
 
-\section{Technologies}
+\section{Tools \& Technologies}
+In this section, we discuss some important implementation decisions, and the technologies we chose for implementation. These decisions are based on following concerns;
 
+\begin{enumerate}
 
+\item The tools we developed will be freely available, so we choose to use open-source technologies as much as possible.
+
+\item The implementation and deployment involves many parties. For example, every institute has to use our mapping tool to generate mappings. This piece of software must be easy to use and should be able to run with zero configuration. Hence, we chose mappings to be stored as properties on the secure server disk in JSON format. This enables us to run this mapping wizard tool on a web-server with almost zero configuration.	
+
+\end{enumerate}
+
+\subsection{Apache HTTP Server}
+
+\subsection{Codeigniter Framework}
+
+\subsection{PHP2WSDL}
+
+\subsection{MySQL}
 
 \chapter{Conclusions}
 \label{ch:Conclusions}
