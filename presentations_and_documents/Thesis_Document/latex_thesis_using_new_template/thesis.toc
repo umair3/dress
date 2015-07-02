@@ -37,9 +37,5 @@
 \contentsline {subsection}{\numberline {5.1.3}DRESS based Web-Service}{23}
 \contentsline {subsection}{\numberline {5.1.4}Client}{23}
 \contentsline {section}{\numberline {5.2}Tools \& Technologies}{23}
-\contentsline {subsection}{\numberline {5.2.1}Apache HTTP Server}{24}
-\contentsline {subsection}{\numberline {5.2.2}Codeigniter Framework}{24}
-\contentsline {subsection}{\numberline {5.2.3}PHP2WSDL}{24}
-\contentsline {subsection}{\numberline {5.2.4}MySQL}{24}
 \contentsline {chapter}{\numberline {6}Conclusions}{25}
 \contentsline {section}{\numberline {6.1}This is the End}{25}
