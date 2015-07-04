@@ -59,7 +59,7 @@
 \adviser{Dr. Sharifullah Khan}
 \adviserAffiliation{Department of Computing}
 
-\date{June 2015}
+\date{July 2015}
 
 %\setcounter{tocdepth}{2}
  %\setstretch{1.1}
@@ -119,6 +119,7 @@ I am thankful to all my colleagues, co-workers and contributors who were support
             EA & Exchange Agreement  \\
             NQF & National Qualifications Framework  \\
             EQF & European Qualifications Framework  \\
+            XSD & XML Schema Definition  \\
             \hline                          % inserts single-line
     \end{tabular}
 \end{table}
@@ -137,7 +138,9 @@ With time passing, the exchange of official and legal documents digitally is get
 
 In 1999, it was decided in Bologna declaration to create European Higher Education Area which facilitate to standardize the exchange of information across Europe. Alone in Europe, more than four thousands partaking institutes with more than two million students were involved in this process in academic year 2009-2010. \\
 
-Enter Universities and students statistics from Pakistan. \\
+In April 2015 Bureau of Statistics Pakistan published statistics about Pakistan's population with different levels of education \cite{Level of Edu}. There are 1,712,308 people having education of BA/BSc \& Equivalent and 618,937 people with MA/MSc \& Equivalent or Above education. \cite{Edu Stat} \\
+
+Ministry of Federal Education and Professional Training and USAID published detailed report on Pakistan Education Statistics 2010-2011. We are mentioning the higher education enrollment statistics from this report to get an idea for need of this research. According to this report there are 135 higher education institutes with total enrollment of 1.108 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1,558 degree colleges have an enrollment of 0.431 million. \cite{Edu Stat}\\
 
 It is a well established fact that more and more systems are digitized every year. The educational institutes are also making their record digital and this trend is increasing. For example, more and more universities are implementing electronic student information systems to keep student courses and credit record. However, the documents often called degrees/certificates issued by these autonomous bodies are still exchanged in paper form.  \\
 
@@ -462,11 +465,11 @@ The number of universities can increase when agreements are signed with new univ
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Implementation}\label{ch-implement}
+\chapter{Implementation \& Evaluation}\label{ch-implement}
 
 
 \section{Implementation Stages}
-Automating exchange of educational certificates using DRESS can be divided into four stages of implementation. The very first stage begins with defining the schema, that is our proposed standard and writing an xsd. The second stage involves implementation of a mapping tool that generates mapping and filters over heterogeneous schemas. The third stage is the development of a web-service that uses the generated mappings and filters to serve requests using DRESS. In this stage we implement a soap service describing the possible operations in a WSDL that satisfy the business processes described in chapter. The fifth stage is the last stage which includes a GUI interface for a Client which is a central authority to send and retrieve information from different institutes/nodes.
+Automating exchange of educational certificates using DRESS can be divided into four stages of implementation. The very first stage begins with defining the schema, that is our proposed standard and writing an XSD. The second stage involves implementation of a mapping tool that generates mapping and filters over heterogeneous schemas. The third stage is the development of a web-service that uses the generated mappings and filters to serve requests using DRESS. In this stage we implement a soap service describing the possible operations in a WSDL that satisfy the business processes described in chapter. The fourth stage is the last stage which includes development of a GUI interface for a Client which is a central authority to send and retrieve information from different institutes/nodes.
  
 \subsection{Defining the Schema}
 DRESS defines vocabulary for educational certificates. Using this vocabulary, XML documents are created for the exchange of documents to take place. There are different types of documents like DEGREE, REGISTRATION and TRANSCRIPT. Each document has a corresponding XML document. At this stage we create the XSDs for these XML documents.
@@ -540,6 +543,12 @@ Szentirmai, L.; Radacs, L., "Improvement of academic and research standards of h
 \bibitem{SCHAC 1.5.0}
 https://wiki.refeds.org/download/attachments/1606048/SCHAC
 \%2B1.5.0.pdf?version=3\&modificationDate=1429195142624\&api=v2
+
+\bibitem{Edu Stat}
+http://www.aepam.edu.pk/files/educationstatistics/pakistaneducationstatistics2010-11.pdf
+
+\bibitem{Level of Edu}
+http://www.pbs.gov.pk/sites/default/files//tables/POPULATION BY LEVEL OF EDUCATION AND SEX.pdf
 
 \end{thebibliography}
 
