@@ -218,15 +218,25 @@ In Chapter 7, the research work is concluded and possible future work is present
 
 \chapter{Literature Review}\label{ch-work}
 
-There already exists a few standards and practices identified with exchanging degree or courses record. It is important to go through these, before proceeding onward to the new standard and the architecture we are proposing. We will review what these standards cover and what we can reuse.
+There already exists a few standards and practices identified with exchanging degree or courses record. It is important to go through these, before proceeding onward to the new standard and the architecture we are proposing. We will review what these standards cover and what we can reuse. \\
 
 \section{Bologna Process}
 
 It intends to make European educational framework of standards engaging different countries in Europe to compare, contrast and make compatible their educational systems. \cite{bologna process} \\
 
-To improve the mutual recognition of degrees and programs, education ministers from 29 countries signed bologna declaration in 1999. Other partaking countries joined the program later. \cite{improvement bologna process} Bologna process is quite often named as European Higher Education Area (EHEA). EHEA focuses on transferal and convergence adaption by 46 countries. This process benefits Europeans and it has its significance for other educational institutes and communities. a) The leading role of European institutes, b) the lessons that are learned in the implementation of the framework of standards, and c) the practices adopted guide the educational communities around the world. 2010 was marked as the deadline across Europe for implementing the agreed specifications. \cite{European Higher Education Area } \\
+To improve the mutual recognition of degrees and programs, education ministers from 29 countries signed bologna declaration in 1999. Other partaking countries joined the program later. \cite{improvement bologna process} Bologna process is quite often named as European Higher Education Area (EHEA). EHEA focuses on transferal and convergence adaption by 46 countries. This process benefits Europeans and it has its significance for other educational institutes and communities.
 
-To meet the 2010 deadline, Spain started to implement the convergence of undergraduate engineering degrees that conformed EHEA in 2008. This standardization provided some opportunities for mobility and unified measurements. \cite{European Higher Education Area }
+	\begin{enumerate}
+
+		\item The leading role of European institutes,
+
+		\item the lessons that are learned in the implementation of the framework of standards, and
+	
+		\item the practices adopted guide the educational communities around the world.
+
+	\end{enumerate} 
+
+	2010 was marked as the deadline across Europe for implementing the agreed specifications. \cite{EHEA} To meet the 2010 deadline, Spain started to implement the convergence of undergraduate engineering degrees that conformed EHEA in 2008. This standardization provided some opportunities for mobility and unified measurements. \cite{EHEA} \\
 
 \section{Qualifications Exchange Standards}
 
@@ -242,7 +252,7 @@ To meet the 2010 deadline, Spain started to implement the convergence of undergr
   \label{fig:EQF}
 \end{figure}
 
-    EQF concentrates on learning results as opposed to concentrating on learning inputs. It covers all types of education including professional, vocational and school education. It tries to validate formal and in addition informal education.
+    EQF concentrates on learning results as opposed to concentrating on learning inputs. It covers all types of education including professional, vocational and school education. It tries to validate formal and in addition informal education. \\
 
     \subsection{Europass}
     Collection of five documents which intend to ease mobility when seeking employment across Europe. These include the Curriculum Vitae, the Language Passport, the Mobility, the Diploma Supplement, and the Certificate Supplement. One can fill himself the Curriculum Vitae, and the Language Passport but the rest of the documents are issued by the related authorities. It follows a standard template format system, a layout. Same format helps to achieve neutrality and transparency while presenting one's skills. \\
@@ -256,13 +266,13 @@ To meet the 2010 deadline, Spain started to implement the convergence of undergr
 
     All these documents have some common XML schema attributes which describe document type, printed preferences. \\
 
-    Europass does not explain details related to degrees or educational certificates in XML certificate.
+    Europass does not explain details related to degrees or educational certificates in XML certificate. \\
 
         \subsubsection{Europass Curriculum Vitae}
-        Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in xml format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV.
+        Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in xml format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV. \\
 
         \subsubsection{Europass Language Passport}
-        Europass Language Passport (ELP) is a template. One can create it online and export it in europass xml format. It contains XML vocabulary related to language skills and the scale of six values to score proficiency.
+        Europass Language Passport (ELP) is a template. One can create it online and export it in europass xml format. It contains XML vocabulary related to language skills and the scale of six values to score proficiency. \\
 
     \subsection{Schema for Academia}
     The need for the inter-exchange of information between institutes across Europe has highlighted the importance of common attributes for this exchange to take place. Schema for Academia (SCHAC) is the result of the attribute coordination between different institutes. It plans to define and advance common attributes in the field of higher education to encourage data-exchange between institutions. It does not plan to supplement different the national schemas, rather it suggests a coordinated framework on top of the different national schemas. \\
@@ -291,7 +301,7 @@ Authorization, Entitlements
 Group-related Attributes
 \end{itemize}
 
-	SCHAC has a clearly defined meta-information for defining an attribute. To discuss the ideas  used by SCHAC, let us look in detail the schacGender attribute as an example shown in Table \ref{tab:schacGender}. It uses ISO-standards where-ever possible. In schacGender attribute, it is using values from ISO-5218. However, it lacks hierarchy which prevents from reuse-ability and it can be considered its disadvantage.
+	SCHAC has a clearly defined meta-information for defining an attribute. To discuss the ideas  used by SCHAC, let us look in detail the schacGender attribute as an example shown in Table \ref{tab:schacGender}. It uses ISO-standards where-ever possible. In schacGender attribute, it is using values from ISO-5218. However, it lacks hierarchy which prevents from reuse-ability and it can be considered its disadvantage. \\
 	
 \begin{table}[!tbh]
 %\renewcommand{\arraystretch}{1.5}
@@ -311,35 +321,35 @@ Example	            & schacGender = 1	\\
 \end{tabular}
 \end{table}
 
-It is also worth mentioning that SCHAC has a category student information for curriculum, major and degree but no attribute is defined. This is because SCHAC is not completed till now and it is in progress.
+It is also worth mentioning that SCHAC has a category student information for curriculum, major and degree but no attribute is defined. This is because SCHAC is not completed till now and it is in progress. \\
 
     \subsection{Dublin Core}
-    The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery.
+    The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery. \\
 
 \section{European Learner Mobility}
-Some related work has been done recently and systems have been proposed based on the above mentioned standards. These are "The Mobility Project" and "The REST Mobility" projects.
+Some related work has been done recently and systems have been proposed based on the above mentioned standards. These are "The Mobility Project" and "The REST Mobility" projects. \\
 
     \subsection{The Mobility Project}
-    It aimed to provide a platform and infrastructure for exchange of electronic data exchange between educational institutes. Infrastructure includes data format, architecture and the prototype software. The system will be called The Mobility later in this paper.
+    It aimed to provide a platform and infrastructure for exchange of electronic data exchange between educational institutes. Infrastructure includes data format, architecture and the prototype software. The system will be called The Mobility later in this paper. \\
 
-    The Mobility is peer to peer like architecture. Nodes exchange data using SOAP base web service. Other web services like XML-RPC and REST were not used due to their limitations. XML-RPC not have developer defined data-types and character set. REST does not imposes a standard specification, instead it follows set of rules and is used for speedy development of web service interface.
+    The Mobility is peer to peer like architecture. Nodes exchange data using SOAP base web service. Other web services like XML-RPC and REST were not used due to their limitations. XML-RPC not have developer defined data-types and character set. REST does not imposes a standard specification, instead it follows set of rules and is used for speedy development of web service interface. \\
 
-    The nodes represented the universities, and their number tends to change. So there was a need for system to maintain this record and UDDI was used. He did not recommend the central or delegated private registry instead gave advantages and disadvantages of both. Central single registry has all information at one place but also it a single point of failure.
+    The nodes represented the universities, and their number tends to change. So there was a need for system to maintain this record and UDDI was used. He did not recommend the central or delegated private registry instead gave advantages and disadvantages of both. Central single registry has all information at one place but also it a single point of failure. \\
 
-    The software has two transport modules and each have web interface.
+    The software has two transport modules and each have web interface. \\
 
-    Nagrozki proposed a new standard, defined its vocabulary re-using ideas taken from SCHAC to leverage ISO and RFC rules. Some like grade, credits were taken in inspiration from Eropass Mobility.
+    Nagrozki proposed a new standard, defined its vocabulary re-using ideas taken from SCHAC to leverage ISO and RFC rules. Some like grade, credits were taken in inspiration from Eropass Mobility. \\
 
-    Although The Mobility project was started by MUCI and CINECA, two European Higher Education Consortia. Many universities consortia, individual universities and companies joined in later on.
+    Although The Mobility project was started by MUCI and CINECA, two European Higher Education Consortia. Many universities consortia, individual universities and companies joined in later on. \\
 
     \subsection{The REST Mobility}
-    This is alternative implementation of The Mobility. Nagrozki's system used SOAP web service for data exchange. Karol created a RESTful implementation of the Mobility. The Mobility lacked data model. In The REST Mobility a data model is proposed since REST is resourceful. The model proposed not represents or intends to be a standard.
+    This is alternative implementation of The Mobility. Nagrozki's system used SOAP web service for data exchange. Karol created a RESTful implementation of the Mobility. The Mobility lacked data model. In The REST Mobility a data model is proposed since REST is resourceful. The model proposed not represents or intends to be a standard. \\
 
 \section{Information Manifold}
-Providing a uniform interface for querying data from many sources is the aim of Information Manifold. It enables a simple user to not worry about locating sources and manually combining results. This leads to concept of Deep Web. Data integration systems give users a common global schema called mediated schema for posting queries. To answer these queries semantic relationships called mappings are needed between mediated schema and the sources schema.
+Providing a uniform interface for querying data from many sources is the aim of Information Manifold. It enables a simple user to not worry about locating sources and manually combining results. This leads to concept of Deep Web. Data integration systems give users a common global schema called mediated schema for posting queries. To answer these queries semantic relationships called mappings are needed between mediated schema and the sources schema. \\
 
 \section{MAPQFTOOL}
-This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database.
+This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database. \\
 
 \chapter{Requirements Analysis}\label{ch-requirements-analysis}
 \section{Definitions}
@@ -518,6 +528,8 @@ In this section, we discuss some important implementation decisions, and the tec
 
 \end{enumerate}
 
+\section{Evaluation}
+
 %\subsection{Apache HTTP Server}
 
 %\subsection{Codeigniter Framework}
@@ -552,7 +564,7 @@ P. Pouyioutas, H. Gjermundrod, and M. Michael, "MAPQFTOOL: A software tool to su
 \bibitem{The Mobility Project}
 Rafal Nagrodzki, "The Mobility Project," Institue of Informatics, University of Warsaw, Warsaw, Master's Thesis 2009.
 
-\bibitem{European Higher Education Area }
+\bibitem{EHEA}
 A. Duran, Y.B. Moon, and E. Giraldo, "Work in progress - the European Higher Education Area ("Bologna process") in Engineering Education in Spain," Frontiers in Education Conference, 2009. FIE '09. 39th IEEE, pp. 1,2, Oct. 2009.
 
 \bibitem{Integration of Services in the Mobility Project}

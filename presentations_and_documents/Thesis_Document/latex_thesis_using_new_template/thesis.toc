@@ -9,33 +9,34 @@
 \contentsline {section}{\numberline {2.1}Bologna Process}{7}
 \contentsline {section}{\numberline {2.2}Qualifications Exchange Standards}{8}
 \contentsline {subsection}{\numberline {2.2.1}European Qualifications Framework}{8}
-\contentsline {subsection}{\numberline {2.2.2}Europass}{9}
-\contentsline {subsubsection}{Europass Curriculum Vitae}{10}
+\contentsline {subsection}{\numberline {2.2.2}Europass}{10}
+\contentsline {subsubsection}{Europass Curriculum Vitae}{11}
 \contentsline {subsubsection}{Europass Language Passport}{11}
 \contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{11}
 \contentsline {subsection}{\numberline {2.2.4}Dublin Core}{13}
-\contentsline {section}{\numberline {2.3}European Learner Mobility}{13}
-\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{13}
-\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{14}
-\contentsline {section}{\numberline {2.4}Information Manifold}{14}
-\contentsline {section}{\numberline {2.5}MAPQFTOOL}{15}
-\contentsline {chapter}{\numberline {3}Requirements Analysis}{16}
-\contentsline {section}{\numberline {3.1}Definitions}{16}
-\contentsline {section}{\numberline {3.2}Business Process}{17}
-\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{17}
-\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{18}
-\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{18}
-\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{18}
-\contentsline {section}{\numberline {3.4}Software Specifications}{19}
-\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{19}
-\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{20}
-\contentsline {chapter}{\numberline {4}Architecture \& Design}{21}
-\contentsline {chapter}{\numberline {5}Implementation \& Evaluation}{24}
-\contentsline {section}{\numberline {5.1}Implementation Stages}{24}
-\contentsline {subsection}{\numberline {5.1.1}Defining the Schema}{24}
-\contentsline {subsection}{\numberline {5.1.2}Map Generation}{25}
-\contentsline {subsection}{\numberline {5.1.3}DRESS based Web-Service}{25}
-\contentsline {subsection}{\numberline {5.1.4}Client}{25}
-\contentsline {section}{\numberline {5.2}Tools \& Technologies}{25}
-\contentsline {chapter}{\numberline {6}Conclusions}{27}
-\contentsline {section}{\numberline {6.1}This is the End}{27}
+\contentsline {section}{\numberline {2.3}European Learner Mobility}{14}
+\contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{14}
+\contentsline {subsection}{\numberline {2.3.2}The REST Mobility}{15}
+\contentsline {section}{\numberline {2.4}Information Manifold}{15}
+\contentsline {section}{\numberline {2.5}MAPQFTOOL}{16}
+\contentsline {chapter}{\numberline {3}Requirements Analysis}{17}
+\contentsline {section}{\numberline {3.1}Definitions}{17}
+\contentsline {section}{\numberline {3.2}Business Process}{18}
+\contentsline {subsection}{\numberline {3.2.1}Make Exchange Agreement}{18}
+\contentsline {subsection}{\numberline {3.2.2}Find Student Data}{19}
+\contentsline {subsection}{\numberline {3.2.3}Exchange a Document Details}{19}
+\contentsline {section}{\numberline {3.3}Mapping and Web Service Challange}{19}
+\contentsline {section}{\numberline {3.4}Software Specifications}{20}
+\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{20}
+\contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{21}
+\contentsline {chapter}{\numberline {4}Architecture \& Design}{22}
+\contentsline {chapter}{\numberline {5}Implementation \& Evaluation}{25}
+\contentsline {section}{\numberline {5.1}Implementation Stages}{25}
+\contentsline {subsection}{\numberline {5.1.1}Defining the Schema}{25}
+\contentsline {subsection}{\numberline {5.1.2}Map Generation}{26}
+\contentsline {subsection}{\numberline {5.1.3}DRESS based Web-Service}{26}
+\contentsline {subsection}{\numberline {5.1.4}Client}{26}
+\contentsline {section}{\numberline {5.2}Tools \& Technologies}{26}
+\contentsline {section}{\numberline {5.3}Evaluation}{27}
+\contentsline {chapter}{\numberline {6}Conclusions}{28}
+\contentsline {section}{\numberline {6.1}This is the End}{28}
