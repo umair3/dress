@@ -547,17 +547,29 @@ In this section we present the evaluation techniques that can be used and the on
 	All the above mentioned techniques require us to create a test bed environment. Hence, we created an environment of three nodes for the evaluation purpose. \\
 	
 	\subsection{Test-bed}
-	Keeping in mind the end goal to mimic a true domain and to simulate more realistically, it is better to setup separate servers for each node/entity. So we setup separate server for each node with different technologies and services running on these machines. We take three nodes as shown in figure. The two nodes (Node1 and Node2) in light grey color are the providers and the node (Node0) in the center in dark grey color is the node that acts as a central authority. Both provider nodes are running database management systems and schema that are different from each other. Thus simulating a heterogeneous environment.
+	Keeping in mind the end goal to mimic a true domain and to simulate more realistically, it is better to setup separate servers for each node/entity. So we setup separate server for each node with different technologies and services running on these machines. We take three nodes as shown in figure ~\ref{fig:testbed}. The two nodes (Node1 and Node2) in light grey color are the providers and the node (Node0) in the center in dark grey color is the node that acts as a central authority. Both provider nodes are running database management systems and schema that are different from each other. Thus simulating a heterogeneous environment.
 	
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=5cm]{architecture_distributed_testbed_exchange_through_hec.png}
   \caption{Three Nodes Exchanging Information Usign DRESS with one Node as Central Control Authority}
-  \label{fig:architecture_distributed_exchange_through_hec}
+  \label{fig:testbed}
 \end{figure}  
 
+	\begin{enumerate}
+
+We begin with setting up the providers first by generating mappings over the heterogeneous schema and then installing the web-services that enable these providers to exchange educational certificates. Once the providers are ready, we setup the client to use the provider web-services for exchanging information using DRESS.  
+
+		\item At Node1,
+
+		\item At Node2,
+	
+		\item At Node0, 
+
+	\end{enumerate}
+
 	\subsection{Evaluation Techniques}
-	asdfasdf
+	
 	
 		\subsubsection{Evaluating against Functional \& Non-Functional Requirements}
 	
