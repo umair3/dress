@@ -140,11 +140,13 @@ In 1999, it was decided in Bologna declaration to create European Higher Educati
 
 In April 2015 Bureau of Statistics Pakistan published statistics about Pakistan's population with different levels of education \cite{Level of Edu}. There are 1,712,308 people having education of BA/BSc \& Equivalent and 618,937 people with MA/MSc \& Equivalent or Above education. \cite{Edu Stat} \\
 
-Ministry of Federal Education and Professional Training and USAID published detailed report on Pakistan Education Statistics 2010-2011. We are mentioning the higher education enrollment statistics from this report to get an idea for need of this research. According to this report there are 135 higher education institutes with total enrollment of 1.108 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1,558 degree colleges have an enrollment of 0.431 million. \cite{Edu Stat}\\
+Ministry of Federal Education and Professional Training and USAID published detailed report on Pakistan Education Statistics 2010-2011 \cite{Edu Stat}. We are mentioning the higher education enrollment statistics from this report to get an idea for need of this research. According to this report there are 135 higher education institutes with total enrollment of 1.108 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1,558 degree colleges have an enrollment of 0.431 million. \\ 
+
+According to Pakistan Education Statistics 2013-2014 report there are 161 higher education institutes with total enrollment of 1.595 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1086 degree colleges have an enrollment of 1.336 million. \cite{Edu Stat2}\\
 
 It is a well established fact that more and more systems are digitized every year. The educational institutes are also making their record digital and this trend is increasing. For example, more and more universities are implementing electronic student information systems to keep student courses and credit record. However, the documents often called degrees/certificates issued by these autonomous bodies are still exchanged in paper form.  \\
 
-This manual approach of exchanging physical documents and re-enter the data again manually in digital or physical for by people is error prone and exhaustive. As a result the local data-sets of these autonomous bodies has different record for the same individual. \\
+This manual approach of exchanging physical documents and re-enter the data again manually in digital or physical form by people is error prone and exhaustive. As a result the local data-sets of these autonomous bodies has different record for the same individual. \\
 
 This creates an opportunity for a common data-exchange standard which bring a common ground for the exchange of information. To resolve the issues facing in manual exchange of documents, the institutional systems must talk to each other using a common standard. This would make the entire process more dependable and less error prone. \\
 
@@ -309,8 +311,6 @@ Example	            & schacGender = 1	\\
 \end{tabular}
 \end{table}
 
-Surname issue.
-
 It is also worth mentioning that SCHAC has a category student information for curriculum, major and degree but no attribute is defined. This is because SCHAC is not completed till now and it is in progress.
 
     \subsection{Dublin Core}
@@ -418,10 +418,34 @@ It is very important to understand that to implement the scenarios mentioned in 
 Based on the business process and the challenges we discussed, functional and non-functional requirements are;
 
     \subsection{Functional Requirements}
+    
+    \begin{enumerate}
 
+		\item The client must be able to fetch educational certificates from different providers with database schemas of different heterogeneous levels. This exchange must satify all the use cases discussed in section \ref{s-business_process}.
+
+		\item Provider must authenticate the client.
+	
+		\item The system ought to be testable with sample data.	
+		
+		\item The addition of new providers into the system must not involve any coding.
+
+	\end{enumerate} 
 
     \subsection{Non-functional Requirements}
 
+	\begin{enumerate}
+
+		\item The proposed standard and the supporting software must be generic. This means using this standard and the proposed architecture, the software must be able to exchange documents with different attributes and types. 
+
+		\item It should provide control and authority.
+	
+		\item It should build trust among the data sharing entities. 	
+		
+		\item It should be easy to integrate and use.
+		
+		\item The tools and technologies required should be freely available, widely used and independent of any specific hardware or operating system.
+
+	\end{enumerate}
 
 \chapter{Architecture \& Design}\label{ch-architecture-design}
 From the requirements analysis, we suggest student exchange system should have distributed architecture. As partaking institutes are autonomous and themselves maintain the its own data. It signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.
