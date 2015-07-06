@@ -556,17 +556,19 @@ In this section we present the evaluation techniques that can be used and the on
   \label{fig:testbed}
 \end{figure}  
 
-	\begin{enumerate}
+We begin with setting up the providers first by generating mappings over the heterogeneous schema and then installing the web-services that enable these providers to exchange educational certificates. Once the providers are ready, we setup the client to use the provider web-services for exchanging information using DRESS.
 
-We begin with setting up the providers first by generating mappings over the heterogeneous schema and then installing the web-services that enable these providers to exchange educational certificates. Once the providers are ready, we setup the client to use the provider web-services for exchanging information using DRESS.  
+	\begin{enumerate}  
 
-		\item At Node1,
+		\item At Node1, we installed MS-SQL as database management system with a university database schema. We generated mappings using the mapping tool and then setup the DRESS based provider web-service.
 
-		\item At Node2,
+		\item At Node2, we installed MySQL as database management system with another university documents  database. We generated mappings for this schema and then setup the DRESS based provider web-service. 
 	
-		\item At Node0, 
+		\item At Node0, we installed the client GUI which enables us to request information regrading educational certificates from the providers. 
 
 	\end{enumerate}
+	
+It is worth mentioning that the mappings generated at Node1 and Node2 are different and correspond to their respective schema only.
 
 	\subsection{Evaluation Techniques}
 	

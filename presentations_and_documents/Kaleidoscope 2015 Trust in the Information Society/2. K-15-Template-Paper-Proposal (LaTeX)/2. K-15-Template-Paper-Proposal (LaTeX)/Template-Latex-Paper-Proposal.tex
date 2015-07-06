@@ -1,0 +1,251 @@
+% Based on template for ICASSP-2008 paper; to be used with:
+%          spconf.sty  - ICASSP/ICIP LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass[a4paper]{article} 
+\usepackage{spconf,amsmath,epsfig}
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+% Title.
+% ------
+\title{AUTHOR PAPER PROPOSAL TEMPLATE AND GUIDELINES \\ 
+       FOR PAPERS IN THE KALEIDOSCOPE PROCEEDINGS}
+%
+% Single address - DO NOT USE FOR PAPER PROPOSAL!!!.
+% ---------------------------------------------------
+\name{\thanks{Thanks to XYZ agency for funding - if any.}}
+\address{} % Leave this empty for the paper proposal phase!
+%
+%
+
+
+\begin{document}
+
+% Change page numbering style *only* for the paper proposal phase!
+\pagestyle{plain}
+\pagenumbering{arabic}
+
+%\ninept
+%
+\maketitle
+%
+\begin{abstract} \em
+The abstract should appear in \underline{italics} at the top of the
+left-hand column of text, about 12 mm (0.5 inch) below the title area
+and no more than 80 mm (3.125 inches) in length.  Leave a 12 mm (0.5
+inch) space between the end of the abstract and the beginning of the
+main text.  The abstract should normally contain 100 to 150 words, and
+in no case it shall exceed 200 words. The abstract must be identical
+to the abstract text submitted electronically in EDAS, since it is the
+latter that will be used for generating the table of abstracts for the
+conference, not the abstract and title in the paper itself.  All
+manuscripts must be in English, printed in black ink.
+\end{abstract}
+%
+\begin{keywords}
+One, two, three, four, five
+\end{keywords}
+%
+\section{Introduction}
+\label{sec:intro}
+
+These guidelines include complete descriptions of the number of pages,
+layout, fonts, spacing, and related information for producing your
+proceedings manuscripts. Please follow them and if you have any
+questions, direct them to the Kaleidoscope secretariat at
+{\em kaleidoscope@itu.int}. Papers not adhering to them will be returned to
+you and if proper formatting is not achieved by the deadline this will
+lead to the paper being rejected for inclusion in the proceedings and
+presentation at the conference.
+
+\section{Formatting your paper}
+\label{sec:format}
+
+Your paper {\bf cannot} have more than eight pages (there included all
+text, all figures, tables, abstract and references). All printed
+material, including text, illustrations, and charts must be kept
+within a print area of 175 mm (6.9 inches) wide by 244 mm (9.6 inches)
+high. Do not write or print anything outside the print area. The top
+margin must be 25 mm (1 inch), except for the title page, and the left
+margin must be 17.5 mm (0.69 inch).  All {\it text} must be in a
+two-column format. Columns are to be 85 mm (3.35 inches) wide, with a
+5 mm (0.20 inch) space between them. Text must be fully
+justified. Units should be expressed as much as possible in
+international units, and a dot (``.'') should be used to express
+decimal points (not ``,'').
+
+\section{PAGE TITLE SECTION}
+\label{sec:pagestyle}
+
+The paper title (on the first page) should begin 35 mm (1.38 inches)
+from the top edge of the page, centered, completely capitalized, and
+in Times-Roman 12-point, boldface type.  For the PAPER PROPOSAL phase,
+the authors' name(s) and affiliation(s) SHOULD NOT appear below the
+title, nor anywhere else in the paper.\\
+{\small NOTE: This instruction will {\bf change} for the camera-ready
+version of accepted papers. In that case, the authors' name(s) and
+affiliation(s) are to appear below the title in capital and lower case
+letters.  Papers with multiple authors and affiliations may require
+two or more lines for this information.}
+
+\section{TYPE-STYLE AND FONTS}
+\label{sec:typestyle}
+
+To achieve the best rendering both in the proceedings and from the
+CD-ROM, we strongly encourage you to use Times-Roman font.  In
+addition, this will give the proceedings a more uniform look.  Use a
+font that is {\bf no} smaller than nine point type throughout the
+paper, including figure captions.
+
+In nine point type font, capital letters are 2 mm high.  If you use the
+smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
+vertically.  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
+the paper much more readable.  Larger type sizes require correspondingly larger
+vertical spacing.  Please do not double-space your paper.  True-Type 1 fonts
+are preferred.
+
+\section{MAJOR HEADINGS}
+\label{sec:majhead}
+
+Major headings (for example, ``1. Introduction'') should appear in all
+capital letters, bold face if possible, centered in the column, with
+one blank line before, and one blank line after. Use a period (``.'')
+after the heading number, not a colon.
+
+\subsection{Subheadings}
+\label{ssec:subhead}
+
+Subheadings should appear in lower case (initial word capitalized) in
+boldface.  They should start at the left margin on a separate line.
+ 
+\subsubsection{Sub-subheadings}
+\label{sssec:subsubhead}
+
+Sub-subheadings, as in this paragraph, are discouraged. However, if you
+must use them, they should appear in lower case (initial word
+capitalized) and start at the left margin on a separate line, with paragraph
+text beginning on the following line.  They should be in italics.
+
+\section{PRINTING YOUR PAPER}
+\label{sec:print}
+
+Print your properly formatted text on high-quality, A4 size (210 mm
+wide by 297 mm long, or 8.27 inches by 11.7 inches). If the last page
+of your paper is only partially filled, arrange the columns so that
+they are evenly balanced if possible, rather than having one long
+column.
+
+In LaTeX, to start a new column (but not a new page) and help balance the
+last-page column lengths, you can use the command ``$\backslash$pagebreak'' as
+demonstrated on this page (see the LaTeX source below).
+
+The paper proposal must be submitted either as a Post\-Script (PS)
+or unprotected Adobe's Portable Document Format (PDF) file. All fonts
+{\bf must} be embedded and the file should contain {\bf no}
+bookmarks. These are {\em strict} publisher's requirements. Look for
+information regarding embedding fonts and bookmark generation in the
+EDAS help page at {\em
+http://edas.info/listFAQ.php?c=19927}. Additional hints can be found in
+the IEEE PDF Express website at:
+http://www.pdf-express.org/pdfcheck.asp. \\
+{\small NOTE: The IEEE PDF Express site will be available for production of the camera-ready version of accepted papers.}
+
+
+\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
+\label{sec:illust}
+
+All halftone illustrations must be clear black and white prints.  Do
+not use any colors in illustrations, since the proceedings will be
+printed in black and white. It is your responsibility to ensure that
+illustrations (there included pictures, diagrams, etc) are properly
+rendered in a black-and-white laser printer. 
+
+Illustrations must appear within the designated margins.  They may
+span the two columns.  If possible, position illustrations at the top
+of columns, rather than in the middle or at the bottom.  Caption and
+number every illustration. Figure captions must be placed on the {\bf
+bottom}, not top, of the figure. Table captions must be located on the
+{\bf top} of the table.
+
+Since there are many ways, often incompatible, of including images (e.g., with
+experimental results) in a LaTeX document, below is an example of how to do
+this \cite{Lamp86}.
+
+% Below is an example of how to insert images. Delete the ``\vspace'' line,
+% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
+% with a suitable PostScript file name.
+% -------------------------------------------------------------------------
+\begin{figure}[htb]
+
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+% \centerline{\epsfig{figure=image1.ps,width=8.5cm}}
+  %\vspace{2.0cm}
+  \begin{picture}(60,60)\put(2,2){\framebox(50,50)[c]{Square}}\end{picture}
+  \centerline{(a) Result 1}\medskip
+\end{minipage}
+%
+\begin{minipage}[b]{.48\linewidth}
+  \centering
+% \centerline{\epsfig{figure=image3.ps,width=4.0cm}}
+  %\vspace{1.5cm}
+  \begin{picture}(60,50)\put(30,30){\circle{50}}\end{picture}
+  \centerline{(b) Result 2}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+  \centering
+% \centerline{\epsfig{figure=image4.ps,width=4.0cm}}
+  %\vspace{1.5cm}
+  \begin{picture}(60,50)\put(30,35){\oval(30,20)}\end{picture}
+  \centerline{(c) Result 3}\medskip
+\end{minipage}
+%
+\caption{Example of placing a figure with experimental results.}
+\label{fig:res}
+%
+\end{figure}
+
+% To start a new column (but not a new page) and help balance the last-page
+% column length use \vfill\pagebreak.
+% -------------------------------------------------------------------------
+\vfill
+\pagebreak
+
+
+\section{PAGE NUMBERING}
+\label{sec:page}
+
+Please number all pages in your paper proposal. Note that this
+instruction will {\bf change} for the camera-ready version.
+
+\section{FOOTNOTES}
+\label{sec:foot}
+
+Use footnotes sparingly (or not at all!) and place them at the bottom of the
+column on the page on which they are referenced. Use Times 9-point type,
+single-spaced. To help your readers, avoid using footnotes altogether and
+include necessary peripheral observations in the text (within parentheses, if
+you prefer, as in this sentence).
+
+\section{USING REFERENCES}
+\label{sec:ref}
+
+List and number all bibliographical references at the end of the
+paper.  The references can be numbered in alphabetic order or in order
+of appearance in the document.  When referring to them in the text,
+type the corresponding reference number in square brackets as shown at
+the end of this sentence \cite{C2}.
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+\bibliographystyle{IEEEbib}
+\bibliography{strings,refs}
+
+\end{document}
