@@ -588,14 +588,30 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 
 	\end{enumerate}
 		
+	We now evaluate the non-functional requirements which are relatively hard to measure. A subjective evaluation of the non-functional requirements is below;
+	
+	\begin{enumerate}  
+
+		\item We exchanged different documents and similar documents from different issuing authorities with a few changes at attribute level. However, it is hard to test with every possible document but we were able to test the standard for documents from different issuing authorities. These document contained differences at attribute level and among values. For example, the grade and mark attributes are used both with divisions plus percentage and grades plus CGPA. This successful exchange satisfies the non-functional requirement number 1.
+
+		\item The architecture is designed in such a way that it provides both control and authority. The only authority that may request data from the providers in this architecture is the Node0 (the central authority). This satisfies the non-functional requirement number 2. 
+	
+		\item Both providers Node1 and Node2 in the test-bed are the owner of their data. Providers are autonomous bodies approved from a central authority. Since, the data is not copied to some other authority and a document exchange request is always made to the corresponding provider. For example, University 1 at Node1 will always serve exchange requests for its documents and every time request is made to Node1. This makes University1 owner of its own data and thus builds trust in the system. This satisfies the third requirement.
 		
+		\item The mapping tool made it easy to integrate new providers into the system in a semi-autmated way. This satisfies the fourth requirement. 
+		
+		\item We used open-source technologies that are widely used for setting up test-bed. We used JSON for storing mappings which require no storage configurations. We used PHP as server-side programming language for the development of the web-service and the query builder. HTML and JavaScript are used for front end development. All the technologies are openly available, free and widely used. This satisfies the fifth requirement.
+
+	\end{enumerate}
 		
 		
 		\subsubsection{Using Program Validation Technique}
+		Program validation technique unit testing and integration testing of the tools that are developed. This technique reports the issues and bugs found in the developed tools. However, in this research our focus is on our proposed standard DRESS and the proposed architecture. Although we developed software tools to evaluate DRESS and the architecture but the testing of the these tools itself is out of scope of this research and can be in future work. \\
 	
-		\subsubsection{Testing against Exemplary data}
+		%\subsubsection{Testing against Exemplary data}
+		%This technique involves running the system with different data-sets by different users and then getting feedback. We collected documents for two different 
 	
-		\subsubsection{Success Vs Failure Cases}
+		%\subsubsection{Success Vs Failure Cases}
 
 
 %\subsection{Apache HTTP Server}
@@ -606,8 +622,8 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 
 %\subsection{MySQL}
 
-\chapter{Conclusions}
-\label{ch:Conclusions}
+\chapter{Conclusion \& Future Work}\label{ch:Conclusions}
+
 
 \section{This is the End}
 \label{sec:This_is_the_end}
