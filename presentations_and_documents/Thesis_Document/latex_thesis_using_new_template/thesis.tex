@@ -192,7 +192,7 @@ every data owning entity is the owner of its own data to build trust and have bu
 Implementation of a mapping tool to ease mapping of heterogeneous schema with our proposed standard DRESS.
 \end{itemize}
 
-\subsection{Challenges}
+\subsection{Challenges}\label{s-challenges}
 
 \begin{itemize}
 \item
@@ -425,7 +425,7 @@ After the implementation of web-service by the provider. The requester fills a f
 
 It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically.
 
-\section{Software Specifications}
+\section{Software Specifications}\label{s-softspecs}
 Based on the business process and the challenges we discussed, functional and non-functional requirements are;
 
     \subsection{Functional Requirements}
@@ -568,13 +568,29 @@ We begin with setting up the providers first by generating mappings over the het
 
 	\end{enumerate}
 	
-It is worth mentioning that the mappings generated at Node1 and Node2 are different and correspond to their respective schema only.
+It is worth mentioning that the mappings generated at Node1 and Node2 are different and correspond to their respective schema only. \\
 
 	\subsection{Evaluation Techniques}
-	
+	We discuss the evaluation techniques that can be used for evaluating our proposed standard and the proposed architecture. We also provided references of the research projects where these techniques have already been used as an example. We apply these techniques to evaluate against the goals and challenges we discussed in sections \ref{s-goals} and \ref{s-challenges} respectively. \\
 	
 		\subsubsection{Evaluating against Functional \& Non-Functional Requirements}
+		We listed functional and non-functional requirements in section \ref{s-softspecs} for achieving the goals mentioned in section \ref{s-goals} and meeting the challenges explained in section \ref{s-challenges}.  In this technique we subjectively evaluate these requirements. Let us begin with functional requirements first.
+		
+	\begin{enumerate}  
+
+		\item Starting with first functional requirement, we can express that the proposed architecture and DRESS empowered effective information trade of educational certificates between partaking institutes in the test-bed environment. This exchanged worked successfully for the different heterogeneous schema running on different database engines. 
+
+		\item The test-bed also satisfied the second requirement and only provider data is only shared if a request is made with valid access keys. 
 	
+		\item We collected real educational certificates and added this record to two different test schema on each node. We see that the system is testable with this data. Hence, we met this third requirement.
+		
+		\item We added two new providers in the environment in a semi-automated way to generate mappings using the mapping tool and made agreements. This satisfies the fourth requirement.
+
+	\end{enumerate}
+		
+		
+		
+		
 		\subsubsection{Using Program Validation Technique}
 	
 		\subsubsection{Testing against Exemplary data}
