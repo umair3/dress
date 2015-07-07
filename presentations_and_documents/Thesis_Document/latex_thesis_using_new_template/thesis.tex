@@ -473,7 +473,20 @@ Based on the business process and the challenges we discussed, functional and no
 	\end{enumerate}
 
 \chapter{Architecture \& Design}\label{ch-architecture-design}
-From the requirements analysis, we suggest student exchange system should have distributed architecture. As partaking institutes are autonomous and themselves maintain the its own data. It signs agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities. The arrows represent exchange of data.
+From the requirements analysis chapter \ref{ch-requirements-analysis} and the goals discussed in section \ref{s-goals}, we conclude that the educational certificate system will be a distributed system. This system is based on DRESS and logically layered architecture.
+
+%be designed with an architecture having following characteristics;
+
+%\begin{enumerate}
+
+		%\item It should provide control and authority.
+	
+		%\item It should build trust among the data sharing entities. To attain
+
+%\end{enumerate}
+
+\section{Distributed System}
+We suggest an educational certificate exchange system that is distributed. As partaking institutes are autonomous and themselves maintain their data. They sign agreements independently for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure~\ref{fig:architecture_distributed_independent_exchange} represent universities. The arrows represent exchange of data. \\
 
 \begin{figure}[!htp]
   \centering
@@ -482,7 +495,7 @@ From the requirements analysis, we suggest student exchange system should have d
   \label{fig:architecture_distributed_independent_exchange}
 \end{figure}
 
-This peer to peer like distribute architecture has benefits over adding a middle agent or central server in the system.
+This peer to peer like distributed architecture has benefits over adding a middle agent or central server in the system.
 
 \begin{enumerate}
 \item Avoidance from single point of failure.
@@ -490,7 +503,7 @@ This peer to peer like distribute architecture has benefits over adding a middle
 \item Each university having control over its own data and thus building trust in the system.	
 \end{enumerate}
 
-We suggest student exchange system will have distributed architecture. Each university has its own data and signs agreements with HEC for exchanging data with other universities. Each can be a requester plus a provider of data. The circles/nodes in the figure below represent universities
+However, we also want to have control and authenticity. With fully distributed architecture we lack these attributes. Hence, we suggest student exchange system that will have distributed architecture with a central node that acts as a central authority as shown in figure ~\ref{fig:architecture_distributed_exchange_through_hec}. Each university has its own data and signs agreements with the central node for exchanging data with other universities. This central node is a requester while the rest are provider of data. The circles/nodes in the figure below represent the partaking institutes. \\
 
 \begin{figure}[!htp]
   \centering
@@ -499,18 +512,31 @@ We suggest student exchange system will have distributed architecture. Each univ
   \label{fig:architecture_distributed_exchange_through_hec}
 \end{figure}
 
-There are some choices to be made at this point. We will be using web services for exchanging data as they provide a high abstraction from network issues and use well known standards like XML over HTTP. There are some XML based data exchange protocols on web. These are XML-RPC, SOAP, and REST.
+The introduction of a central node has a few benefits as well as a few compromises. Now now we discuss these one by one.
 
-The nodes will exchange data using SOAP based web service in our system.  We chose SOAP as it forces to follow a formal standard and supports developer defined data types.
+\begin{enumerate}
+\item Although we compromised avoidance from single point of failure by introducing the central node but gained more control and authority. 
+\item Load is still distributed across the providers.
+\item Each university having control over its own data, thus building trust in the system. The introduction of central authority even helps to gain more trust in the system.
+\end{enumerate}
 
-The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system "URL registry" for saving web services URLs. Now we have to make a choice. URL registry can be global or each requesting node can have its own private URL registry. We will use private registry to avoid single point of failure and to minimize load.
+There are some choices to be made at this point. We will be using web services for exchanging data as they provide a high abstraction from network issues and use well known standards like XML over HTTP. There are some XML based data exchange protocols on web. These are XML-RPC, SOAP, and REST. \\
+
+The nodes will exchange data using SOAP based web service in our system.  We chose SOAP as it forces to follow a formal standard and supports developer defined data types. \\
+
+The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system "URL registry" for saving web services URLs. Now we have to make a choice. URL registry can be global or requesting node can have its own private URL registry. \\
+
+As we have made the necessary decisions, let us look the system design in more detail. The figure \ref{fig:architecture} shows the components in a provider and a requester. \\
 
 \begin{figure}[!htp]
   \centering
-  \includegraphics[width=12cm]{architecture.png}
+  \includegraphics[width=14cm]{architecture.png}
   \caption{Architecture Diagram}
   \label{fig:architecture}
 \end{figure}
+
+%\section{Service Layers Architecture}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -587,11 +613,13 @@ We begin with setting up the providers first by generating mappings over the het
 It is worth mentioning that the mappings generated at Node1 and Node2 are different and correspond to their respective schema only. \\
 
 	\subsection{Evaluation Techniques}
-	We discuss the evaluation techniques that can be used for evaluating our proposed standard and the proposed architecture. We also provided references of the research projects where these techniques have already been used as an example. We apply these techniques to evaluate against the goals and challenges we discussed in sections \ref{s-goals} and \ref{s-challenges} respectively. \\
+	We discuss the evaluation techniques that can be used for evaluating our proposed standard and the proposed architecture. We also provided references of the research projects where these techniques have already been used as an example. We apply these techniques to evaluate against the goals we discussed in sections \ref{s-goals}. \\
+	
+	% We apply these techniques to evaluate against the goals and challenges we discussed in sections \ref{s-goals} and \ref{s-challenges} respectively. \\
 	
 		\subsubsection{Evaluating against Functional \& Non-Functional Requirements}
-		We listed functional and non-functional requirements in section \ref{s-softspecs} for achieving the goals mentioned in section \ref{s-goals} and meeting the challenges explained in section \ref{s-challenges}.  In this technique we subjectively evaluate these requirements. Let us begin with functional requirements first.
-		
+		We listed functional and non-functional requirements in section \ref{s-softspecs} for achieving the goals mentioned in section \ref{s-goals}.  In this technique we subjectively evaluate these requirements. Let us begin with functional requirements first.
+		% and meeting the challenges explained in section \ref{s-challenges}
 	\begin{enumerate}  
 
 		\item Starting with first functional requirement, we can express that the proposed architecture and DRESS empowered effective information trade of educational certificates between partaking institutes in the test-bed environment. This exchanged worked successfully for the different heterogeneous schema running on different database engines. 
@@ -644,7 +672,7 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 \section{This is the End}
 \label{sec:This_is_the_end}
 %
-In this research we reported the design and implementation of.
+In this research we reported........ .
 
 
 %\backmatter
