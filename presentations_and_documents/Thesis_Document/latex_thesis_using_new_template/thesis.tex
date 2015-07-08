@@ -85,7 +85,7 @@
 \chapter*{Acknowledgment}
 All gratefulness and wonderfulness to {\bfseries ALLAH} and with His blessings, i am in good health and he gave me the ability to complete this work. I pray for more of Allah's blessings. It would not be possible without the efforts that were made by my {\bfseries parents} for supporting me during this duration and throughout my life. \\
 
-I am truly thankful to my supervisor {\bfseries Dr. Sharifullah Khan} for his guidance and who had been a great coach. I want to express my gratitude towards him for believing in me and facilitating me for the completion of this work. I appreciate {\bfseries Dr. Hamid Mukhtar}, {\bfseries Dr. Sarah Shafiq Khan} and {\bfseries Mr. Mujtaba Haider} for suggesting me and for their support. \\
+I am truly thankful to my supervisor {\bfseries Dr. Sharifullah Khan} for his guidance and who had been a great coach. I want to express my gratitude towards him for believing in me and facilitating me for the completion of this work. I appreciate {\bfseries Dr. Hamid Mukhtar}, {\bfseries Dr. Sarah Shafiq Khan} and {\bfseries Mr. Mujtaba Haider} for suggesting and supporting me. \\
 
 I am thankful to all my colleagues, co-workers and contributors who were supportive in completing this research.
 
@@ -141,29 +141,44 @@ In 1999, it was decided in Bologna declaration to create European Higher Educati
 
 In April 2015 Bureau of Statistics Pakistan published statistics about Pakistan's population with different levels of education \cite{Level of Edu}. There are 1,712,308 people having education of BA/BSc \& Equivalent and 618,937 people with MA/MSc \& Equivalent or Above education. \cite{Edu Stat} \\
 
-Ministry of Federal Education and Professional Training and USAID published detailed report on Pakistan Education Statistics 2010-2011 \cite{Edu Stat}. We are mentioning the higher education enrollment statistics from this report to get an idea for need of this research. According to this report there are 135 higher education institutes with total enrollment of 1.108 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1,558 degree colleges have an enrollment of 0.431 million. \\ 
+Ministry of Federal Education and Professional Training and USAID published detailed report on Pakistan Education Statistics 2010-2011 \cite{Edu Stat}. We are mentioning the higher education enrollment statistics from this report to get an idea for need of this research. According to this report there are 135 higher education institutes with total enrollment of 1.108 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1,558 degree colleges have an enrollment of 0.431 million students. \\ 
 
 According to Pakistan Education Statistics 2013-2014 report there are 161 higher education institutes with total enrollment of 1.595 million. This number includes all bachelors, masters or above enrollments. It is also worth mentioning that 1086 degree colleges have an enrollment of 1.336 million. \cite{Edu Stat2}\\
 
+The statistics we collected from Pakistan Education Statistics reports are represented in table \ref{tab:pakedustats}. These statistics suggest that the number of students are increasing. Although the number of degree colleges has decreased but the number of students have almost tripled in degree colleges from 2010 to 2014. The number of enrollments in universities have also increased. These statistics signify the importance of this research.
+
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Statistics from Pakistan Education Statistics Reports}
+\label{tab:pakedustats}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|c|c|c|}
+\hline
+Academic Year               	& Enrollments in Colleges		& Enrollments in Universities\\
+\hline
+2010-2011 	    	& 0.431 million					& 1.108 million \\
+2013-2014	    	& 1.336 million 				& 1.595 million \\
+\hline
+\end{tabular}
+\end{table}
+
 It is a well established fact that more and more systems are digitized every year. The educational institutes are also making their record digital and this trend is increasing. For example, more and more universities are implementing electronic student information systems to keep student courses and credit record. However, the documents often called degrees/certificates issued by these autonomous bodies are still exchanged in paper form.  \\
 
-This manual approach of exchanging physical documents and re-enter the data again manually in digital or physical form by people is error prone and exhaustive. As a result the local data-sets of these autonomous bodies has different record for the same individual. \\
+This manual approach of exchanging physical documents and re-entering the data again manually in digital or physical form by people is error prone and exhaustive. As a result the local data-sets of these autonomous bodies has different record for the same individual. \\
 
 This creates an opportunity for a common data-exchange standard which bring a common ground for the exchange of information. To resolve the issues facing in manual exchange of documents, the institutional systems must talk to each other using a common standard. This would make the entire process more dependable and less error prone. \\
 
 This research digs into the currently adopted solutions, standards and the new research in the area of student mobility and exchange of official documents related to students. It suggests a prototype infrastructure including data format and the architecture to exchange degree records digitally. \\
 
-Each institutional system is an autonomous body maintaining its data separately. The schema of the data is different in different institutes. For our proposed architecture and standard to work, each institute must  implement web-services based on DRESS for the exchange of documents. This approach is very time consuming, inefficient, and error prone. This provides us another  opportunity to suggest a tool that maps these different types of databases schema from different institutes to DRESS. \\
+Each institute is an autonomous body maintaining its data separately. The schema of the data is different in different institutes. To exchange documents, partaking institutes must implement web-services based on our proposed architecture and Document Record Exchange Standard for Students (DRESS). We will use only DRESS in rest of the thesis. This approach is very time consuming, inefficient, and error prone. This provides us another  opportunity to suggest a tool that maps these different types of databases schema from different institutes to DRESS. \\
 
 To handle the different levels of heterogeneity, we came up with a mapping tool which semi-automatically maps institutes data-sets to our proposed standard and creates web-services to access their data. \\
-
-The rest of the chapter is organized as follows. In Section \ref{s-problem_statement}, the problem statement is stated. In Section \ref{s-contributions}, thesis contributions are stated. In Section \ref{s-thesis-organization}, we conclude the chapter with an outline for the rest of the thesis. \\
 
 The remaining chapter is sorted out as this; In Section 1.1, we explain the problem Statement. In Section 1.2, we discuss what this research has contributed. In Section 1.3, we explain how this research is organized into chapters.
 
 \section{Problem Statement}\label{s-problem_statement}
 
-The existing standards that are used for exchanging educational certificates partially cover attributes that are required for the exchange of these documents. These are developed mostly as part of other projects and thus only focusing in this domain partially. Hence, they most of these lack some basic attributes that are necessary for a standard to be usable. \\
+The existing standards that are used for exchanging educational certificates partially cover attributes that are required for the exchange of these documents. These are developed mostly as part of other projects and thus only focusing in this domain partially. Hence, most of these lack some basic attributes that are necessary for a standard to be usable. \\
 
 We take a step and put an effort in suggesting a standard that is generic, reusable, extendable and based on technologies that are platform independent and widely usable accompanying tools that make it easy to implement and use. So, our official problem statement becomes; \\   
 
@@ -239,7 +254,7 @@ There already exists a few standards and practices identified with exchanging de
 
 It intends to make European educational framework of standards engaging different countries in Europe to compare, contrast and make compatible their educational systems. \cite{bologna process} \\
 
-To improve the mutual recognition of degrees and programs, education ministers from 29 countries signed bologna declaration in 1999. Other partaking countries joined the program later. \cite{improvement bologna process} Bologna process is quite often named as European Higher Education Area (EHEA). EHEA focuses on transferal and convergence adaption by 46 countries. This process benefits Europeans and it has its significance for other educational institutes and communities.
+To improve the mutual recognition of degrees and programs, education ministers from 29 countries signed bologna declaration in 1999. Other partaking countries joined the program later. \cite{improvement bologna process} Bologna process is quite often named as European Higher Education Area (EHEA). EHEA focuses on transferal and convergence adaption by 46 countries. This process benefits Europeans and it has its significance for other educational institutes and communities. The significance of EHEA is due to these reasons;
 
 	\begin{enumerate}
 
@@ -435,7 +450,7 @@ After the implementation of web-service by the provider. The requester fills a f
   \label{fig:sq_exchange_doc}
 \end{figure}
 
-\section{Mapping and Web Service Challange}
+\section{Mapping and Web Service Challenge}
 
 It is very important to understand that to implement the scenarios mentioned in section \ref{s-business_process}, every provider must implement a web-service based on DRESS. This is a challenging task since every partaking institute (provider) has different schemas and different database management systems. This schema is required to be mapped to DRESS. This must be served to the requester using a web-service. This creates an opportunity for a semi-automated tool which maps the schemas to DRESS and generate a web-service automatically.
 
@@ -491,7 +506,7 @@ We suggest an educational certificate exchange system that is distributed. As pa
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=6cm]{architecture_distributed_independent_exchange.png}
-  \caption{Multiple Nodes Exchanging Information Independently in Distributed Architecture \cite{The Mobility Project}}
+  \caption{Multiple Nodes Exchanging Information Independently \cite{The Mobility Project}}
   \label{fig:architecture_distributed_independent_exchange}
 \end{figure}
 
@@ -508,7 +523,7 @@ However, we also want to have control and authenticity. With fully distributed a
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=5cm]{architecture_distributed_exchange_through_hec.png}
-  \caption{Multiple Nodes Exchanging Information Through a Central Control Authority in Distributed Architecture}
+  \caption{Multiple Nodes Exchanging Information Through a Central Control Authority}
   \label{fig:architecture_distributed_exchange_through_hec}
 \end{figure}
 
@@ -710,6 +725,9 @@ https://wiki.refeds.org/download/attachments/1606048/SCHAC
 
 \bibitem{Edu Stat}
 http://www.aepam.edu.pk/files/educationstatistics/pakistaneducationstatistics2010-11.pdf
+
+\bibitem{Edu Stat2}
+http://www.aepam.edu.pk/files/educationstatistics/pakistaneducationstatistics2013-14.pdf
 
 \bibitem{Level of Edu}
 http://www.pbs.gov.pk/sites/default/files//tables/POPULATION BY LEVEL OF EDUCATION AND SEX.pdf
