@@ -541,7 +541,7 @@ The nodes will exchange data using SOAP based web service in our system.  We cho
 
 The number of universities can increase when agreements are signed with new universities for exchange data. The web service URLs need to be saved so that requester can retrieve this URL and request that university. This can be achieved by developing a custom system "URL registry" for saving web services URLs. Now we have to make a choice. URL registry can be global or requesting node can have its own private URL registry. \\
 
-As we have made the necessary decisions, let us look the system design in more detail. The figure \ref{fig:architecture} shows the components in a provider and a requester. \\
+As we have made the necessary decisions, let us look the system design in more detail. The figure \ref{fig:architecture} shows the components in a provider and a requester. 
 
 \begin{figure}[!htp]
   \centering
@@ -550,7 +550,14 @@ As we have made the necessary decisions, let us look the system design in more d
   \label{fig:architecture}
 \end{figure}
 
-%\section{Service Layers Architecture}
+\section{Service Layers Architecture}
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{service_layers.jpg}
+  \caption{Service Layers Architecture Diagram}
+  \label{fig:architecture}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
