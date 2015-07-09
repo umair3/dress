@@ -121,6 +121,9 @@ I am thankful to all my colleagues, co-workers and contributors who were support
             NQF & National Qualifications Framework  \\
             EQF & European Qualifications Framework  \\
             XSD & XML Schema Definition  \\
+            XCV & Europass Curriculum Vitae \\
+            ELP & Europass Language Passport \\
+            
             \hline                          % inserts single-line
     \end{tabular}
 \end{table}
@@ -287,8 +290,8 @@ To improve the mutual recognition of degrees and programs, education ministers f
     \subsection{Europass}
     Collection of five documents which intend to ease mobility when seeking employment across Europe. These include the Curriculum Vitae, the Language Passport, the Mobility, the Diploma Supplement, and the Certificate Supplement. One can fill himself the Curriculum Vitae, and the Language Passport but the rest of the documents are issued by the related authorities. It follows a standard template format system, a layout. Same format helps to achieve neutrality and transparency while presenting one's skills. \\
 
-    The motto as mentioned on the Europass website's homepage is as follows;
-    "Five documents to make your skills and qualifications clearly and easily understood in Europe" \\
+    The motto as mentioned on the Europass website's homepage is as follows; \\
+    "Five documents to make your skills and qualifications clearly and easily understood in Europe" \cite{Europass Web} \\
 
     Europass has defined XML schemas for CV and Language Passport. The documents can be exported in XML format when created on Europass. These exported XML documents can be imported to Europass and converted to HTML, PDF, Microsoft Word or ODT templates. \\
 
@@ -299,12 +302,12 @@ To improve the mutual recognition of degrees and programs, education ministers f
     Europass does not explain details related to degrees or educational certificates in XML certificate. 
 
         \subsubsection{Europass Curriculum Vitae}
-        Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in xml format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV. 
+        Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in XML format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV. 
 
         \subsubsection{Europass Language Passport}
         Europass Language Passport (ELP) is a template. One can create it online and export it in europass xml format. It contains XML vocabulary related to language skills and the scale of six values to score proficiency. 
 
-    \subsection{Schema for Academia}
+    \subsection{Schema for Academia \cite{SCHAC 1.5.0}} 
     The need for the inter-exchange of information between institutes across Europe has highlighted the importance of common attributes for this exchange to take place. Schema for Academia (SCHAC) is the result of the attribute coordination between different institutes. It plans to define and advance common attributes in the field of higher education to encourage data-exchange between institutions. It does not plan to supplement different the national schemas, rather it suggests a coordinated framework on top of the different national schemas. \\
     
     Schema for Academia (SCHAC) describes vocabulary related degrees and courses. The schema is not technology dependent and written for LDAP (Lightweight Directory Access Protocol). It aims at promoting a common framework to inter-exchange data between educational institutes. It defines attributes that describe individuals and their LDAP profile. \\
@@ -335,7 +338,7 @@ Group-related Attributes
 	
 \begin{table}[!tbh]
 %\renewcommand{\arraystretch}{1.5}
-\caption{Example of SCHAC attribute: schacGender.}
+\caption{Example of SCHAC attribute: schacGender \cite{SCHAC 1.5.0}.}
 \label{tab:schacGender}
 \centering
 \begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|c|c|c|}
@@ -354,13 +357,13 @@ Example	            & schacGender = 1	\\
 It is also worth mentioning that SCHAC has a category student information for curriculum, major and degree but no attribute is defined. This is because SCHAC is not completed till now and it is in progress. 
 
     \subsection{Dublin Core}
-    The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery. 
+    The Dublin core is a simple meta-data standard consisting of set of elements to describe information resources on the network. There are two type of elements; simple and qualifiers. It has 15 simple elements and qualifiers which have additional three elements namely Audience, Provenance and RightsHolder. Qualifiers help in resource discovery. \cite{The Mobility Project} 
 
 \section{European Learner Mobility}
 Some related work has been done recently and systems have been proposed based on the above mentioned standards. These are "The Mobility Project" and "The REST Mobility" projects. 
 
     \subsection{The Mobility Project}
-    It aimed to provide a platform and infrastructure for exchange of electronic data exchange between educational institutes. Infrastructure includes data format, architecture and the prototype software. The system will be called The Mobility later in this paper. \\
+    It aimed to provide a platform and infrastructure for exchange of electronic data exchange between educational institutes. Infrastructure includes data format, architecture and the prototype software\cite{The Mobility Project}. The system will be called The Mobility later in this paper. \\
 
     The Mobility is peer to peer like architecture. Nodes exchange data using SOAP base web service. Other web services like XML-RPC and REST were not used due to their limitations. XML-RPC not have developer defined data-types and character set. REST does not imposes a standard specification, instead it follows set of rules and is used for speedy development of web service interface. \\
 
@@ -373,10 +376,10 @@ Some related work has been done recently and systems have been proposed based on
     Although The Mobility project was started by MUCI and CINECA, two European Higher Education Consortia. Many universities consortia, individual universities and companies joined in later on. 
 
     \subsection{The REST Mobility}
-    This is alternative implementation of The Mobility. Nagrozki's system used SOAP web service for data exchange. Karol created a RESTful implementation of the Mobility. The Mobility lacked data model. In The REST Mobility a data model is proposed since REST is resourceful. The model proposed not represents or intends to be a standard. 
+    This is alternative implementation of The Mobility. Nagrozki's system used SOAP web service for data exchange. Karol created a RESTful implementation of the Mobility. The Mobility lacked data model. In The REST Mobility a data model is proposed since REST is resourceful. The model proposed not represents or intends to be a standard. \cite{Integration of Services in the Mobility Project}
 
 \section{Information Manifold}
-Providing a uniform interface for querying data from many sources is the aim of Information Manifold. It enables a simple user to not worry about locating sources and manually combining results. This leads to concept of Deep Web. Data integration systems give users a common global schema called mediated schema for posting queries. To answer these queries semantic relationships called mappings are needed between mediated schema and the sources schema. 
+Providing a uniform interface for querying data from many sources is the aim of Information Manifold. It enables a simple user to not worry about locating sources and manually combining results. This leads to concept of Deep Web. Data integration systems give users a common global schema called mediated schema for posting queries. To answer these queries semantic relationships called mappings are needed between mediated schema and the sources schema. \cite{Data integration: the teenage years}
 
 \section{MAPQFTOOL}
 This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database. 
@@ -600,7 +603,7 @@ In this section we present the evaluation techniques that can be used and the on
 
 	\item Evaluating against functional \& non-functional requirements.
 
-	\item Using program validation technique.
+	\item Using program validation technique. \cite{Sieve}
 	
 	\item Testing against exemplary data.
 	
@@ -696,7 +699,17 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 	In this research we reported........ .
 
 	\section{Future Work}\label{sec:future}
-	Unified Measurements
+	Unified Measurements \cite{EHEA}
+	
+	Document Authentication \cite{Authentic PDF}
+	
+	Search Across Databases \cite{Search Across Space Databases}
+	
+	Become base of may automation projects like mobility.
+	
+	
+	
+	
 
 
 %\backmatter
@@ -742,6 +755,18 @@ statistics2013-14.pdf
 
 \bibitem{Level of Edu}
 http://www.pbs.gov.pk/sites/default/files//tables/POPULATION BY LEVEL OF EDUCATION AND SEX.pdf
+
+\bibitem{Europass Web}
+https://europass.cedefop.europa.eu/en/home
+
+\bibitem{Authentic PDF}
+Neubauer, T.; Weippl, E.; Biffl, S., "Digital signatures with familiar appearance for e-government documents: authentic PDF," Availability, Reliability and Security, 2006. ARES 2006. The First International Conference on , vol., no., pp.8 pp.,, 20-22 April 2006
+
+\bibitem{Search Across Space Databases}
+Maluf, D.A.; McDermott, W.J.; Knight, C.D.; Smith, E.E.; Gurram, M., "Searching Across the International Space Station Databases," Aerospace Conference, 2007 IEEE , vol., no., pp.1,8, 3-10 March 2007
+
+\bibitem{Sieve}
+http://hdl.handle.net/1721.1/27091
 
 \end{thebibliography}
 

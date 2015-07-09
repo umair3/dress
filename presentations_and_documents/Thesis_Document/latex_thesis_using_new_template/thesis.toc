@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.2}Qualifications Exchange Standards}{9}
 \contentsline {subsection}{\numberline {2.2.1}European Qualifications Framework}{9}
 \contentsline {subsection}{\numberline {2.2.2}Europass}{10}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Europass Curriculum Vitae}{11}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Europass Curriculum Vitae}{12}
 \contentsline {subsubsection}{\numberline {2.2.2.2}Europass Language Passport}{12}
-\contentsline {subsection}{\numberline {2.2.3}Schema for Academia}{12}
+\contentsline {subsection}{\numberline {2.2.3}Schema for Academia \cite {SCHAC 1.5.0}}{12}
 \contentsline {subsection}{\numberline {2.2.4}Dublin Core}{14}
 \contentsline {section}{\numberline {2.3}European Learner Mobility}{14}
 \contentsline {subsection}{\numberline {2.3.1}The Mobility Project}{14}
