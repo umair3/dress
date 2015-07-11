@@ -41,7 +41,7 @@
 \setcounter{secnumdepth}{3}
 
 
-\title{Automating Exchange of Educational Certificates Using DRESS}
+\title{Student Degree Record Exchange Standard}
 %\subtitle{An optional sub-title, usually not used at NUST}
 
 \author{Umair Anwar}
@@ -73,7 +73,7 @@
 
 \chapter*{Abstract}
 
- Bologona process aimed to ease the mobility of students across Europe. Previously, some efforts were made in related domains but these were not focused on mobility of the students between institutes. Hence, efforts were put developing standards and proposing suitable architectures that fit all across Europe under the umbrella of Bologna process. Inspired by this, the mobility project tried to gather and reuse all the work previously done in related areas. Mobility reused the vocabularies, ideas and focused on the mobility of students. However, it created an opportunity for a semi-automated mapping tool for mapping proposed standard to the heterogeneous schema of different institutes. It lacks enough vocabulary to cover exchange of information for some educational certificates in Pakistan. \\
+ Bologona process aimed to ease the mobility of students across Europe. Hence, efforts were put developing standards and proposing suitable architectures that fit all across Europe. Inspired by this, the mobility project tried to gather and reuse all the work previously done in related areas. Mobility reused the vocabularies, ideas and focused on the mobility of students. However, it created an opportunity for a semi-automated mapping tool for mapping proposed standard to the heterogeneous schema of different institutes. It lacks enough vocabulary to cover exchange of information for some educational certificates in Pakistan. \\
  
  We suggest a prototype infrastructure that provides more control and improves this exchange of information between partaking institutes by covering more detailed vocabulary. The term infrastructure includes both the architecture and our proposed standard (DRESS). \\
  
@@ -83,7 +83,7 @@
 \certificateoforiginality
 %---------------------------------------------------------------------
 \chapter*{Acknowledgment}
-All gratefulness and wonderfulness to {\bfseries ALLAH} and with His blessings, i am in good health and he gave me the ability to complete this work. I pray for more of Allah's blessings. It would not be possible without the efforts that were made by my {\bfseries parents} for supporting me during this duration and throughout my life. \\
+All gratefulness and wonderfulness to {\bfseries ALLAH} and with His blessings, I am in good health and he gave me the ability to complete this work. I pray for more of Allah's blessings. It would not be possible without the efforts that were made by my {\bfseries parents} for supporting me during this duration and throughout my life. \\
 
 I am truly thankful to my supervisor {\bfseries Dr. Sharifullah Khan} for his guidance and who had been a great coach. I want to express my gratitude towards him for believing in me and facilitating me for the completion of this work. I appreciate {\bfseries Dr. Hamid Mukhtar}, {\bfseries Dr. Sarah Shafiq Khan} and {\bfseries Mr. Mujtaba Haider} for suggesting and supporting me. \\
 
@@ -183,7 +183,7 @@ The remaining chapter is sorted out as this; In Section 1.1, we explain the prob
 
 The existing standards that are used for exchanging educational certificates partially cover attributes that are required for the exchange of these documents. These are developed mostly as part of other projects and thus only focusing in this domain partially. Hence, most of these lack some basic attributes that are necessary for a standard to be usable. \\
 
-We take a step and put an effort in suggesting a standard that is generic, reusable, extendable and based on technologies that are platform independent and widely usable accompanying tools that make it easy to implement and use. So, our official problem statement becomes; \\   
+We take a step and put an effort in suggesting a standard that is generic, reusable, extendable and based on technologies that are platform independent and widely usable accompanying tools that make it easy to implement and use. So, our formal problem statement becomes; \\   
 
 "To propose a document record exchange standard for students that enables the partaking institutes to exchange educational certificates while hiding the heterogeneous details. The proposed standard must reuse the ideas already suggested in existing standards and must be generic, extendable, reusable and easy to use. The standard must accompany the tools that make it easily usable." 
 
@@ -431,7 +431,7 @@ This section describes the business that is involved in the execution of exchang
 \end{figure}
 
 
-After the implementation of web-service by the provider. The requester fills a form and asks for the credentials. The emails the access point and exchange secrets to the Coordinator.
+After the implementation of web-service by the provider, the coordinator sends an endpoint URL and API access credentials to the central authority. The central authority store these in the URL registry.
 
     \subsection{Find Student Data}
     To find a student record, the requester asks a provider from the agreed providers list for a student record. The provider sends back list of documents associated with the student.
@@ -464,7 +464,7 @@ Based on the business process and the challenges we discussed, functional and no
     
     \begin{enumerate}
 
-		\item The client must be able to fetch educational certificates from different providers with database schemas of different heterogeneous levels. This exchange must satify all the use cases discussed in section \ref{s-business_process}.
+		\item The client must be able to fetch educational certificates from different providers with database schemas of different heterogeneous levels. This exchange must satisfy all the use cases discussed in section \ref{s-business_process}.
 
 		\item Provider must authenticate the client.
 	
@@ -530,7 +530,7 @@ However, we also want to have control and authenticity. With fully distributed a
   \label{fig:architecture_distributed_exchange_through_hec}
 \end{figure}
 
-The introduction of a central node has a few benefits as well as a few compromises. Now now we discuss these one by one.
+The introduction of a central node has a few benefits as well as a few compromises. Now we discuss these one by one.
 
 \begin{enumerate}
 \item Although we compromised avoidance from single point of failure by introducing the central node but gained more control and authority. 
@@ -618,7 +618,7 @@ In this section we present the evaluation techniques that can be used and the on
 	
 \begin{figure}[!htp]
   \centering
-  \includegraphics[width=5cm]{architecture_distributed_testbed_exchange_through_hec.png}
+  \includegraphics{architecture_distributed_testbed_exchange_through_hec.jpg}
   \caption{Three Nodes Exchanging Information Usign DRESS with one Node as Central Control Authority}
   \label{fig:testbed}
 \end{figure}  
@@ -647,7 +647,7 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		% and meeting the challenges explained in section \ref{s-challenges}
 	\begin{enumerate}  
 
-		\item Starting with first functional requirement, we can express that the proposed architecture and DRESS empowered effective information trade of educational certificates between partaking institutes in the test-bed environment. This exchanged worked successfully for the different heterogeneous schema running on different database engines. 
+		\item Starting with first functional requirement, we can express that the proposed architecture and DRESS based effective information trade of educational certificates between partaking institutes in the test-bed environment. This worked successfully for the different heterogeneous schema running on different database engines. 
 
 		\item The test-bed also satisfied the second requirement and only provider data is only shared if a request is made with valid access keys. 
 	
