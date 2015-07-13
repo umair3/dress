@@ -46,3 +46,5 @@
 \contentsline {chapter}{\numberline {7}Conclusion \& Future Work}{36}
 \contentsline {section}{\numberline {7.1}Conclusion}{36}
 \contentsline {section}{\numberline {7.2}Future Work}{37}
+\contentsline {subsection}{\numberline {7.2.1}Unified Measurements}{37}
+\contentsline {subsection}{\numberline {7.2.2}Improvements in Document Authentication}{38}
