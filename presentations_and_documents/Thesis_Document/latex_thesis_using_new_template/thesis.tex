@@ -616,6 +616,16 @@ In the coming sections, we will discuss the vocabulary including the attributes 
 
 %\section{TRANSCRIPT}
 
+Figure~\ref{fig:schema_document} represents partial representation of a schema document.
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{schema_document.png}
+  \caption{Fragment Representation of a Document Schema}
+  \label{fig:schema_document}
+\end{figure}
+
+
 
 \chapter{Implementation \& Evaluation}\label{ch-implement}
 
@@ -738,6 +748,32 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
   \caption{Testing process for detecting faults}
   \label{fig:fault-based-testing}
 \end{figure}
+
+	\begin{enumerate}  
+
+		\item First, we present a formal model to represent the XML documents. A formal model is necessary to formalize the testing of the documents under consideration by executing the queries. We used these following rules to represent the formal model denoted by M. \\
+		M = \textless E,A,C,P \textgreater , where; \\
+		E is set of finite number of elements \\
+		A is set of finite number of attributes \\
+		C is set of finite number of constraints \\
+		P is set of finite number of associations among E, A and C. \\
+		
+		So, the formal model representation of a DEGREE document becomes; \\
+		E = \{sellers, seller, sellerName, nickName, ...\} \\
+		A = \{selleID\} \\
+		C = \{type, occurs, pattern, use, ...\} \\
+		P = \{ p1(sellers, seller), p2 (sellers, order, seller) , p3 (seller, sellerID), p4 (seller, sellerName), ... , p10 (sellerID, pattern), p11 (sellerID, use), p12 (sellerName, type), p13 (sellerName, occurs), ...
+
+		\item The second step involves gathering the test-data. Instead of mutating the valid documents as used in \cite{Testing XML Schemas} \cite{Fault based Testing}, we sniffed the documents using Wireshark during the exchange since we need to detect faults in these documents. 
+	
+		\item The third step is the selection of the fault classes. 
+		
+		\item The fourth step involves writing queries based upon the identified fault classes. 
+		
+		\item We used open-source technologies that are widely used for setting up test-bed. We used JSON for storing mappings which require no storage configurations. We used PHP as server-side programming language for the development of the web-service and the query builder. HTML and JavaScript are used for front end development. All the technologies are openly available, free and widely used. This satisfies the fifth requirement.
+
+	\end{enumerate}
+
 		%\subsubsection{Testing against Exemplary data}
 		%This technique involves running the system with different data-sets by different users and then getting feedback. We collected documents for two different 
 	
@@ -842,6 +878,11 @@ Maluf, D.A.; McDermott, W.J.; Knight, C.D.; Smith, E.E.; Gurram, M., "Searching 
 \bibitem{Sieve}
 http://hdl.handle.net/1721.1/27091
 
+\bibitem{Testing XML Schemas}
+Emer, M.C.F.P.; Vergilio, S.R.; Jino, M., "A testing approach for XML schemas," Computer Software and Applications Conference, 2005. COMPSAC 2005. 29th Annual International , vol.2, no., pp.57,62 Vol. 1, 26-28 July 2005
+
+\bibitem{Fault based Testing}
+Emer, M.C.F.P.; Vergilio, S.R.; Jino, M., "A testing approach for XML schemas," Computer Software and Applications Conference, 2005. COMPSAC 2005. 29th Annual International , vol.2, no., pp.57,62 Vol. 1, 26-28 July 2005
 
 \end{thebibliography}
 

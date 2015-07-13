@@ -67,10 +67,18 @@ White space in argument---line 79 of file thesis.aux
  : \citation{The
  :               Mobility Project}
 I'm skipping whatever remains of this command
-White space in argument---line 125 of file thesis.aux
+White space in argument---line 120 of file thesis.aux
+ : \citation{Testing
+ :                   XML Schemas}
+I'm skipping whatever remains of this command
+White space in argument---line 121 of file thesis.aux
+ : \citation{Fault
+ :                 based Testing}
+I'm skipping whatever remains of this command
+White space in argument---line 129 of file thesis.aux
  : \citation{Authentic
  :                     PDF}
 I'm skipping whatever remains of this command
 I found no \bibdata command---while reading file thesis.aux
 I found no \bibstyle command---while reading file thesis.aux
-(There were 20 error messages)
+(There were 22 error messages)
