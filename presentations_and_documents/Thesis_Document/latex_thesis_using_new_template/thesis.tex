@@ -75,9 +75,9 @@
 
  Bologona process aimed to ease the mobility of students across Europe. Hence, efforts were put developing standards and proposing suitable architectures that fit all across Europe. Inspired by this, the mobility project tried to gather and reuse all the work previously done in related areas. Mobility reused the vocabularies, ideas and focused on the mobility of students. However, it created an opportunity for a semi-automated mapping tool for mapping proposed standard to the heterogeneous schema of different institutes. It lacks enough vocabulary to cover exchange of information for some educational certificates in Pakistan. \\
  
- We suggest a prototype infrastructure that provides more control and improves this exchange of information between partaking institutes by covering more detailed vocabulary. The term infrastructure includes both the architecture and our proposed standard (DRESS). \\
+ We suggest a prototype infrastructure that provides more control and improves this exchange of information between partaking institutes by covering more detailed vocabulary. The term infrastructure includes both the architecture and our proposed standard (DRESS). We avail the opportunity that The Mobility Project provided and suggest a mapping tool that semi-automatically create mappings between our standard and the heterogeneous data-sets of different partaking institutes. \\
  
- We avail the opportunity that The Mobility Project provided and suggest a mapping tool that semi-automatically create mappings between our standard and the heterogeneous data-sets of different partaking institutes. 
+To evaluate this research, we created a test-bed environment and validated the proposed standard XML schema definitions against the generated XML documents using different evaluation techniques. 
 
 %---------------------------------------------------------------------
 \certificateoforiginality
@@ -554,12 +554,27 @@ As we have made the necessary decisions, let us look the system design in more d
 \end{figure}
 
 	\subsection{Requester}
-
+		
+%\begin{figure}[!htp]
+%  \centering
+%  \includegraphics[width=14cm]{requester.jpg}
+%  \caption{Requester}
+%  \label{fig:requester}
+%\end{figure}		
+		
 		\subsubsection{Client Agent}
 
 		\subsubsection{URL Registry}
 
 	\subsection{Provider}
+
+%\begin{figure}[!htp]
+%  \centering
+%  \includegraphics[width=14cm]{provider.jpg}
+%  \caption{Provider}
+%  \label{fig:provider}
+%\end{figure}	
+
 
 		\subsubsection{Server Agent}
 		
@@ -621,16 +636,18 @@ In this section we present the evaluation techniques that can be used and the on
 
 	\item Using program validation technique. \cite{Sieve}
 	
-	\item Testing against exemplary data.
+	\item Fault-based testing of XML Schema.
 	
-	\item Success and failure statistics for different cases.	
+	%\item Testing against exemplary data.
+	
+	%\item Success and failure statistics for different cases.	
 
 	\end{enumerate}
 	
 	All the above mentioned techniques require us to create a test bed environment. Hence, we created an environment of three nodes for the evaluation purpose. \\
 	
 	\subsection{Test-bed}
-	Keeping in mind the end goal to mimic a true domain and to simulate more realistically, it is better to setup separate servers for each node/entity. So we setup separate server for each node with different technologies and services running on these machines. We take three nodes as shown in figure ~\ref{fig:testbed}. The two nodes (Node1 and Node2) in light grey color are the providers and the node (Node0) in the center in dark grey color is the node that acts as a central authority. Both provider nodes are running database management systems and schema that are different from each other. Thus simulating a heterogeneous environment.
+	Keeping in mind the end goal to mimic a true domain and to simulate more realistically, it is better to setup separate servers for each node/entity. So we setup separate server for each node with different technologies and services running on these machines. We take three nodes as shown in figure ~\ref{fig:testbed}. The two nodes (Node1 with horizontal lines and Node2 with vertical lines) are the providers and the node (Node0 with grid pattern) in the center is the node that acts as a central authority. Both provider nodes are running database management systems and schema that are different from each other. Thus simulating a heterogeneous environment.
 	
 \begin{figure}[!htp]
   \centering
@@ -692,7 +709,16 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		
 		\subsubsection{Using Program Validation Technique}
 		Program validation technique unit testing and integration testing of the tools that are developed. This technique reports the issues and bugs found in the developed tools. However, in this research our focus is on our proposed standard DRESS and the proposed architecture. Although we developed software tools to evaluate DRESS and the architecture but the testing of the these tools itself is out of scope of this research. 
-	
+		
+		\subsubsection{Using Fault-based Testing}
+		We used this evaluating technique to test the XML schema for detecting faults. Starting with the creation of a formal model for the schema under consideration, we create fault classes. These fault classes are used to generate the queries. We run these queries against the test-data. The test data are the sniffed XML documents while exchange between during partaking institutes. The results of the queries are then compared with the specified schema to detect faults. The testing process we followed is shown in figure~\ref{fig:fault-based-testing}. It should be noted that instead of mutating the data, we sniffed the traffic and used the captured XML documents as test-data.  		
+		
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=13.5cm]{fault-based-testing.jpg}
+  \caption{Testing process for detecting faults}
+  \label{fig:fault-based-testing}
+\end{figure}
 		%\subsubsection{Testing against Exemplary data}
 		%This technique involves running the system with different data-sets by different users and then getting feedback. We collected documents for two different 
 	
