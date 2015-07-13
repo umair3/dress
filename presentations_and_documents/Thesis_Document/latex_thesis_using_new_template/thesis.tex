@@ -123,7 +123,7 @@ I am thankful to all my colleagues, co-workers and contributors who were support
             XSD & XML Schema Definition  \\
             ECV & Europass Curriculum Vitae \\
             ELP & Europass Language Passport \\
-            ECTS & European Credit Transfer System \\
+            %ECTS & European Credit Transfer System \\
             
             \hline                          % inserts single-line
     \end{tabular}
@@ -554,8 +554,16 @@ As we have made the necessary decisions, let us look the system design in more d
   \label{fig:architecture}
 \end{figure}
 
-	%\subsection{Requester}
-		
+	\subsection{Requester}
+	The requester is the central node requesting the providers for the exchange of certificates. The requester has two components; 
+
+\begin{enumerate}
+\item Client-agent
+\item URL Registry 
+\end{enumerate}
+
+	Whenever the requester receives a request, its client-agent finds the web-service URL from URL Registry and sends a request to the corresponding provider using DRESS. The URL Registry is used as private registry for the requester, since there is only one requester node.  	
+
 %\begin{figure}[!htp]
 %  \centering
 %  \includegraphics[width=14cm]{requester.jpg}
@@ -563,11 +571,9 @@ As we have made the necessary decisions, let us look the system design in more d
 %  \label{fig:requester}
 %\end{figure}		
 		
-	%	\subsubsection{Client Agent}
 
-	%	\subsubsection{URL Registry}
-
-	%\subsection{Provider}
+	\subsection{Provider}
+	Every node that owns data and serves the educational certificates to the requester is a provider. Maps are generated at these nodes using the mapper and stored at the provider. These mappings are later used by the server-agent for accessing data from the database using  the query builder. The query builder builds queries to access different heterogeneous databases for the mapper and for the server-agent.
 
 %\begin{figure}[!htp]
 %  \centering
@@ -598,6 +604,18 @@ As we have made the necessary decisions, let us look the system design in more d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Document Record Exchange Standard for Students}\label{ch-DRESS}
+
+In this chapter, we discuss the vocabulary of the Document Record Exchange Standard for Students abbreviated as DRESS. It is an information exchange standard for the exchange of educational certificates.  
+In the coming sections, we will discuss the vocabulary including the attributes and the possible values for each of the schema definitions that DRESS provide.
+  
+%It provides us with the vocabulary of three documents; REGISTRATION, DEGREE and TRANSCRIPT. In the coming %sections, we will discuss the vocabulary including the attributes and the possible values for each of %these schema documents that DRESS provide.  
+
+%\section{REGISTRATION}
+
+%\section{DEGREE}
+
+%\section{TRANSCRIPT}
+
 
 \chapter{Implementation \& Evaluation}\label{ch-implement}
 

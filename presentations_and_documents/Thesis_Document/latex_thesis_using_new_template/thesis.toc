@@ -29,6 +29,8 @@
 \contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{21}
 \contentsline {chapter}{\numberline {4}Architecture \& Design}{22}
 \contentsline {section}{\numberline {4.1}Distributed System}{22}
+\contentsline {subsection}{\numberline {4.1.1}Requester}{25}
+\contentsline {subsection}{\numberline {4.1.2}Provider}{25}
 \contentsline {chapter}{\numberline {5}Document Record Exchange Standard for Students}{27}
 \contentsline {chapter}{\numberline {6}Implementation \& Evaluation}{28}
 \contentsline {section}{\numberline {6.1}Implementation Stages}{28}
