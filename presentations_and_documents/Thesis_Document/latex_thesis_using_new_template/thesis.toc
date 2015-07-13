@@ -29,13 +29,6 @@
 \contentsline {subsection}{\numberline {3.4.2}Non-functional Requirements}{21}
 \contentsline {chapter}{\numberline {4}Architecture \& Design}{22}
 \contentsline {section}{\numberline {4.1}Distributed System}{22}
-\contentsline {subsection}{\numberline {4.1.1}Requester}{25}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Client Agent}{25}
-\contentsline {subsubsection}{\numberline {4.1.1.2}URL Registry}{25}
-\contentsline {subsection}{\numberline {4.1.2}Provider}{25}
-\contentsline {subsubsection}{\numberline {4.1.2.1}Server Agent}{25}
-\contentsline {subsubsection}{\numberline {4.1.2.2}Query Builder}{25}
-\contentsline {subsubsection}{\numberline {4.1.2.3}Mapper}{25}
 \contentsline {chapter}{\numberline {5}Document Record Exchange Standard for Students}{27}
 \contentsline {chapter}{\numberline {6}Implementation \& Evaluation}{28}
 \contentsline {section}{\numberline {6.1}Implementation Stages}{28}
@@ -52,4 +45,4 @@
 \contentsline {subsubsection}{\numberline {6.3.2.3}Using Fault-based Testing}{35}
 \contentsline {chapter}{\numberline {7}Conclusion \& Future Work}{36}
 \contentsline {section}{\numberline {7.1}Conclusion}{36}
-\contentsline {section}{\numberline {7.2}Future Work}{36}
+\contentsline {section}{\numberline {7.2}Future Work}{37}

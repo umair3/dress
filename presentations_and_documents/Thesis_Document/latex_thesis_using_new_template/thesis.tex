@@ -553,7 +553,7 @@ As we have made the necessary decisions, let us look the system design in more d
   \label{fig:architecture}
 \end{figure}
 
-	\subsection{Requester}
+	%\subsection{Requester}
 		
 %\begin{figure}[!htp]
 %  \centering
@@ -562,11 +562,11 @@ As we have made the necessary decisions, let us look the system design in more d
 %  \label{fig:requester}
 %\end{figure}		
 		
-		\subsubsection{Client Agent}
+	%	\subsubsection{Client Agent}
 
-		\subsubsection{URL Registry}
+	%	\subsubsection{URL Registry}
 
-	\subsection{Provider}
+	%\subsection{Provider}
 
 %\begin{figure}[!htp]
 %  \centering
@@ -576,11 +576,11 @@ As we have made the necessary decisions, let us look the system design in more d
 %\end{figure}	
 
 
-		\subsubsection{Server Agent}
+	%	\subsubsection{Server Agent}
 		
-		\subsubsection{Query Builder}
+	%	\subsubsection{Query Builder}
 		
-		\subsubsection{Mapper}
+	%	\subsubsection{Mapper}
 		
 
 %\section{Service Layers Architecture}
@@ -738,8 +738,17 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 
 	\section{Conclusion}\label{sec:conclusion}
 
-	In this research we reported........ .
-
+	Inspired by the standardization of students' information in Europe, we have developed a prototype standard "Document Record Exchange Standard for Students (DRESS)". It is completely focused on exchange of student certificates independently of underlying platform. It currently fulfills vocabulary requirements for three important certificates; REGISTRATION, DEGREE and TRANSCRIPT. \\
+	
+	We used DRESS over the proposed architecture to exchange documents. DRESS is evaluated subjectively  against the goals, the functional and the non-functional requirements. We used a fault based evaluation for its validation and detecting faults in the proposed schemas. \\
+	
+	In DRESS, we reused the ideas that were implemented in already existing standards. It is reusable and conforms to ISO-standards where possible. It covered some vocabulary which was previously missing in existing standards. It focuses on the student educational certificates and defines vocabulary placing the document at the root. \\
+	
+	To follow and implement any standard, it must fulfill the requirements as well as it must be easy to use. To ease its implementation we created a semi-automated wizard based mapping tool. This tool enables the providers to easily map their databases to DRESS. These mappings are used by the web-service we created for the providers.
+	
+	 
+		
+	
 	\section{Future Work}\label{sec:future}
 	Unified Measurements \cite{EHEA}
 	
