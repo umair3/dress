@@ -11,7 +11,10 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Architecture Diagram}}{26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Fragment Representation of a Document Schema}}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Representing Type Personal Characteristics}}{29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Representing Type OrganizationIdT}}{30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Representing Type gradeT}}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Three Nodes Exchanging Information Usign DRESS with one Node as Central Control Authority}}{32}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Testing process for detecting faults}}{36}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Three Nodes Exchanging Information Usign DRESS with one Node as Central Control Authority}}{35}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Testing process for detecting faults}}{39}
 \addvspace {10\p@ }

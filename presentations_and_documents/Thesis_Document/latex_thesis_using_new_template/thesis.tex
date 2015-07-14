@@ -616,7 +616,18 @@ In the coming sections, we will discuss the vocabulary including the attributes 
 
 %\section{TRANSCRIPT}
 
-Figure~\ref{fig:schema_document} represents partial representation of a schema document.
+\section{Vocabulary}
+
+Before discussing DRESS in detail, there are some important considerations to remember regarding a standard. While proposing the vocabulary, we have focused on the following objectives;
+
+\begin{enumerate}
+\item The vocabulary of the standard must address the problem domain well.
+\item It must be easy to understand.
+\item It must be reusable and extendable.
+\item It must be in conformance with the existing standards and norms as much as possible.
+\end{enumerate}
+
+We have reused some of the vocabulary of the mobility project\cite{The Mobility Project}. We have reused the ideas from the SCHAC \cite{SCHAC 1.5.0} and  used ISO standard wherever possible. Figure~\ref{fig:schema_document} represents partial representation of a schema document. 
 
 \begin{figure}[!htp]
   \centering
@@ -625,7 +636,112 @@ Figure~\ref{fig:schema_document} represents partial representation of a schema d
   \label{fig:schema_document}
 \end{figure}
 
+\begin{itemize}
+\item docType: Enumeration of string values shown in Table \ref{tab:docType} describing the document that is under consideration.
 
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Possible values for docType}
+\label{tab:docType}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|}
+\hline
+Value       		& Description \\
+\hline
+REGISTRATION 	    & Registration document \\
+DEGREE	    		& Degree document \\
+TRANSCRIPT	    	& Transcript document \\
+\hline
+\end{tabular}
+\end{table}
+
+\item docTitle: string containing title of the document under consideration.
+
+\item serialNo: string containing a document serial number.
+\item regNo: string containing a student's registration number.
+\item rollNo: string containing a student's roll number.
+\item issueDate: date containing a valid issue date for the document. The date must follow ISO 8601 e.g. 2015-07-14
+
+\item student: It is a complexType personalCharacteristicsT and comprises of three fields as shown in figure~\ref{fig:schema_personalCharacteristicsT}.
+
+	 \begin{itemize}
+	 	\item firstName: string containing student's first name.
+	 	\item lastName: string containing student's last name.
+	 	\item Father: It is a complexType personalCharacteristicsT.
+	 \end{itemize}
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{schema_personalCharacteristicsT.png}
+  \caption{Representing Type Personal Characteristics}
+  \label{fig:schema_personalCharacteristicsT}
+\end{figure}
+
+\item organization: It is a complexType organizationIdT and comprises of two fields as shown in figure~\ref{fig:schema_organizationIdT}.
+
+	 \begin{itemize}
+	 	\item name: string containing organization's name.
+	 	\item description: string containing organization's details.
+	 \end{itemize}
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{schema_organizationIdT.png}
+  \caption{Representing Type OrganizationIdT}
+  \label{fig:schema_organizationIdT}
+\end{figure}
+
+\item marks: It is a complexType gradeT and contains an attribute "gradingScheme" and a value as shown in figure~\ref{fig:schema_gradeT}.
+
+	 \begin{itemize}
+	 	\item Attribute gradingScheme: It is an enumerated list of gradingSchemes.
+	 	\item value: string containing a measurement of student's marks according to the grading scheme.
+	 \end{itemize}
+
+\begin{figure}[!htp]
+  \centering
+  \includegraphics[width=14cm]{schema_gradeT.png}
+  \caption{Representing Type gradeT}
+  \label{fig:schema_gradeT}
+\end{figure}
+
+\item course: It is a complexType compromising of following fields.
+	\begin{itemize}
+	 	\item name: string containing title of the course.
+	 	\item description: string containing a short description about the course.
+	 	\item weight: It is complexType with a string value and an attribute "weightScheme".
+	 	\item grade: It is a complexType gradeT and contains an attribute "gradingScheme" and a value.
+	 \end{itemize}
+
+\item session: It is a complexType containing two fields.
+
+	 \begin{itemize}
+	 	\item startDate: the date student registered with the institute. The date must follow ISO 8601 e.g. 2015-07-14
+	 	\item endDate: the date student completed a qualification. The date must follow ISO 8601 e.g. 2015-07-14
+	 \end{itemize}
+
+\item examSystem: Enumeration of string values shown in Table \ref{tab:examSystem} describing the examination system of the issuing authority.
+
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Possible values for examSystem}
+\label{tab:examSystem}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{1.3in}|c|c|}
+\hline
+Value       		& Description \\
+\hline
+QUATERLY 	    & exams after 4 months \\
+SEMESTER	    & exams after 6 months \\
+YEARLY			& exams after 1 year \\
+2YEARLY	    	& exams after 2 years \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\end{itemize}
 
 \chapter{Implementation \& Evaluation}\label{ch-implement}
 
@@ -759,10 +875,10 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		P is set of finite number of associations among E, A and C. \\
 		
 		So, the formal model representation of a DEGREE document becomes; \\
-		E = \{sellers, seller, sellerName, nickName, ...\} \\
-		A = \{selleID\} \\
+		E = \{docType, serialNo, regNo, issueDate, ...\} \\
+		A = \{\} \\
 		C = \{type, occurs, pattern, use, ...\} \\
-		P = \{ p1(sellers, seller), p2 (sellers, order, seller) , p3 (seller, sellerID), p4 (seller, sellerName), ... , p10 (sellerID, pattern), p11 (sellerID, use), p12 (sellerName, type), p13 (sellerName, occurs), ...
+		P = \{ p1(document, docType), ...
 
 		\item The second step involves gathering the test-data. Instead of mutating the valid documents as used in \cite{Testing XML Schemas} \cite{Fault based Testing}, we sniffed the documents using Wireshark during the exchange since we need to detect faults in these documents. 
 		
