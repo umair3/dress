@@ -85,7 +85,7 @@ To evaluate this research, we created a test-bed environment and validated the p
 \chapter*{Acknowledgment}
 All gratefulness and wonderfulness to {\bfseries ALLAH} and with His blessings, I am in good health and he gave me the ability to complete this work. I pray for more of Allah's blessings. It would not be possible without the efforts that were made by my {\bfseries parents} for supporting me during this duration and throughout my life. \\
 
-I am truly thankful to my supervisor {\bfseries Dr. Sharifullah Khan} for his guidance and who had been a great coach. I want to express my gratitude towards him for believing in me and facilitating me for the completion of this work. I appreciate {\bfseries Dr. Hamid Mukhtar}, {\bfseries Dr. Sarah Shafiq Khan} and {\bfseries Mr. Mujtaba Haider} for suggesting and supporting me. \\
+I am truly thankful to my supervisor {\bfseries Dr. Sharifullah Khan} for his guidance and who had been a great coach. I want to express my gratitude towards him for believing in me and facilitating me for the completion of this work. I appreciate {\bfseries Dr. Hamid Mukhtar}, {\bfseries Dr. Sarah Shafiq Khan} and {\bfseries Ms. Sana Khalique} for suggesting and supporting me. \\
 
 I am thankful to all my colleagues, co-workers and contributors who were supportive in completing this research.
 
@@ -112,7 +112,7 @@ I am thankful to all my colleagues, co-workers and contributors who were support
             DRESS & Document Record Exchange Standard of Students  \\
             SCHAC & Schema for Academia  \\
             LDAP & Lightweight Directory Access Protocol \\
-            FVUSPEC & Finnish Virtual University Specifications  \\
+            %FVUSPEC & Finnish Virtual University Specifications  \\
             MLO & Meta-data for Learning Opportunities  \\
             WSDL & Web Service Description Language  \\
             EHEA & European Higher Education Area  \\
@@ -240,15 +240,7 @@ Let us now discuss how we have organized the remaining research in chapters: \\
 
 In Chapter 2, we go through the literature review. We discuss the work that has already been done for exchanging student information. We look into the already existing standards, a few implementations and related projects. We will go deep in details in this section, to understand the ideas and technologies that are already in use. \\
 
-In Chapter 3, we discuss the business process in detail using sequence diagrams and define the functional and non-functional requirements.  \\
-
-In Chapter 4, the proposed architecture and design are discussed in detail. \\
-
-In Chapter 5, our proposed standard "DRESS" is presented. We discuss its vocabulary and the possible values. \\
-
-In Chapter 6, we discuss the implementation and the test-bed environment we created. In this chapter, we also evaluate whether the goals are achieved. \\
-
-In Chapter 7, the research work is concluded and possible future work is presented.
+In Chapter 3, we discuss the business process in detail using sequence diagrams and define the functional and non-functional requirements. In Chapter 4, the proposed architecture and design are discussed in detail. In Chapter 5, our proposed standard "DRESS" is presented. We discuss its vocabulary and the possible values. In Chapter 6, we discuss the implementation and the test-bed environment we created. In this chapter, we also evaluate whether the goals are achieved. In Chapter 7, the research work is concluded and possible future work is presented.
 
 \chapter{Literature Review}\label{ch-work}
 
@@ -289,18 +281,14 @@ To improve the mutual recognition of degrees and programs, education ministers f
     EQF concentrates on learning results as opposed to concentrating on learning inputs. It covers all types of education including professional, vocational and school education. It tries to validate formal and in addition informal education. 
 
     \subsection{Europass}
-    Collection of five documents which intend to ease mobility when seeking employment across Europe. These include the Curriculum Vitae, the Language Passport, the Mobility, the Diploma Supplement, and the Certificate Supplement. One can fill himself the Curriculum Vitae, and the Language Passport but the rest of the documents are issued by the related authorities. It follows a standard template format system, a layout. Same format helps to achieve neutrality and transparency while presenting one's skills. \\
-
-    The motto as mentioned on the Europass website's homepage is as follows; \\
+    Collection of five documents which intend to ease mobility when seeking employment across Europe. These include the Curriculum Vitae, the Language Passport, the Mobility, the Diploma Supplement, and the Certificate Supplement. One can fill himself the Curriculum Vitae, and the Language Passport but the rest of the documents are issued by the related authorities. It follows a standard template format system, a layout. Same format helps to achieve neutrality and transparency while presenting one's skills. The motto as mentioned on the Europass website's homepage is as follows; \\
     "Five documents to make your skills and qualifications clearly and easily understood in Europe" \cite{Europass Web} \\
 
     Europass has defined XML schemas for CV and Language Passport. The documents can be exported in XML format when created on Europass. These exported XML documents can be imported to Europass and converted to HTML, PDF, Microsoft Word or ODT templates. \\
 
     Europass specifies JSON schema according to Internet Engineering Task Force's JSON specifications draft. The europass JSON vocabulary is close and similar to europass XML schema. The JSON objects for europass documents (CV and Language Passport) can be validated using Europass JSON validator. \\
 
-    All these documents have some common XML schema attributes which describe document type, printed preferences. \\
-
-    Europass does not explain details related to degrees or educational certificates in XML certificate. 
+    All these documents have some common XML schema attributes which describe document type, printed preferences. Europass does not explain details related to degrees or educational certificates in XML certificate. 
 
         \subsubsection{Europass Curriculum Vitae}
         Europass Curriculum Vitae (ECV) is a template which one can create online and it can be exported in XML format. The ECV XML schema contains vocabularies related to document type, printing preferences, personal details, contact details, skills, and educational degrees and institutes. The XML vocabulary related to degree details is very little only to cover the scope of a CV. 
@@ -370,7 +358,7 @@ Some related work has been done recently and systems have been proposed based on
 
     The nodes represented the universities, and their number tends to change. So there was a need for system to maintain this record and UDDI was used. He did not recommend the central or delegated private registry instead gave advantages and disadvantages of both. Central single registry has all information at one place but also it a single point of failure. \\
 
-    The software has two transport modules and each have web interface. \\
+    %The software has two transport modules and each have web interface. \\
 
     Nagrozki proposed a new standard, defined its vocabulary re-using ideas taken from SCHAC to leverage ISO and RFC rules. Some like grade, credits were taken in inspiration from Eropass Mobility. \\
 
@@ -384,6 +372,9 @@ Providing a uniform interface for querying data from many sources is the aim of 
 
 \section{MAPQFTOOL}
 This tool helps comparing National Qualification Frameworks against European Qualifications Framework in Europe. This automates the process of creating mappings between these frameworks and stores the mappings in the database. 
+
+\section{Summary}
+We explored existing standards and technologies for exchanging information regarding educational documents. The bologna declaration initiated the standardization of educational systems across Europe. European qualification framework, Schema for Academia and Europass are efforts that were put in place to standardized exchange of qualifications. The Mobility Project and The REST mobility are implementations to ease mobility of students across Europe.  These details helped us better understanding the problem domain.
 
 \chapter{Requirements Analysis}\label{ch-requirements-analysis}
 \section{Definitions}
@@ -490,6 +481,10 @@ Based on the business process and the challenges we discussed, functional and no
 		\item The tools and technologies required should be freely available, widely used and independent of any specific hardware or operating system.
 
 	\end{enumerate}
+
+\section{Summary}
+We explored the business process involving getting list of documents against a student and exchanging the documents. This presents us with a challenge to fetch this data from heterogeneous data sources. Considering the business cases and the challenges, we have set functional and non-functional goals.   
+
 
 \chapter{Architecture \& Design}\label{ch-architecture-design}
 From the requirements analysis chapter \ref{ch-requirements-analysis} and the goals discussed in section \ref{s-goals}, we conclude that the educational certificate system will be a distributed system. This system is based on DRESS and logically layered architecture.
@@ -600,6 +595,8 @@ As we have made the necessary decisions, let us look the system design in more d
 %  \label{fig:architecture}
 %\end{figure}
 
+\section{Summary}
+We presented a distributed system where every node is a provider that serves the requests expect one central node which is the requester. We see that by having central node over distributed architecture, we have more control and authority. SOAP is chosen over REST and RPC since it forces to follow a formal standard.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -743,6 +740,9 @@ YEARLY			& exams after 1 year \\
 
 \end{itemize}
 
+\section{Summary}
+We explored the vocabulary required for the exchange of educational documents. We discussed the elements, their types and the possible values that can be assigned. This covers required vocabulary for registration, degree and transcript XML schema definitions. 
+
 \chapter{Implementation \& Evaluation}\label{ch-implement}
 
 
@@ -876,7 +876,7 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		
 		So, the formal model representation of a DEGREE document becomes; \\
 		E = \{docType, serialNo, regNo, issueDate, ...\} \\
-		A = \{gradingScheme} \\
+		A = \{gradingScheme\} \\
 		C = \{type, occurs, pattern, use, ...\} \\
 		P = \{ p1(document, docType), ...
 
@@ -920,6 +920,9 @@ Test-data               				& XQuery \\
 		\item At step 6, we analyze the test result. The query returns result 1 and no fault related to minOccurrence is found. However, if the query returned 0, we would have detected a fault. 		
 		
 	\end{enumerate}
+
+\section{Summary}
+Implementation of DRESS and the supporting tools is completed in multiple stages. We defined the schema documents, developed mapping tool, generated maps, developed web-service and the client. To evaluate DRESS, we set up an environment of three nodes including a requester and two providers. We performed subject evaluation against the goals, the functional requirements and the non-functional requirements. We evaluated the schema by detecting faults in the exchanged documents using a fault-based testing approach.
 
 		%\subsubsection{Testing against Exemplary data}
 		%This technique involves running the system with different data-sets by different users and then getting feedback. We collected documents for two different 
