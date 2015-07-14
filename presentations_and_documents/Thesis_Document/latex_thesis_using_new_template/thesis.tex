@@ -740,7 +740,7 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		Program validation technique unit testing and integration testing of the tools that are developed. This technique reports the issues and bugs found in the developed tools. However, in this research our focus is on our proposed standard DRESS and the proposed architecture. Although we developed software tools to evaluate DRESS and the architecture but the testing of the these tools itself is out of scope of this research. 
 		
 		\subsubsection{Using Fault-based Testing}
-		We used this evaluating technique to test the XML schema for detecting faults. Starting with the creation of a formal model for the schema under consideration, we create fault classes. These fault classes are used to generate the queries. We run these queries against the test-data. The test data are the sniffed XML documents while exchange between during partaking institutes. The results of the queries are then compared with the specified schema to detect faults. The testing process we followed is shown in figure~\ref{fig:fault-based-testing}. It should be noted that instead of mutating the data, we sniffed the traffic and used the captured XML documents as test-data.  		
+		We used this evaluating technique to test the XML schema for detecting faults. The faults that will be found are related to the development errors or the evolution of the schema\cite{Testing XML Schemas}. Starting with the creation of a formal model for the schema under consideration, we create fault classes. These fault classes are used to generate the queries. We run these queries against the test-data. The test data are the sniffed XML documents while exchange between during partaking institutes. The results of the queries are then compared with the specified schema to detect faults. The testing process we followed is shown in figure~\ref{fig:fault-based-testing}. It should be noted that instead of mutating the data, we sniffed the traffic and used the captured XML documents as test-data.  		
 		
 \begin{figure}[!htp]
   \centering
@@ -752,7 +752,7 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 	\begin{enumerate}  
 
 		\item First, we present a formal model to represent the XML documents. A formal model is necessary to formalize the testing of the documents under consideration by executing the queries. We used these following rules to represent the formal model denoted by M. \\
-		M = \textless E,A,C,P \textgreater , where; \\
+		M = \textless E,A,C,P\textgreater , where; \\
 		E is set of finite number of elements \\
 		A is set of finite number of attributes \\
 		C is set of finite number of constraints \\
@@ -765,13 +765,44 @@ It is worth mentioning that the mappings generated at Node1 and Node2 are differ
 		P = \{ p1(sellers, seller), p2 (sellers, order, seller) , p3 (seller, sellerID), p4 (seller, sellerName), ... , p10 (sellerID, pattern), p11 (sellerID, use), p12 (sellerName, type), p13 (sellerName, occurs), ...
 
 		\item The second step involves gathering the test-data. Instead of mutating the valid documents as used in \cite{Testing XML Schemas} \cite{Fault based Testing}, we sniffed the documents using Wireshark during the exchange since we need to detect faults in these documents. 
+		
+		% table with number of sniffed documents at node1 and node2 for REGISTRATION, DEGREE, TRANSCRIPT
 	
-		\item The third step is the selection of the fault classes. 
+		\item The third step is the selection of the fault classes. The schemas under consideration are XML schemas. There can be faults specific to XML and can be categorized into three classes;
 		
-		\item The fourth step involves writing queries based upon the identified fault classes. 
+		\begin{enumerate} 
+			\item class1: Fault class for Elements
+			\item class2: Fault class for Attributes
+			\item class3: Fault class for Constraints
+		\end{enumerate}
 		
-		\item We used open-source technologies that are widely used for setting up test-bed. We used JSON for storing mappings which require no storage configurations. We used PHP as server-side programming language for the development of the web-service and the query builder. HTML and JavaScript are used for front end development. All the technologies are openly available, free and widely used. This satisfies the fifth requirement.
+		We associate the elements or attributes of the schemas to the fault classes. These are identified using the elements, attributes and constraints in the formal model.		
+		
+		\item The fourth step involves writing queries based upon the identified fault classes and the associations. These queries are written in XQuery to test the sniffed documents. 
+		
+		
+		\item The fifth step involves executing queries on test-data. In Table \ref{tab:xquery-testdata}, we execute an XQuery against an element for testing minOccurrence constraint. This falls in class 3 category of the fault classes. 
 
+\begin{table}[!tbh]
+%\renewcommand{\arraystretch}{1.5}
+\caption{Xquery on Test data}
+\label{tab:xquery-testdata}
+\centering
+\begin{tabular}[width=\columnwidth]{|p{2.3in}|c|c|}
+\hline
+Test-data               				& XQuery \\
+\hline
+\textless document\textgreater 	    	& let \$doc := document \\ 
+....	    							& ("degree.xml")  \\
+\textless serialNo\textgreater 012681\textless /serialNo\textgreater 	    	& for \$i in \$doc//document   \\
+....	    							& let \$count := count(\$i/serialNo)  \\
+\textless /document\textgreater	    	&  return \textless result\textgreater {\$count} \textless /result\textgreater  \\
+\hline
+\end{tabular}
+\end{table}
+		
+		\item At step 6, we analyze the test result. The query returns result 1 and no fault related to minOccurrence is found. However, if the query returned 0, we would have detected a fault. 		
+		
 	\end{enumerate}
 
 		%\subsubsection{Testing against Exemplary data}

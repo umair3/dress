@@ -45,8 +45,8 @@
 \contentsline {subsubsection}{\numberline {6.3.2.1}Evaluating against Functional \& Non-Functional Requirements}{33}
 \contentsline {subsubsection}{\numberline {6.3.2.2}Using Program Validation Technique}{35}
 \contentsline {subsubsection}{\numberline {6.3.2.3}Using Fault-based Testing}{36}
-\contentsline {chapter}{\numberline {7}Conclusion \& Future Work}{38}
-\contentsline {section}{\numberline {7.1}Conclusion}{38}
-\contentsline {section}{\numberline {7.2}Future Work}{39}
-\contentsline {subsection}{\numberline {7.2.1}Unified Measurements}{39}
-\contentsline {subsection}{\numberline {7.2.2}Improvements in Document Authentication}{40}
+\contentsline {chapter}{\numberline {7}Conclusion \& Future Work}{39}
+\contentsline {section}{\numberline {7.1}Conclusion}{39}
+\contentsline {section}{\numberline {7.2}Future Work}{40}
+\contentsline {subsection}{\numberline {7.2.1}Unified Measurements}{40}
+\contentsline {subsection}{\numberline {7.2.2}Improvements in Document Authentication}{41}
