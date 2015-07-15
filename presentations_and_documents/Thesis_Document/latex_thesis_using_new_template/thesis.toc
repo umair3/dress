@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Requester}{24}
 \contentsline {subsection}{\numberline {4.1.2}Provider}{24}
 \contentsline {section}{\numberline {4.2}Summary}{26}
-\contentsline {chapter}{\numberline {5}Document Record Exchange Standard for Students}{27}
+\contentsline {chapter}{\numberline {5}Document Record Exchange Standard for Students }{27}
 \contentsline {section}{\numberline {5.1}Vocabulary}{27}
 \contentsline {section}{\numberline {5.2}Summary}{31}
 \contentsline {chapter}{\numberline {6}Implementation \& Evaluation}{32}
