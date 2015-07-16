@@ -3,7 +3,8 @@ Note: Clone/Pull the latest code from github at https://github.com/umair3/dress.
 ----------------------
 Requirements
 ----------------------
-
+PHP 5.5
+Apache 2.2
 
 
 ----------------------
