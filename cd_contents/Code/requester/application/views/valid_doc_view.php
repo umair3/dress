@@ -8,7 +8,7 @@
 				<tr>
 					<td>Document Type: *</td>
 					<td>
-						<select id="search_criteria" name="search_criteria">
+						<select id="doc_type" name="doc_type">
 							<option>Choose</option>
 							<option>Registeration</option>
 							<option>Transcript</option>
@@ -29,13 +29,13 @@
 				<tr>
 					<td>Search Value: *</td>
 					<td>
-						<input type="text" id="search_criteria" name="search_criteria" value=""/>
+						<input type="text" id="search_criteria_value" name="search_criteria_value" value=""/>
 					</td>
 				</tr>
 				<tr>
 					<td>University: *</td>
 					<td>
-						<select id="search_criteria" name="search_criteria">
+						<select id="provider" name="provider">
 							<option>Choose</option>
 							<?php echo $institute_options; ?>
 						</select>

@@ -48,6 +48,14 @@ class Doc extends CI_Controller {
 		
 	}
 	
+	private function _get_institute_api($institute_id) {
+		 
+		$this->db->where('id',$institute_id);
+		$query = $this->db->get('address_list');
+		return $query->row();
+		
+	}
+	
 	public function list_doc()
 	{
 		$data['institute_options'] = $this->_get_institues_select_options();
@@ -61,7 +69,17 @@ class Doc extends CI_Controller {
 		$data['posted'] = 0;
 		if($_POST) {
 			//$options = array("location" => "http://localhost/projects/thesis/uni_soap_server/soapserver.php", "uri" => "http://localhost");
-			$options = array("location" => "http://localhost/projects/thesis/cd_contents/Code/provider/soapserver.php", "uri" => "http://localhost");
+			//$options = array("location" => "http://localhost/projects/thesis/cd_contents/Code/provider/soapserver.php", "uri" => "http://localhost");
+			
+			$provider = $this->_get_institute_api($_POST['provider']);
+			$api = $provider->uni_webservice_url;
+			
+			$api = str_replace("gen_wsdl.php/", "", $api);
+			$api = str_replace("gen_wsdl.php", "", $api);
+			$api.= 'soapserver.php/';
+			
+			$options = array("location" => $api, "uri" => "http://localhosta");
+			
 			try {
 				$client = new SoapClient(null, $options);
 				
