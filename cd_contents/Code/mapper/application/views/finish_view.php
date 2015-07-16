@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SDRES</title>
+		<title>DRESS</title>
 		<link href="<?php echo base_url('resources/css/common.css'); ?>" type="text/css" rel="stylesheet">
 		<link href="<?php echo base_url('resources/css/flexslider.css'); ?>" type="text/css" rel="stylesheet">
 		<style type="text/css">
@@ -157,7 +157,7 @@
 			<h2>Finish</h2>
 			<p>You have successfully created mappings. This is your web-service URL. Note this URL and Send it to Central Portal Admin.</p>
 			<p>
-				<?php echo base_url().'../uni_soap_server/gen_wsdl.php/'; ?>
+				<?php echo base_url().'../provider/gen_wsdl.php/'; ?>
 			</p>
 			
 			
