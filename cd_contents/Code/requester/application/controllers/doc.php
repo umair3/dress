@@ -72,13 +72,14 @@ class Doc extends CI_Controller {
 			//$options = array("location" => "http://localhost/projects/thesis/cd_contents/Code/provider/soapserver.php", "uri" => "http://localhost");
 			
 			$provider = $this->_get_institute_api($_POST['provider']);
+			//print_r($provider);
 			$api = $provider->uni_webservice_url;
 			
 			$api = str_replace("gen_wsdl.php/", "", $api);
 			$api = str_replace("gen_wsdl.php", "", $api);
 			$api.= 'soapserver.php/';
 			
-			$options = array("location" => $api, "uri" => "http://localhosta");
+			$options = array("location" => $api, "uri" => "http://localhost");
 			
 			try {
 				$client = new SoapClient(null, $options);

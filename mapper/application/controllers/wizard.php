@@ -15,7 +15,8 @@ class Wizard extends CI_Controller {
 				'port'		=>	$this->input->post('port'),
 				'user'		=>	$this->input->post('user'),
 				'password'	=>	$this->input->post('password'), // to be encrypted in future for security
-				'database'	=>	$this->input->post('database')
+				'database'	=>	$this->input->post('database'),
+				'driver'	=>	$this->input->post('driver')
 			);
 			
 			$db_creds_json = json_encode($db_creds);
@@ -53,14 +54,17 @@ class Wizard extends CI_Controller {
 		
 		$db_creds = $this->_load_database_properties();
 		
-		/*$dsn = 'dbdriver://username:password@hostname/database';
-		$this->load->database($dsn);*/
+		//$dsn = 'dbdriver://username:password@hostname/database';
+		$dsn = $db_creds->driver.'://'.$db_creds->user.':'.$db_creds->password.'@'.$db_creds->host.':'.$db_creds->port.'/'.$db_creds->database; //'mysql://root:@localhost/ferrari';
+		$this->load->database($dsn);
 		
-		$this->load->database();
+		/*$this->load->database();
+		$this->db->dbdriver = 'mysql'; 
 		$this->db->hostname	= $db_creds->host.':'.$db_creds->port;
 		$this->db->username = $db_creds->user;
 		$this->db->password = $db_creds->password;
 		$this->db->database = $db_creds->database;
+		//$db_creds->driver;*/
 	}
 	
 	public function map()

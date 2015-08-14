@@ -188,6 +188,24 @@
 					</td>
 				</tr>
 				<tr>
+					<td>DBMS: *</td>
+					<td>
+						<select id="driver" name="driver">
+							<option value="cubrid" <?php if ($db_creds->driver=='cubrid') {echo 'selected=\"selected\"';} ?>>cubrid</value>
+							<option value="mssql" <?php if ($db_creds->driver=='mssql') {echo 'selected=\"selected\"';} ?>>mssql</value>
+							<option value="mysql" <?php if ($db_creds->driver=='mysql') {echo 'selected=\"selected\"';} ?>>mysql</value>
+							<option value="mysqli" <?php if ($db_creds->driver=='mysqli') {echo 'selected=\"selected\"';} ?>>mysqli</value>
+							<option value="oci8" <?php if ($db_creds->driver=='oci8') {echo 'selected=\"selected\"';} ?>>oci8</value>
+							<option value="odbc" <?php if ($db_creds->driver=='odbc') {echo 'selected=\"selected\"';} ?>>odbc</value>
+							<option value="pdo" <?php if ($db_creds->driver=='pdo') {echo 'selected=\"selected\"';} ?>>pdo</value>
+							<option value="postgre" <?php if ($db_creds->driver=='postgre') {echo 'selected=\"selected\"';} ?>>postgre</value>
+							<option value="sqlite" <?php if ($db_creds->driver=='sqlite') {echo 'selected=\"selected\"';} ?>>sqlite</value>
+							<option value="sqlsrv" <?php if ($db_creds->driver=='sqlsrv') {echo 'selected=\"selected\"';} ?>>sqlsrv</value>
+							
+						</select>
+					</td>
+				</tr>
+				<tr>
 					<td></td>
 					<td>
 						<input type="submit" value="Connect"/>
