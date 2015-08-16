@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SDRES</title>
+		<title>DRESS</title>
 		<link href="<?php echo base_url('resources/css/common.css'); ?>" type="text/css" rel="stylesheet">
 		<link href="<?php echo base_url('resources/css/flexslider.css'); ?>" type="text/css" rel="stylesheet">
 		<style type="text/css">
