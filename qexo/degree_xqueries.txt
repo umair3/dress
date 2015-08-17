@@ -1,0 +1,47 @@
+java -jar kawa-1.9.1.jar --xquery
+----------------------------------
+CLASS1 - FAULT CLASS FOR ELEMENTS
+----------------------------------
+for $x in doc("degree.xml")/xml
+return $x/documentType
+
+for $x in doc("degree.xml")/xml
+return $x/level
+
+for $x in doc("degree.xml")/xml
+return $x/examSystem
+
+for $x in doc("degree.xml")/xml
+return $x/title
+
+for $x in doc("degree.xml")/xml
+return $x/serialNo
+
+for $x in doc("degree.xml")/xml
+return $x/registrationNo
+
+for $x in doc("degree.xml")/xml
+return $x/rollNo
+
+for $x in doc("degree.xml")/xml
+return $x/date
+
+for $x in doc("degree.xml")/xml
+return $x/firstName
+
+for $x in doc("degree.xml")/xml
+return $x/lastName
+
+for $x in doc("degree.xml")/xml
+return $x/institute
+
+for $x in doc("degree.xml")/xml
+return $x/image
+
+-----------------------------------
+CLASS2 - FAULT CLASS FOR ATTRIBUTES
+-----------------------------------
+
+------------------------------------
+CLASS1 - FAULT CLASS FOR CONSTRAINTS
+------------------------------------
